@@ -1,0 +1,35 @@
+# 据吉文档
+
+> Congrats on setting up a new Doks project!
+
+- [页面未找到](/404/): 您正在寻找的页面不存在或已被移动。请检查网址，使用导航浏览各个板块，或返回首页。
+- [隐私政策](/privacy/): 了解我们如何收集、使用和保护您的个人数据，您对信息拥有的权利，以及如何联系我们。
+- [Blog](/blog/): Read product updates, release highlights, and practical tips that explain what’s new, why it matters, and how to get the most value from this project.
+- [Docs](/docs/): Browse guides and reference documentation that explain how to use this site’s features, configure Doks, and publish clear, user-focused content.
+
+## Blog
+
+> Read product updates, release highlights, and practical tips that explain what’s new, why it matters, and how to get the most value from this project.
+
+- [Example Post](/blog/example-post/): Learn how to write clear, structured product update posts that explain what changed, why it matters, and how users can successfully adopt new features.
+
+## Docs
+
+> Browse guides and reference documentation that explain how to use this site’s features, configure Doks, and publish clear, user-focused content.
+
+- [Guides](/docs/guides/): Explore step-by-step guides that walk you through common tasks, from setup to advanced workflows, helping you learn and use this project with confidence.
+- [Reference](/docs/reference/): Find detailed, structured reference pages that explain concepts, configuration options, and behavior so you can quickly look up precise information as you work.
+- [Resources](/docs/resources/): Discover curated links to official docs, tools, templates, and learning materials that help you deepen your knowledge and get more from this project.
+
+### Guides
+
+> Explore step-by-step guides that walk you through common tasks, from setup to advanced workflows, helping you learn and use this project with confidence.
+
+- [快速开始](/docs/guides/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/): 请移步快速上手通道，迅速完成一个简单的数据标注项目。
+
+### Reference
+
+> Find detailed, structured reference pages that explain concepts, configuration options, and behavior so you can quickly look up precise information as you work.
+
+- [Example Reference](/docs/reference/example-reference/): Learn how to design concise, comprehensive reference pages that document concepts, options, and behavior clearly so users can quickly find exact answers.
+
