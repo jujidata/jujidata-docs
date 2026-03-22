@@ -8,30 +8,34 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    run:
-        working-directory: ./doks
+    # ✨ 关键修正：设置默认的工作目录
+    defaults:
+      run:
+        working-directory: ./doks 
+
     steps:
       - name: 📥 检出代码
         uses: actions/checkout@v4
         with:
-          submodules: recursive  # 如果 Doks 是作为 submodule 引入的，这行非常重要
-          fetch-depth: 0         # 获取完整历史以支持 .Lastmod 等功能
+          submodules: recursive
+          fetch-depth: 0
 
       - name: 🛠️ 安装 Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-          extended: true        # Doks 通常需要 Extended 版本来处理 SCSS
+          extended: true
 
       - name: 📦 安装 Node.js 依赖
-        # Doks 依赖 NPM 来处理样式和搜索索引
+        # 有了上面的 defaults，这里会自动在 ./doks 下运行
         run: npm install
 
       - name: 🏗️ 执行构建
-        run: npm run build      # Doks 默认使用 npm 脚本调用 hugo
+        run: npm run build
 
       - name: 🌐 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public  # 构建后的静态文件存放目录
+          # 注意：如果构建生成的 public 在 doks 目录下，这里要写成 ./doks/public
+          publish_dir: ./doks/public
