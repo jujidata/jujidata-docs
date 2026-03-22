@@ -1,6 +1,11 @@
 title = "据吉文档"
 # 或者自定义域名
 baseURL = "https://coolguy2020.github.io/jujidata-docs/"
+# ✅ 建议开启此项，强制 Hugo 在生成链接时补全 baseURL
+canonifyURLs = true
+
+# ❌ 确保此项为 false 或删除（如果是 true，子路径引用会乱套）
+relativeURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
 # disableKinds = ["taxonomy", "term"]
