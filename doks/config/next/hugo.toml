@@ -1,7 +1,7 @@
 # Overrides for next environment
-baseURL = "https://coolguy2020.github.io/jujidata-docs/"
+baseURL = "https://docs.jujidata.com/"
 
 # ✅ 建议开启此项，强制 Hugo 在生成链接时补全 baseURL
-canonifyURLs = true
+canonifyURLs = false
 # ❌ 确保此项为 false 或删除（如果是 true，子路径引用会乱套）
-relativeURLs = false
+relativeURLs = true

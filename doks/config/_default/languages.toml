@@ -5,7 +5,7 @@
   [zh.params]
     languageISO = "zh"
     languageTag = "zh-CN"
-    footer = '移步体验 <a class="text-muted" href="https://jujidata.com/">据吉网</a>'
+    footer = '请移步体验<a class="link-primary text-decoration-none" style="color:blue" href="https://jujidata.com/">据吉网</a>'
     alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/example-post/">Doks version 1.0 just shipped!</a>'
 
 [de]

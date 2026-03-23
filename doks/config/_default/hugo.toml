@@ -1,8 +1,7 @@
 title = "据吉文档"
 # 或者自定义域名
-baseURL = "https://docs.jujidata.com/jujidata-docs"
-# ✅ 建议开启此项，强制 Hugo 在生成链接时补全 baseURL
-canonifyURLs = true
+baseURL = "http://localhost:1313/"
+canonifyURLs = false
 # ❌ 确保此项为 false 或删除（如果是 true，子路径引用会乱套）
 relativeURLs = false
 disableAliases = true
@@ -18,7 +17,7 @@ summarylength = 20 # 70 (default)
 # Multilingual
 defaultContentLanguage = "zh"
 disableLanguages = ["de", "nl"]
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 copyRight = "Copyright (c) 2020-2026 据吉网"
 [params]
@@ -86,8 +85,6 @@ copyRight = "Copyright (c) 2020-2026 据吉网"
 
 [permalinks]
   blog = "/blog/:slug/"
-  # 修改这一行，去掉复杂的切片语法
-  docs = "/docs/:section/:slug/"
 
 [minify.tdewolff.html]
   keepComments = true # If set to false, build signatures are removed

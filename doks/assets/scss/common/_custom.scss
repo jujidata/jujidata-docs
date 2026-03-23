@@ -35,6 +35,12 @@ h1.juji-hero-title {
   -webkit-text-fill-color: transparent; /* 使文本透明以显示背景 */
 }
 
+p.description {
+  font-size: 1rem; /* 描述文本的基础字号 */
+  color: #555; /* 描述文本的颜色 */
+  margin-top: 0.5rem; /* 标题和描述之间的间距 */
+} 
+
 /* 移动端适配：在小屏幕上允许标题变宽，避免折成三行 */
 @media (max-width: 768px) {
   h1.juji-hero-title {
