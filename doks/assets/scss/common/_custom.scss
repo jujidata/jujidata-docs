@@ -1,4 +1,5 @@
 // Put your custom SCSS code here
+@import "navbar-left-align";
 // Put your custom SCSS code here
 
 /* montserrat-regular - latin */
@@ -27,7 +28,6 @@ h1.juji-hero-title {
   /* 1. 核心：控制最大宽度，迫使长标题自动折成两行 */
   max-width: 560px; 
   margin: 0 auto; 
-
   font-size: 3.5rem; /* 大标题的基础字号 */
   color: $juji-color-primary; /* 使用自定义的渐变颜色 */
   background: $juji-color-primary; /* 设置背景为渐变 */
@@ -41,6 +41,72 @@ p.description {
   margin-top: 0.5rem; /* 标题和描述之间的间距 */
 } 
 
+/* Force all containers inside the document wrap to be full width */
+.wrap .container {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+}
+
+/* Move the sidebar away from the left edge */
+.docs-sidebar {
+  flex: 0 1 420px;
+  padding-left: 5.5rem !important; /* Increase this value (e.g., 3rem, 4rem) to move it further right */
+  padding-right: 1rem;           /* Spacing between sidebar and main content */
+}
+
+/* Optional: If the "据吉文档" brand/logo also feels too close to the edge */
+.navbar-brand {
+  margin-left: 1.5rem;
+}
+
+.container-fw {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+}
+
+// assets/scss/common/_custom.scss
+
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #eeeeee !important;
+  
+  .navbar-brand {
+    .brand-text {
+      font-weight: 800 !important;
+      color: #000 !important;
+    }
+  }
+
+  .nav-link {
+    color: #4b5563 !important;
+    &:hover {
+      color: #0d6efd !important;
+    }
+  }
+}
+
+// 文档卡片左对齐修正
+.docs-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  text-align: left !important;
+
+  .d-card {
+    align-items: flex-start !important;
+    text-align: left !important;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    transition: all 0.3s ease;
+
+    &.active {
+      border-color: #0d6efd;
+      background-color: #f0f7ff;
+    }
+  }
+}
 /* 移动端适配：在小屏幕上允许标题变宽，避免折成三行 */
 @media (max-width: 768px) {
   h1.juji-hero-title {

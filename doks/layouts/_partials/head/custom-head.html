@@ -1,1 +1,90 @@
-<!-- Custom head -->
+<style>
+  /* 针对文档正文内容的全局调整 */
+  .docs-content, 
+  .content, 
+  article {
+    font-size: 0.875rem !important; /* 约 14px，比默认更紧凑 */
+    line-height: 1.6 !important;    /* 配合小字号调整行高 */
+  }
+
+  /* 调整标题大小，使其与正文比例协调 */
+  .content h1 { font-size: 1.75rem !important; }
+  .content h2 { font-size: 1.4rem !important; margin-top: 1.5rem !important; }
+  .content h3 { font-size: 1.15rem !important; }
+  .container-xxl img {
+    width: 50px;
+    padding-top: 5px;
+  }
+
+  /* 调整列表、引用等元素的边距 */
+  .content p, .content ul, .content ol {
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* 针对侧边栏字体的微调 (可选) */
+  .docs-sidebar {
+    font-size: 0.85rem !important;
+  }
+
+  /* --- 侧边栏整体字号缩小 --- */
+  .docs-sidebar {
+    font-size: 0.875rem !important; /* 统一侧边栏基础字号 */
+  }
+
+  /* --- 一级目录 (Parent) 样式 --- */
+  /* Doks 通常使用 .docs-link 或 button 来展示一级菜单 */
+  .docs-sidebar .docs-link,
+  .docs-sidebar button {
+    font-size: 0.95rem !important; /* 一级目录略大 */
+    font-weight: 600 !important;   /* 加粗以示区分 */
+    color: #111827 !important;     /* 深色文字 */
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* --- 二级目录 (Child) 样式 --- */
+  /* 二级目录通常嵌套在 .collapse 或特定的 ul 中 */
+  .docs-sidebar .nav-link {
+    font-size: 0.85rem !important; /* 二级目录更小、更精致 */
+    font-weight: 400 !important;   /* 常规粗细 */
+    color: #4b5563 !important;     /* 稍微浅一点的灰色 */
+    padding-left: 1.25rem !important; /* 增加缩进，体现层级 */
+  }
+
+  /* 悬停和激活状态 */
+  .docs-sidebar .nav-link:hover,
+  .docs-sidebar .docs-link:hover {
+    color: #0d6efd !important; /* 悬停变蓝色 */
+    text-decoration: none !important;
+  }
+
+  .docs-sidebar .nav-link.active {
+    color: #0d6efd !important;
+    font-weight: 500 !important;
+    background-color: #f0f7ff !important; /* 激活项背景色，类似你卡片的 active 效果 */
+    border-radius: 4px;
+  }
+
+  .section-nav summary {
+    text-decoration: none !important;
+    font-size: 1rem !important; /* 鼠标悬停时放大字体 */
+    font-weight: 700 !important;
+  }
+  .section-nav summary:hover {
+    cursor: pointer;
+  }
+  .section-nav a {
+    text-decoration: none !important;
+    font-size: 1rem !important; /* 鼠标悬停时放大字体 */
+    font-weight: 700 !important;
+  }
+  .section-nav li a {
+    font-size: 0.85rem !important; /* 激活项字体更小 */
+  }
+  .section-nav li.active a {
+    color: #0d6efd !important;
+    font-weight: 500 !important;
+    font-size: 0.85rem !important; /* 激活项字体更小 */
+  }
+  
+</style>

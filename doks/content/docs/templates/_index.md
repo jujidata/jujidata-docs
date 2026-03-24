@@ -6,11 +6,7 @@ date: 2026-03-22T08:00:00+08:00
 lastmod: 2026-03-22T08:00:00+08:00
 draft: false
 weight: 200
-layout: "list" # 关键：这会自动列出该目录下的子页面
-menu:
-  sidebar_docs:
-    parent: "模版使用"
-    identifier: "templates"
+layout: "single" # 关键：这会自动列出该目录下的子页面
 ---
 
 在据吉网，您可以直接调用以下标准模版，或在此基础上进行二次开发：

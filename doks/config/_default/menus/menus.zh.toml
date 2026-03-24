@@ -40,6 +40,15 @@
   weight = 20
   pageRef = "/docs/templates"
 
+# --- 概念解析 大分类 ---
+[[sidebar_docs]]
+  name = "概念解析"
+  weight = 30
+  pageRef = "/docs/concepts"
+
+# --- API参考 大分类 ---
+
+
 [[footer]]
   name = "隐私政策"
   url = "/privacy/"

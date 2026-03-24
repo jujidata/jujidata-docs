@@ -1,0 +1,23 @@
+<header class="navbar navbar-expand-md navbar-light fixed-top d-print-none">
+  <div class="container-xxl">
+    <a class="navbar-brand d-flex align-items-center fw-bolder" href="{{ .Site.Home.RelPermalink }}">
+      <img src="/images/logo.png" alt="{{ .Site.Title }}" width="32" height="32" class="d-inline-block me-2">
+      <span class="brand-text" style="font-size: 1.5rem;">{{ .Site.Title }}</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav align-items-center navbar-left-align">
+        {{ range .Site.Menus.main -}}
+        <li class="nav-item">
+          <a class="nav-link px-3" style="font-size: 1rem; font-weight: 600;" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+        </li>
+        {{- end }}
+      </ul>
+      
+      </div>
+  </div>
+</header>
