@@ -8,6 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # ✨ 核心修正：即便 UI 无法选择，这里显式声明也可以生效
+    permissions:
+      contents: write   # 授予推送代码到 gh-pages 分支的权限
+      pages: write      # 授予 Pages 服务的管理权限（可选）
+      id-token: write   # 身份验证权限（可选）
     # ✨ 关键修正：设置默认的工作目录
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
