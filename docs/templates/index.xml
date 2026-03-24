@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模版中心 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/</link><description>Recent content in 模版中心 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Sun, 22 Mar 2026 08:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/index.xml" rel="self" type="application/rss+xml"/><item><title>2D 矩形框标注 (Bounding Box)</title><link>https://docs.jujidata.com/docs/templates/gallery_cv/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/gallery_cv/</guid><description>&lt;h2 id="1-模版概述"&gt;1. 模版概述&lt;/h2&gt;
+&lt;p&gt;2.D 矩形框标注主要用于&lt;strong&gt;物体检测 (Object Detection)&lt;/strong&gt; 任务。标注员通过绘制与目标边缘紧密贴合的四边形框，确定物体在图像中的位置（坐标）和类别（标签）。&lt;/p&gt;
+&lt;h3 id="适用场景"&gt;适用场景&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自动驾驶&lt;/strong&gt;：车辆、行人、交通标志检测。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智慧安防&lt;/strong&gt;：人脸识别、违禁品检测。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;新零售&lt;/strong&gt;：货架商品识别、客流分析。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;医疗影像&lt;/strong&gt;：病灶区域初筛。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="2-核心交互功能"&gt;2. 核心交互功能&lt;/h2&gt;
+&lt;p&gt;据吉网的 2D 矩形框模版集成了多项提效工具：&lt;/p&gt;
+&lt;h3 id="智能辅助与快捷键"&gt;智能辅助与快捷键&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;十字准星辅助&lt;/strong&gt;：提供全屏十字参照线，确保框选边缘与像素精准对齐。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快速缩放&lt;/strong&gt;：支持鼠标滚轮以光标为中心实时缩放，方便处理远端微小目标。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快捷键作业&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;N&lt;/code&gt;：创建新矩形框。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Delete&lt;/code&gt;：删除选中框。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + Z&lt;/code&gt;：撤销上一步操作。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;方向键&lt;/code&gt;：微调选中框的像素位置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="属性关联机制"&gt;属性关联机制&lt;/h3&gt;
+&lt;p&gt;支持为每个矩形框配置多级属性。例如，在标注“车辆”时，可联动弹出：&lt;/p&gt;</description></item></channel></rss>

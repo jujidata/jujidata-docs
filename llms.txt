@@ -1,0 +1,42 @@
+# 据吉文档
+
+> AI数据标注一站式服务平台使用手册
+
+- [页面未找到](https://docs.jujidata.com/404/): 您正在寻找的页面不存在或已被移动。请检查网址，使用导航浏览各个板块，或返回首页。
+- [隐私政策](https://docs.jujidata.com/privacy/): 了解我们如何收集、使用和保护您的个人数据，您对信息拥有的权利，以及如何联系我们。
+- [博客](https://docs.jujidata.com/blog/): Read product updates, release highlights, and practical tips that explain what’s new, why it matters, and how to get the most value from this project.
+- [文档指南](https://docs.jujidata.com/docs/): 据吉文档的主页面，包含所有指南、参考和资源。
+
+## 博客
+
+> Read product updates, release highlights, and practical tips that explain what’s new, why it matters, and how to get the most value from this project.
+
+- [Example Post](https://docs.jujidata.com/blog/example-post/): Learn how to write clear, structured product update posts that explain what changed, why it matters, and how users can successfully adopt new features.
+
+## 文档指南
+
+> 据吉文档的主页面，包含所有指南、参考和资源。
+
+- [标注概念 (Concepts)](https://docs.jujidata.com/docs/concepts/)
+- [据吉网 (jujidata.com) ](https://docs.jujidata.com/docs/quick_guides/): 小数据，大价值 —— 让数据标注像工业流水线一样精准、透明。
+- [模版中心](https://docs.jujidata.com/docs/templates/): 预置 10 大主流 AI 标注模版，支持高度自定义配置。
+- [Resources](https://docs.jujidata.com/docs/resources/): Discover curated links to official docs, tools, templates, and learning materials that help you deepen your knowledge and get more from this project.
+
+### 标注概念 (Concepts)
+
+
+
+- [试标空间 (Sandbox)](https://docs.jujidata.com/docs/concepts/sandbox/): 通过小样任务测试供应商交付质量，降低大规模作业风险。
+
+### 据吉网 (jujidata.com) 
+
+> 小数据，大价值 —— 让数据标注像工业流水线一样精准、透明。
+
+- [据吉网 (jujidata.com) ](https://docs.jujidata.com/docs/quick_guides/intro/): 小数据，大价值 —— 让数据标注像工业流水线一样精准、透明。
+
+### 模版中心
+
+> 预置 10 大主流 AI 标注模版，支持高度自定义配置。
+
+- [2D 矩形框标注 (Bounding Box)](https://docs.jujidata.com/docs/templates/gallery_cv/): 最通用的物体检测标注模版，支持多标签分类与复杂属性关联。
+

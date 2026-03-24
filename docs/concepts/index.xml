@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>标注概念 (Concepts) on 据吉文档</title><link>https://docs.jujidata.com/docs/concepts/</link><description>Recent content in 标注概念 (Concepts) on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Sun, 22 Mar 2026 08:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/concepts/index.xml" rel="self" type="application/rss+xml"/><item><title>试标空间 (Sandbox)</title><link>https://docs.jujidata.com/docs/concepts/sandbox/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/sandbox/</guid><description>&lt;h2 id="什么是试标空间"&gt;什么是试标空间？&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;试标空间 (Sandbox)&lt;/strong&gt; 是据吉网独创的“赛马机制”。甲方通过发布占总量 1%-5% 的小样任务，让参与竞标的多个供应商在同一标准下进行实操。&lt;/p&gt;
+&lt;h3 id="为什么需要试标"&gt;为什么需要试标？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;质量可视化&lt;/strong&gt;：不再只看乙方的 PPT 或历史介绍，直接看本次项目的成品。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;规避风险&lt;/strong&gt;：避免在正式开工后才发现供应商不理解标注规则。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;择优录取&lt;/strong&gt;：平台会根据各方的&lt;strong&gt;准确率&lt;/strong&gt;、&lt;strong&gt;响应速度&lt;/strong&gt;和&lt;strong&gt;吞吐量&lt;/strong&gt;生成对比画像。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="操作流程"&gt;操作流程&lt;/h2&gt;
+&lt;h3 id="第一步创建试标任务"&gt;第一步：创建试标任务&lt;/h3&gt;
+&lt;p&gt;在项目管理后台点击“开启 Sandbox”，上传测试数据集。建议样本包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;常规场景&lt;/strong&gt;：占 70%，测试基础稳定性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Corner Cases (极端案例)&lt;/strong&gt;：占 30%，测试供应商处理复杂问题的能力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第二步设定基准-ground-truth"&gt;第二步：设定基准 (Ground Truth)&lt;/h3&gt;
+&lt;p&gt;甲方需亲自或指定专家标注一份“标准答案”。系统将以此为基准，自动计算乙方的&lt;strong&gt;标注准确率 (Precision)&lt;/strong&gt; 和 &lt;strong&gt;召回率 (Recall)&lt;/strong&gt;。&lt;/p&gt;</description></item></channel></rss>

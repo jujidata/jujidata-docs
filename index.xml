@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>欢迎来到据吉数据标注一站式服务平台 on 据吉文档</title><link>https://docs.jujidata.com/</link><description>Recent content in 欢迎来到据吉数据标注一站式服务平台 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Sun, 22 Mar 2026 08:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Example Post</title><link>https://docs.jujidata.com/blog/example-post/</link><pubDate>Mon, 16 Feb 2026 16:31:32 +0100</pubDate><guid>https://docs.jujidata.com/blog/example-post/</guid><description>Use blog posts to communicate product updates and new features in a clear and consistent format.</description></item><item><title>2D 矩形框标注 (Bounding Box)</title><link>https://docs.jujidata.com/docs/templates/gallery_cv/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/gallery_cv/</guid><description>&lt;h2 id="1-模版概述"&gt;1. 模版概述&lt;/h2&gt;
+&lt;p&gt;2.D 矩形框标注主要用于&lt;strong&gt;物体检测 (Object Detection)&lt;/strong&gt; 任务。标注员通过绘制与目标边缘紧密贴合的四边形框，确定物体在图像中的位置（坐标）和类别（标签）。&lt;/p&gt;
+&lt;h3 id="适用场景"&gt;适用场景&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自动驾驶&lt;/strong&gt;：车辆、行人、交通标志检测。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智慧安防&lt;/strong&gt;：人脸识别、违禁品检测。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;新零售&lt;/strong&gt;：货架商品识别、客流分析。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;医疗影像&lt;/strong&gt;：病灶区域初筛。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="2-核心交互功能"&gt;2. 核心交互功能&lt;/h2&gt;
+&lt;p&gt;据吉网的 2D 矩形框模版集成了多项提效工具：&lt;/p&gt;
+&lt;h3 id="智能辅助与快捷键"&gt;智能辅助与快捷键&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;十字准星辅助&lt;/strong&gt;：提供全屏十字参照线，确保框选边缘与像素精准对齐。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快速缩放&lt;/strong&gt;：支持鼠标滚轮以光标为中心实时缩放，方便处理远端微小目标。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快捷键作业&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;N&lt;/code&gt;：创建新矩形框。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Delete&lt;/code&gt;：删除选中框。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + Z&lt;/code&gt;：撤销上一步操作。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;方向键&lt;/code&gt;：微调选中框的像素位置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="属性关联机制"&gt;属性关联机制&lt;/h3&gt;
+&lt;p&gt;支持为每个矩形框配置多级属性。例如，在标注“车辆”时，可联动弹出：&lt;/p&gt;</description></item><item><title>Resources</title><link>https://docs.jujidata.com/docs/resources/</link><pubDate>Tue, 27 Feb 2024 09:30:56 +0100</pubDate><guid>https://docs.jujidata.com/docs/resources/</guid><description>&lt;p&gt;Link to valuable, relevant resources.&lt;/p&gt;</description></item><item><title>据吉网 (jujidata.com)</title><link>https://docs.jujidata.com/docs/quick_guides/intro/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/intro/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;小数据，大价值&lt;/strong&gt; —— 让数据标注像工业流水线一样精准、透明。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="01-平台定位与愿景"&gt;01. 平台定位与愿景&lt;/h2&gt;
+&lt;p&gt;据吉网致力于解决 AI 数据服务市场中甲方“寻人难、质量控不住”与乙方“获客难、账期无保障”的深层矛盾。通过&lt;strong&gt;信息透明化、生产模块化、结算金融化&lt;/strong&gt;，构建起从项目发起到数据交付的全闭环信任生态。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;核心理念：&lt;/strong&gt; 在据吉网，我们让甲方对质量有底气，让乙方对结款有信心。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="02-核心操作流程"&gt;02. 核心操作流程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;发布需求&lt;/strong&gt;：甲方在线提交项目需求。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能竞标/试标&lt;/strong&gt;：系统匹配供应商，通过试标择优录取。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;线上签约托管&lt;/strong&gt;：资金由平台托管，从根源杜绝双向违约。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模块化生产&lt;/strong&gt;：灵活组合标注组件，支持预标注。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进度追踪与质检&lt;/strong&gt;：实时可视化追踪，严苛质检回溯。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;先结款后下载&lt;/strong&gt;：尾款结算后开放数据下载，保障乙方权益。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="03-功能模块详解"&gt;03. 功能模块详解&lt;/h2&gt;
+&lt;h3 id="a-供需匹配与信任构建"&gt;A. 供需匹配与信任构建&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;智能竞标&lt;/strong&gt;：算法匹配垂类领域供应商，并结合试标结果（Sandbox）择优录取。
+&lt;strong&gt;历史回溯&lt;/strong&gt;：甲方可根据乙方在平台的历史履约数据、准确率及评价进行画像评估。
+&lt;strong&gt;资金托管&lt;/strong&gt;：双方达成意向后线上签章，甲方支付预付款至平台托管。&lt;/p&gt;</description></item><item><title>试标空间 (Sandbox)</title><link>https://docs.jujidata.com/docs/concepts/sandbox/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/sandbox/</guid><description>&lt;h2 id="什么是试标空间"&gt;什么是试标空间？&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;试标空间 (Sandbox)&lt;/strong&gt; 是据吉网独创的“赛马机制”。甲方通过发布占总量 1%-5% 的小样任务，让参与竞标的多个供应商在同一标准下进行实操。&lt;/p&gt;
+&lt;h3 id="为什么需要试标"&gt;为什么需要试标？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;质量可视化&lt;/strong&gt;：不再只看乙方的 PPT 或历史介绍，直接看本次项目的成品。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;规避风险&lt;/strong&gt;：避免在正式开工后才发现供应商不理解标注规则。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;择优录取&lt;/strong&gt;：平台会根据各方的&lt;strong&gt;准确率&lt;/strong&gt;、&lt;strong&gt;响应速度&lt;/strong&gt;和&lt;strong&gt;吞吐量&lt;/strong&gt;生成对比画像。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="操作流程"&gt;操作流程&lt;/h2&gt;
+&lt;h3 id="第一步创建试标任务"&gt;第一步：创建试标任务&lt;/h3&gt;
+&lt;p&gt;在项目管理后台点击“开启 Sandbox”，上传测试数据集。建议样本包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;常规场景&lt;/strong&gt;：占 70%，测试基础稳定性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Corner Cases (极端案例)&lt;/strong&gt;：占 30%，测试供应商处理复杂问题的能力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第二步设定基准-ground-truth"&gt;第二步：设定基准 (Ground Truth)&lt;/h3&gt;
+&lt;p&gt;甲方需亲自或指定专家标注一份“标准答案”。系统将以此为基准，自动计算乙方的&lt;strong&gt;标注准确率 (Precision)&lt;/strong&gt; 和 &lt;strong&gt;召回率 (Recall)&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>页面未找到</title><link>https://docs.jujidata.com/404/</link><pubDate>Tue, 17 Feb 2026 13:06:19 +0100</pubDate><guid>https://docs.jujidata.com/404/</guid><description>&lt;p&gt;很抱歉，未能找到您要访问的页面。&lt;/p&gt;
+&lt;p&gt;请使用上方导航栏，或返回
+
+&lt;a class="link link--text" href="./"&gt;首页&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>隐私政策</title><link>https://docs.jujidata.com/privacy/</link><pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate><guid>https://docs.jujidata.com/privacy/</guid><description>&lt;p&gt;我们重视您的隐私，并致力于保护您的个人数据。本隐私政策说明了我们收集哪些信息、如何使用这些信息，以及您拥有的选择权。&lt;/p&gt;
+&lt;p&gt;我们仅收集为提供和改进服务所必需的信息，例如基本的使用分析，以及您选择与我们分享的任何细节（例如通过表单或支持请求）。我们不会出售您的个人数据。&lt;/p&gt;
+&lt;p&gt;如果您对本政策或我们如何处理您的数据有任何疑问，请通过本网站提供的联系方式与我们联系。&lt;/p&gt;</description></item></channel></rss>
