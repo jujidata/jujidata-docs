@@ -18,7 +18,7 @@
 > 据吉文档的主页面，包含所有指南、参考和资源。
 
 - [标注概念 (Concepts)](https://docs.jujidata.com/docs/concepts/)
-- [据吉网 (jujidata.com) ](https://docs.jujidata.com/docs/quick_guides/): 小数据，大价值 —— 让数据标注像工业流水线一样精准、透明。
+- [据吉网做什么的？ ](https://docs.jujidata.com/docs/quick_guides/): 小数据，大价值 —— 让数据标注像工业流水线一样精准、透明。
 - [模版中心](https://docs.jujidata.com/docs/templates/): 预置 10 大主流 AI 标注模版，支持高度自定义配置。
 - [Resources](https://docs.jujidata.com/docs/resources/): Discover curated links to official docs, tools, templates, and learning materials that help you deepen your knowledge and get more from this project.
 
@@ -28,11 +28,12 @@
 
 - [试标空间 (Sandbox)](https://docs.jujidata.com/docs/concepts/sandbox/): 通过小样任务测试供应商交付质量，降低大规模作业风险。
 
-### 据吉网 (jujidata.com) 
+### 据吉网做什么的？ 
 
 > 小数据，大价值 —— 让数据标注像工业流水线一样精准、透明。
 
-- [据吉网 (jujidata.com) ](https://docs.jujidata.com/docs/quick_guides/intro/): 小数据，大价值 —— 让数据标注像工业流水线一样精准、透明。
+- [快速上手：项目发布者 (需求方)](https://docs.jujidata.com/docs/quick_guides/buyer_guide/): 指导需求方在据吉网完成从注册到获取标注数据的全流程操作
+- [服务商 (乙方) 操作流程手册](https://docs.jujidata.com/docs/quick_guides/vendor_guide/)
 
 ### 模版中心
 

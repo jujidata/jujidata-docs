@@ -1,22 +1,104 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>据吉网 (jujidata.com) on 据吉文档</title><link>https://docs.jujidata.com/docs/quick_guides/</link><description>Recent content in 据吉网 (jujidata.com) on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Sun, 22 Mar 2026 08:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/quick_guides/index.xml" rel="self" type="application/rss+xml"/><item><title>据吉网 (jujidata.com)</title><link>https://docs.jujidata.com/docs/quick_guides/intro/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/intro/</guid><description>&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;小数据，大价值&lt;/strong&gt; —— 让数据标注像工业流水线一样精准、透明。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id="01-平台定位与愿景"&gt;01. 平台定位与愿景&lt;/h2&gt;
-&lt;p&gt;据吉网致力于解决 AI 数据服务市场中甲方“寻人难、质量控不住”与乙方“获客难、账期无保障”的深层矛盾。通过&lt;strong&gt;信息透明化、生产模块化、结算金融化&lt;/strong&gt;，构建起从项目发起到数据交付的全闭环信任生态。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;核心理念：&lt;/strong&gt; 在据吉网，我们让甲方对质量有底气，让乙方对结款有信心。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id="02-核心操作流程"&gt;02. 核心操作流程&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;发布需求&lt;/strong&gt;：甲方在线提交项目需求。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;智能竞标/试标&lt;/strong&gt;：系统匹配供应商，通过试标择优录取。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;线上签约托管&lt;/strong&gt;：资金由平台托管，从根源杜绝双向违约。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;模块化生产&lt;/strong&gt;：灵活组合标注组件，支持预标注。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;进度追踪与质检&lt;/strong&gt;：实时可视化追踪，严苛质检回溯。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;先结款后下载&lt;/strong&gt;：尾款结算后开放数据下载，保障乙方权益。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="03-功能模块详解"&gt;03. 功能模块详解&lt;/h2&gt;
-&lt;h3 id="a-供需匹配与信任构建"&gt;A. 供需匹配与信任构建&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;智能竞标&lt;/strong&gt;：算法匹配垂类领域供应商，并结合试标结果（Sandbox）择优录取。
-&lt;strong&gt;历史回溯&lt;/strong&gt;：甲方可根据乙方在平台的历史履约数据、准确率及评价进行画像评估。
-&lt;strong&gt;资金托管&lt;/strong&gt;：双方达成意向后线上签章，甲方支付预付款至平台托管。&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>据吉网做什么的？ on 据吉文档</title><link>https://docs.jujidata.com/docs/quick_guides/</link><description>Recent content in 据吉网做什么的？ on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 24 Mar 2026 20:15:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/quick_guides/index.xml" rel="self" type="application/rss+xml"/><item><title>快速上手：项目发布者 (需求方)</title><link>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</guid><description>&lt;p&gt;欢迎使用据吉网（jujidata）！无论您是需要为语音、视频还是自动驾驶模型进行数据标注，本指南都将帮助您快速完成从注册到发布项目的全过程。&lt;/p&gt;
+&lt;h2 id="-第一阶段准入与发布"&gt;🟢 第一阶段：准入与发布&lt;/h2&gt;
+&lt;h3 id="1-账号注册与登录"&gt;1. 账号注册与登录&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;登录方式&lt;/strong&gt;：支持 &lt;strong&gt;手机号验证码&lt;/strong&gt;、&lt;strong&gt;微信扫码&lt;/strong&gt; 等多种快捷方式，确保访问安全便捷。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;信息完善&lt;/strong&gt;：建议首次登录后在 &lt;strong&gt;“个人主页”&lt;/strong&gt; 中完善企业资质或个人信息，这有助于后续合同签署和提升企业信誉。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/user_info_hu_65e565d79971f41.webp"
+ width="1884"
+ height="761"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="用户信息界面"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;h3 id="2-发布项目需求"&gt;2. 发布项目需求&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;操作路径&lt;/strong&gt;：进入 &lt;code&gt;项目管理&lt;/code&gt; 页面 -&amp;gt; 点击 &lt;code&gt;发布项目&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;填写要点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;基础信息&lt;/strong&gt;：明确项目名称、任务类型（如：点云、语义分割）及数据规模。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;标注规则&lt;/strong&gt;：上传详尽的 PDF 或文档说明，建议包含正负样例。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;交付时间&lt;/strong&gt;：设置合理的预研、试标及最终交付节点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-第二阶段选商与撮合"&gt;🟡 第二阶段：选商与撮合&lt;/h2&gt;
+&lt;h3 id="3-筛选并选定乙方"&gt;3. 筛选并选定乙方&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;申请列表&lt;/strong&gt;：在项目详情页实时查看所有意向服务商（乙方）的投标申请。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多维评估&lt;/strong&gt;：系统提供乙方的 &lt;strong&gt;历史评分&lt;/strong&gt;、&lt;strong&gt;擅长领域&lt;/strong&gt; 及 &lt;strong&gt;过往案例&lt;/strong&gt; 供您参考。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;确认合作&lt;/strong&gt;：点击 &lt;code&gt;选定乙方&lt;/code&gt;，平台将锁定合作意向并开启商务流程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-前置交易管理"&gt;4. 前置交易管理&lt;/h3&gt;
+&lt;p&gt;在项目正式启动前，需在后台完成以下关键操作：&lt;/p&gt;</description></item><item><title>服务商 (乙方) 操作流程手册</title><link>https://docs.jujidata.com/docs/quick_guides/vendor_guide/</link><pubDate>Tue, 24 Mar 2026 20:15:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/vendor_guide/</guid><description>&lt;h1 id="-服务商-乙方接单方-操作流程"&gt;🛠️ 服务商 (乙方/接单方) 操作流程&lt;/h1&gt;
+&lt;p&gt;欢迎加入 &lt;strong&gt;据吉网 (Jujidata)&lt;/strong&gt; 服务商生态！作为专业的 &lt;strong&gt;数据标注团队&lt;/strong&gt; 或 &lt;strong&gt;个人专家&lt;/strong&gt;，您可以在平台匹配到涵盖自动驾驶、医疗 AI 和自然语言处理（NLP）等领域的优质项目。本手册将确保您从入驻到收款的全过程顺畅无阻。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-第一阶段入驻与档案建设"&gt;🟢 第一阶段：入驻与档案建设&lt;/h2&gt;
+&lt;h3 id="1-注册与验证"&gt;1. 注册与验证&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;账号注册&lt;/strong&gt;：使用邮箱或手机号创建账号。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;身份认证&lt;/strong&gt;：在 &lt;strong&gt;[服务商中心]&lt;/strong&gt; 提交您的营业执照或个人身份信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SEO 小贴士&lt;/strong&gt;：务必勾选您的 &lt;strong&gt;“核心擅长”&lt;/strong&gt;（如：3D点云、LiDAR、医疗影像分割）。详尽的标签会显著提升您在甲方搜索结果中的曝光率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- ![服务商认证界面](/images/provider_auth_zh.png) --&gt;
+&lt;h3 id="2-建立案例库-portfolio"&gt;2. 建立案例库 (Portfolio)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;往期案例&lt;/strong&gt;：上传您的项目经验（例如：“曾为自动驾驶系统标注过10万帧数据”）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;产能说明&lt;/strong&gt;：真实填写您的团队规模。这有助于甲方评估您处理大规模数据集的能力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-第二阶段投标与签约"&gt;🟡 第二阶段：投标与签约&lt;/h2&gt;
+&lt;h3 id="3-寻找并申请项目"&gt;3. 寻找并申请项目&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务广场&lt;/strong&gt;：在 &lt;code&gt;任务市场&lt;/code&gt; 中根据类型、单价和结算周期筛选任务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;研读指南&lt;/strong&gt;：仔细研究甲方的 &lt;strong&gt;标注手册&lt;/strong&gt;，确保您的团队技术能力与之匹配。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;提交投标&lt;/strong&gt;：点击 &lt;code&gt;申请参与&lt;/code&gt;，提供您的优势说明、预估工期及报价。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-合同与资金托管"&gt;4. 合同与资金托管&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;在线签约&lt;/strong&gt;：直接在平台签署 &lt;strong&gt;电子合同&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;托管保障&lt;/strong&gt;：项目只有在甲方的 &lt;strong&gt;托管资金&lt;/strong&gt; 到位后才会正式启动。据吉网以此保障您的劳动成果能得到准时结算。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-第三阶段执行与监控"&gt;🔵 第三阶段：执行与监控&lt;/h2&gt;
+&lt;h3 id="5-试标与对齐-calibration"&gt;5. 试标与对齐 (Calibration)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;样板任务&lt;/strong&gt;：按照要求完成少量“试标”任务，以对齐甲方的质量标准。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;反馈循环&lt;/strong&gt;：根据甲方的反馈及时调整标注风格，确保大规模生产时的 &lt;strong&gt;合格率&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="6-批量生产与进度同步"&gt;6. 批量生产与进度同步&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;实时同步&lt;/strong&gt;：定期提交您的工作进度。您的 &lt;strong&gt;进度条&lt;/strong&gt; 会实时同步到甲方的控制台，建立透明的信任关系。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="alert alert-info d-flex align-items-center" role="alert"&gt;
+ &lt;span class="me-2"&gt;🚀&lt;/span&gt;
+ 
+ 
+ &lt;span&gt;高分技巧：保持每日进度更新和低驳回率将提升您的“服务商信用分”，从而获得更多优先派单的机会。&lt;/span&gt;
+ 
+ 
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id="-第四阶段质检与结算"&gt;⚪ 第四阶段：质检与结算&lt;/h2&gt;
+&lt;h3 id="7-提交验收与审核"&gt;7. 提交验收与审核&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;里程碑提交&lt;/strong&gt;：在完成约定的阶段性任务后，点击 &lt;code&gt;请求审核&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;修正完善&lt;/strong&gt;：如果任务被驳回，请在 24 小时内完成修正并重新提交。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="8-结算与提现"&gt;8. 结算与提现&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;资金释放&lt;/strong&gt;：甲方审核通过后，资金将自动从托管账户释放到您的据吉网账户。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开票与提现&lt;/strong&gt;：您可以直接在平台申请提现，并根据需要在线申请开具电子发票。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="常见问题-faq"&gt;常见问题 (FAQ)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Q: 如何提高我的投标成功率？&lt;/strong&gt;
+A: 强大的案例库、快速的响应速度以及在试标环节展现出的专业性是中标的核心因素。&lt;/p&gt;</description></item></channel></rss>
