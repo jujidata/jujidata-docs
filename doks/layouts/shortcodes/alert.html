@@ -1,0 +1,12 @@
+<div class="alert alert-info d-flex align-items-center" role="alert">
+  {{ with .Get "icon" }}<span class="me-2">{{ . }}</span>{{ end }}
+  {{ if .IsNamedParams }}
+    {{ if .Get "text" }}
+      <span>{{ .Get "text" | markdownify }}</span>
+    {{ else }}
+      <span>{{ .Inner | markdownify }}</span>
+    {{ end }}
+  {{ else }}
+    <span>{{ .Inner | markdownify }}</span>
+  {{ end }}
+</div>

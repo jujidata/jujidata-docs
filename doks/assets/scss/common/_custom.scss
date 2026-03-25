@@ -1,3 +1,4 @@
+
 // Put your custom SCSS code here
 @import "navbar-left-align";
 // Put your custom SCSS code here
@@ -83,6 +84,11 @@ p.description {
       color: #0d6efd !important;
     }
   }
+}
+/* 圆角阴影图片样式 */
+.img {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 // 文档卡片左对齐修正

@@ -9,6 +9,6 @@ params:
   seo:
     title: "据吉文档 - 专业一站式AI数据标注服务平台"
     description: "据吉数据标注平台专注于提供高质量、多维度的AI数据处理服务。涵盖图像标注、文本分类、语音转写及视频标注，助力企业挖掘小数据背后的巨大商业价值，为您的AI项目保驾护航。"
-    canonical: "https://www.jujidata.com/" # 建议填入您网站的官方主页地址
+    canonical: "https://www.jujidata.com/" 
     robots: "index, follow" # 允许搜索引擎抓取并跟踪链接
 ---
