@@ -28,6 +28,7 @@
 
 - [试标空间 (Sandbox)](https://docs.jujidata.com/docs/concepts/sandbox/): 通过小样任务测试供应商交付质量，降低大规模作业风险。
 - [功能介绍：AI 预标注插件与开发者沙盒](https://docs.jujidata.com/docs/concepts/pre-annotation/)
+- [功能介绍：多账号身份切换 (Multi-Accounts)](https://docs.jujidata.com/docs/concepts/multi-accounts/)
 
 ### 据吉网做什么的？ 
 
