@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>标注概念 (Concepts) on 据吉文档</title><link>https://docs.jujidata.com/docs/concepts/</link><description>Recent content in 标注概念 (Concepts) on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Sun, 22 Mar 2026 08:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/concepts/index.xml" rel="self" type="application/rss+xml"/><item><title>试标空间 (Sandbox)</title><link>https://docs.jujidata.com/docs/concepts/sandbox/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/sandbox/</guid><description>&lt;h2 id="什么是试标空间"&gt;什么是试标空间？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>标注概念 (Concepts) on 据吉文档</title><link>https://docs.jujidata.com/docs/concepts/</link><description>Recent content in 标注概念 (Concepts) on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 24 Mar 2026 21:15:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/concepts/index.xml" rel="self" type="application/rss+xml"/><item><title>功能介绍：AI 预标注插件与开发者沙盒</title><link>https://docs.jujidata.com/docs/concepts/pre-annotation/</link><pubDate>Tue, 24 Mar 2026 21:15:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/pre-annotation/</guid><description>&lt;h1 id="-ai-预标注插件让数据标注进入自动驾驶时代"&gt;🤖 AI 预标注插件：让数据标注进入“自动驾驶”时代&lt;/h1&gt;
+&lt;p&gt;在处理大规模数据集时，纯人工标注往往效率低下。&lt;strong&gt;据吉网 (Jujidata)&lt;/strong&gt; 推出强大的预标注插件系统，允许用户结合 AI 模型力量，将标注时间缩短 60% 以上。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-桌面级工具联动"&gt;💻 桌面级工具联动&lt;/h2&gt;
+&lt;p&gt;为了获得更流畅的交互体验和更强的本地处理能力，我们推荐配合 &lt;strong&gt;据吉桌面版标注工具&lt;/strong&gt; 使用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;无缝集成&lt;/strong&gt;：下载并安装桌面版工具后，您可以直接在设置中加载自定义的预标注插件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地算力加速&lt;/strong&gt;：利用本地 GPU 或 CPU 运行预标注算法，减少网络延迟，实现秒级响应。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多格式支持&lt;/strong&gt;：插件能够预处理各种复杂的行业特定数据格式，并将其转化为可视化的标注草案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-插件开发沙盒-playground"&gt;🛠️ 插件开发沙盒 (Playground)&lt;/h2&gt;
+&lt;p&gt;每个企业的 AI 模型和数据标准都不尽相同。为此，我们提供了 &lt;strong&gt;据吉插件 Playground&lt;/strong&gt;，让开发者能够轻松量身定制。&lt;/p&gt;</description></item><item><title>试标空间 (Sandbox)</title><link>https://docs.jujidata.com/docs/concepts/sandbox/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/sandbox/</guid><description>&lt;h2 id="什么是试标空间"&gt;什么是试标空间？&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;试标空间 (Sandbox)&lt;/strong&gt; 是据吉网独创的“赛马机制”。甲方通过发布占总量 1%-5% 的小样任务，让参与竞标的多个供应商在同一标准下进行实操。&lt;/p&gt;
 &lt;h3 id="为什么需要试标"&gt;为什么需要试标？&lt;/h3&gt;
 &lt;ul&gt;
