@@ -32,8 +32,9 @@
 
 > 小数据，大价值 —— 让数据标注像工业流水线一样精准、透明。
 
-- [快速上手：项目发布者 (需求方)](https://docs.jujidata.com/docs/quick_guides/buyer_guide/): 指导需求方在据吉网完成从注册到获取标注数据的全流程操作
-- [服务商 (乙方) 操作流程手册](https://docs.jujidata.com/docs/quick_guides/vendor_guide/)
+- [快速上手：项目发布者 (甲方)](https://docs.jujidata.com/docs/quick_guides/buyer_guide/): 指导需求方在据吉网完成从注册到获取标注数据的全流程操作
+- [快速上手：项目服务商 (乙方) ](https://docs.jujidata.com/docs/quick_guides/vendor_guide/)
+- [快速上手：自标注模式](https://docs.jujidata.com/docs/quick_guides/self-annotated/)
 
 ### 模版中心
 

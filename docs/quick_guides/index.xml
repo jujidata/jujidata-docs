@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>据吉网做什么的？ on 据吉文档</title><link>https://docs.jujidata.com/docs/quick_guides/</link><description>Recent content in 据吉网做什么的？ on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 24 Mar 2026 20:15:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/quick_guides/index.xml" rel="self" type="application/rss+xml"/><item><title>快速上手：项目发布者 (需求方)</title><link>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</guid><description>&lt;p&gt;欢迎使用据吉网（jujidata）！无论您是需要为语音、视频还是自动驾驶模型进行数据标注，本指南都将帮助您快速完成从注册到发布项目的全过程。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>据吉网做什么的？ on 据吉文档</title><link>https://docs.jujidata.com/docs/quick_guides/</link><description>Recent content in 据吉网做什么的？ on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 24 Mar 2026 21:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/quick_guides/index.xml" rel="self" type="application/rss+xml"/><item><title>快速上手：项目发布者 (甲方)</title><link>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</guid><description>&lt;p&gt;欢迎使用据吉网（jujidata）！无论您是需要为语音、视频还是自动驾驶模型进行数据标注，本指南都将帮助您快速完成从注册到发布项目的全过程。&lt;/p&gt;
 &lt;h2 id="-第一阶段准入与发布"&gt;🟢 第一阶段：准入与发布&lt;/h2&gt;
 &lt;h3 id="1-账号注册与登录"&gt;1. 账号注册与登录&lt;/h3&gt;
 &lt;ul&gt;
@@ -37,7 +37,7 @@
 &lt;li&gt;&lt;strong&gt;确认合作&lt;/strong&gt;：点击 &lt;code&gt;选定乙方&lt;/code&gt;，平台将锁定合作意向并开启商务流程。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="4-前置交易管理"&gt;4. 前置交易管理&lt;/h3&gt;
-&lt;p&gt;在项目正式启动前，需在后台完成以下关键操作：&lt;/p&gt;</description></item><item><title>服务商 (乙方) 操作流程手册</title><link>https://docs.jujidata.com/docs/quick_guides/vendor_guide/</link><pubDate>Tue, 24 Mar 2026 20:15:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/vendor_guide/</guid><description>&lt;h1 id="-服务商-乙方接单方-操作流程"&gt;🛠️ 服务商 (乙方/接单方) 操作流程&lt;/h1&gt;
+&lt;p&gt;在项目正式启动前，需在后台完成以下关键操作：&lt;/p&gt;</description></item><item><title>快速上手：项目服务商 (乙方)</title><link>https://docs.jujidata.com/docs/quick_guides/vendor_guide/</link><pubDate>Tue, 24 Mar 2026 20:15:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/vendor_guide/</guid><description>&lt;h1 id="-服务商-乙方接单方-操作流程"&gt;🛠️ 服务商 (乙方/接单方) 操作流程&lt;/h1&gt;
 &lt;p&gt;欢迎加入 &lt;strong&gt;据吉网 (Jujidata)&lt;/strong&gt; 服务商生态！作为专业的 &lt;strong&gt;数据标注团队&lt;/strong&gt; 或 &lt;strong&gt;个人专家&lt;/strong&gt;，您可以在平台匹配到涵盖自动驾驶、医疗 AI 和自然语言处理（NLP）等领域的优质项目。本手册将确保您从入驻到收款的全过程顺畅无阻。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="-第一阶段入驻与档案建设"&gt;🟢 第一阶段：入驻与档案建设&lt;/h2&gt;
@@ -101,4 +101,22 @@
 &lt;hr&gt;
 &lt;h2 id="常见问题-faq"&gt;常见问题 (FAQ)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Q: 如何提高我的投标成功率？&lt;/strong&gt;
-A: 强大的案例库、快速的响应速度以及在试标环节展现出的专业性是中标的核心因素。&lt;/p&gt;</description></item></channel></rss>
+A: 强大的案例库、快速的响应速度以及在试标环节展现出的专业性是中标的核心因素。&lt;/p&gt;</description></item><item><title>快速上手：自标注模式</title><link>https://docs.jujidata.com/docs/quick_guides/self-annotated/</link><pubDate>Tue, 24 Mar 2026 21:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/self-annotated/</guid><description>&lt;h1 id="-自标注模式上手指南"&gt;🏠 自标注模式上手指南&lt;/h1&gt;
+&lt;p&gt;如果您拥有自己的标注团队，并希望利用 &lt;strong&gt;据吉网&lt;/strong&gt; 专业、圆润易用的 UI 工具进行内部协作，请选择“自标注”模式。该模式支持您自主管理成员、分配任务并直接获取成果。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-第一阶段项目创建与配置"&gt;🟢 第一阶段：项目创建与配置&lt;/h2&gt;
+&lt;h3 id="1-发布自标注项目"&gt;1. 发布自标注项目&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;操作路径&lt;/strong&gt;：进入 &lt;code&gt;项目管理&lt;/code&gt; 页面 -&amp;gt; 点击 &lt;code&gt;发布项目&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关键选择&lt;/strong&gt;：在发布选项中，找到 &lt;strong&gt;“标注模式”&lt;/strong&gt;，勾选 &lt;strong&gt;[自标注]&lt;/strong&gt; 选项。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置信息&lt;/strong&gt;：填入项目名称和任务类型（如：图片分割、语义理解），保存并生成项目卡片。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-开启组织成员管理"&gt;2. 开启组织成员管理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;进入管理&lt;/strong&gt;：在项目列表中找到刚才创建的项目卡片。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;管理入口&lt;/strong&gt;：点击卡片下方的 &lt;strong&gt;[组织成员管理]&lt;/strong&gt; 图标。在这里，您可以邀请您的团队成员加入特定项目。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-第二阶段资源准备与团队建设"&gt;🟡 第二阶段：资源准备与团队建设&lt;/h2&gt;
+&lt;h3 id="3-为标注人员购买席位"&gt;3. 为标注人员购买席位&lt;/h3&gt;
+&lt;p&gt;为了保障平台工具的高效运行，自标注模式需要为每位参与的标注人员分配“席位”。&lt;/p&gt;</description></item></channel></rss>
