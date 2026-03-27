@@ -56,7 +56,7 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 
   # Nav
   sectionSwitcher = false # true or false (default)
-  sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+  sectionNav = ["docs", "blog"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
   toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false
