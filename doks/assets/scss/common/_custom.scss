@@ -113,6 +113,15 @@ p.description {
     }
   }
 }
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  border: 1px solid #0d6efd !important; /* Matches your theme's blue */
+}
 /* 移动端适配：在小屏幕上允许标题变宽，避免折成三行 */
 @media (max-width: 768px) {
   h1.juji-hero-title {
