@@ -4,14 +4,27 @@
 
 - [页面未找到](https://docs.jujidata.com/404/): 您正在寻找的页面不存在或已被移动。请检查网址，使用导航浏览各个板块，或返回首页。
 - [隐私政策](https://docs.jujidata.com/privacy/): 了解我们如何收集、使用和保护您的个人数据，您对信息拥有的权利，以及如何联系我们。
-- [博客](https://docs.jujidata.com/blog/): Read product updates, release highlights, and practical tips that explain what’s new, why it matters, and how to get the most value from this project.
+- [博客指南](https://docs.jujidata.com/blog/): 此页面包含产品的多用的技术和产品亮点，希望能和大家多交流解惑。
 - [文档指南](https://docs.jujidata.com/docs/): 据吉文档的主页面，包含所有指南、参考和资源。
 
-## 博客
+## 博客指南
 
-> Read product updates, release highlights, and practical tips that explain what’s new, why it matters, and how to get the most value from this project.
+> 此页面包含产品的多用的技术和产品亮点，希望能和大家多交流解惑。
 
-- [Example Post](https://docs.jujidata.com/blog/example-post/): Learn how to write clear, structured product update posts that explain what changed, why it matters, and how users can successfully adopt new features.
+- [据吉网做什么的？ ](https://docs.jujidata.com/blog/releases/): 小数据，大价值 —— 让数据标注像工业流水线一样精准、透明。
+- [模版中心](https://docs.jujidata.com/blog/techniques/): 预置 10 大主流 AI 标注模版，支持高度自定义配置。
+
+### 据吉网做什么的？ 
+
+> 小数据，大价值 —— 让数据标注像工业流水线一样精准、透明。
+
+- [2D 矩形框标注 (Bounding Box)](https://docs.jujidata.com/blog/2d-%E7%9F%A9%E5%BD%A2%E6%A1%86%E6%A0%87%E6%B3%A8-bounding-box/): 最通用的物体检测标注模版，支持多标签分类与复杂属性关联。
+
+### 模版中心
+
+> 预置 10 大主流 AI 标注模版，支持高度自定义配置。
+
+- [自标注能力](https://docs.jujidata.com/blog/%E8%87%AA%E6%A0%87%E6%B3%A8%E8%83%BD%E5%8A%9B/): 数据标注平台自标注（Self-Annotation）功能的架构演进实践，兼容外包与SaaS两种业务流，介绍系统设计与核心重构思路。
 
 ## 文档指南
 

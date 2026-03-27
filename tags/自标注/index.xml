@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自标注 on 据吉文档</title><link>https://docs.jujidata.com/tags/%E8%87%AA%E6%A0%87%E6%B3%A8/</link><description>Recent content in 自标注 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Thu, 26 Mar 2026 17:46:37 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/tags/%E8%87%AA%E6%A0%87%E6%B3%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>自标注能力</title><link>https://docs.jujidata.com/blog/%E8%87%AA%E6%A0%87%E6%B3%A8%E8%83%BD%E5%8A%9B/</link><pubDate>Thu, 26 Mar 2026 17:46:37 +0000</pubDate><guid>https://docs.jujidata.com/blog/%E8%87%AA%E6%A0%87%E6%B3%A8%E8%83%BD%E5%8A%9B/</guid><description>&lt;h1 id="从外包模式到-saas-化数据标注平台自标注功能的架构演进实践"&gt;从外包模式到 SaaS 化：数据标注平台“自标注”功能的架构演进实践&lt;/h1&gt;
+&lt;p&gt;在构建和维护 AI 数据标注平台的过程中，我们最初采用了传统的“发包-接包”模式。这种模式下，系统具有强烈的“甲方（需求方）”与“乙方（服务商）”的身份隔离。&lt;/p&gt;
+&lt;p&gt;然而，随着大模型（LLM）等 AI 技术的爆发，越来越多的小型研发团队和个人开发者需要一个轻量级的工具来完成&lt;strong&gt;自主标注&lt;/strong&gt;，而不是将数据外包。为了满足这一需求，我们决定在不影响现有外包业务线的前提下，对系统进行一次 SaaS 化的架构升级，引入“自标注（Self-Annotation）”模式。&lt;/p&gt;
+&lt;p&gt;本文将复盘我们是如何通过最小化侵入的系统设计，分阶段完成这次核心业务逻辑重构的。&lt;/p&gt;
+&lt;h2 id="-面临的挑战与核心需求"&gt;🎯 面临的挑战与核心需求&lt;/h2&gt;
+&lt;p&gt;我们需要在同一套系统中兼容两种截然不同的业务流：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;外包标注 (OUTSOURCE)&lt;/strong&gt;：强流程驱动，涉及竞价、多重审核、严格的数据导出限制。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自主标注 (SELF_ANNOTATION)&lt;/strong&gt;：敏捷 SaaS 模式，免审核，用户即插即用，数据随时导入导出。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;架构原则&lt;/strong&gt;：最小化对现有逻辑的影响，新增的字段和逻辑默认向下兼容现有外包行为。&lt;/p&gt;</description></item></channel></rss>
