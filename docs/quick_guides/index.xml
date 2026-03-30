@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>据吉网做什么的？ on 据吉文档</title><link>https://docs.jujidata.com/docs/quick_guides/</link><description>Recent content in 据吉网做什么的？ on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 24 Mar 2026 21:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/quick_guides/index.xml" rel="self" type="application/rss+xml"/><item><title>快速上手：项目发布者 (甲方)</title><link>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</guid><description>&lt;p&gt;欢迎使用据吉网（jujidata）！无论您是需要为语音、视频还是自动驾驶模型进行数据标注，本指南都将帮助您快速完成从注册到发布项目的全过程。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>据吉网做什么的？ on 据吉文档</title><link>https://docs.jujidata.com/docs/quick_guides/</link><description>Recent content in 据吉网做什么的？ on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 24 Mar 2026 21:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/quick_guides/index.xml" rel="self" type="application/rss+xml"/><item><title>据吉网：一站式专业AI数据标注平台与服务全解析</title><link>https://docs.jujidata.com/docs/quick_guides/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/intro/</guid><description>&lt;h1 id="快速了解据吉网"&gt;快速了解据吉网&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="1-全面的标注工具能力"&gt;1. 全面的标注工具能力&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;标准化工作流&lt;/strong&gt;：内置 &lt;strong&gt;10 大核心技术类别&lt;/strong&gt; 的标准化工作流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/templates_hu_a68666d17572411e.webp"
+ width="329"
+ height="295"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="核心模版"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AI 赋能&lt;/strong&gt;：支持第三方 AI 预标注插件接入，大幅提升标注效率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/preannotation_hu_6082b2acdadb856c.webp"
+ width="418"
+ height="306"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="预标注"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;开箱即用&lt;/strong&gt;：针对不同行业的精细化需求，提供 &lt;strong&gt;62 种预设场景模版&lt;/strong&gt;（如 OCR、对话评分、时间序列分析等）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/refined_templates_hu_c19678b118ae7534.webp"
+ width="537"
+ height="310"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="模版细分"
+ id="h-rh-i-2"
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;灵活定制&lt;/strong&gt;：支持无限扩展自定义模版配置，像搭积木一样灵活组合标注组件，完美适配您的私有化协议和特殊业务逻辑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="标注页面"&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/labeling_hu_d46a3a0c7a1e17a2.webp"
+ width="429"
+ height="282"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="标注页面"
+ id="h-rh-i-3"
+&gt;&lt;/h2&gt;
+&lt;h2 id="2-丰富的标注团队资源"&gt;2. 丰富的标注团队资源&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;具备各领域标注专家团队。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/labelingteams_hu_a2746207090f16c8.webp"
+ width="708"
+ height="476"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="乙方团队"
+ id="h-rh-i-4"
+&gt;&lt;/p&gt;</description></item><item><title>快速上手：项目发布者 (甲方)</title><link>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</guid><description>&lt;p&gt;欢迎使用据吉网（jujidata）！无论您是需要为语音、视频还是自动驾驶模型进行数据标注，本指南都将帮助您快速完成从注册到发布项目的全过程。&lt;/p&gt;
 &lt;h2 id="-第一阶段准入与发布"&gt;🟢 第一阶段：准入与发布&lt;/h2&gt;
 &lt;h3 id="1-账号注册与登录"&gt;1. 账号注册与登录&lt;/h3&gt;
 &lt;ul&gt;
@@ -8,7 +86,7 @@
 &lt;p&gt;
 
 &lt;img
- src="../../docs/quick_guides/user_info_hu_65e565d79971f41.webp"
+ src="../../docs/quick_guides/images/user_info_hu_65e565d79971f41.webp"
  width="1884"
  height="761"
  decoding="async"
