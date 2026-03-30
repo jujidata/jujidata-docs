@@ -2,7 +2,7 @@
 # 基础元数据
 title: "快速上手：自标注模式"
 linkTitle: "自标注指南"
-weight: 120
+weight: 40
 date: 2026-03-24T21:00:00+08:00
 
 # SEO 管理模块
