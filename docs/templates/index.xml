@@ -1,4 +1,144 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模版中心 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/</link><description>Recent content in 模版中心 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Sun, 22 Mar 2026 08:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/index.xml" rel="self" type="application/rss+xml"/><item><title>2D 矩形框标注 (Bounding Box)</title><link>https://docs.jujidata.com/docs/templates/gallery_cv/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/gallery_cv/</guid><description>&lt;h2 id="1-模版概述"&gt;1. 模版概述&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模版中心 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/</link><description>Recent content in 模版中心 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 31 Mar 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/index.xml" rel="self" type="application/rss+xml"/><item><title>带掩码的语义分割 (Semantic Segmentation with Masks)</title><link>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-masks/</link><pubDate>Tue, 31 Mar 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-masks/</guid><description>&lt;h1 id="带掩码的语义分割使用说明"&gt;带掩码的语义分割使用说明&lt;/h1&gt;
+&lt;p&gt;带掩码的语义分割，核心是通过画笔掩码涂抹的方式，对目标物体进行像素级的覆盖标注，实现精细的语义分割标注。区别于多边形的轮廓式标注，适用于飞机、云朵、植被、医学影像病灶等无清晰轮廓或需要精细纹理标注的目标场景，广泛应用于航空航天影像分析、遥感图像识别、医疗影像诊断等领域。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;实现像素级精细标注：通过掩码涂抹精准覆盖目标区域，捕捉纹理细节，区分目标与背景的细微差异，为语义分割模型提供高密度训练数据；&lt;/li&gt;
+&lt;li&gt;适配无明确轮廓场景：解决多边形标注无法覆盖模糊边缘、复杂纹理目标的问题，提升标注数据的完整性；&lt;/li&gt;
+&lt;li&gt;支持多目标、多类别标注：可选择不同标签的掩码画笔，分别涂抹标注多个不同类别的目标，每个掩码区域关联对应标签。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;选择画笔，可调节画笔大小&lt;/li&gt;
+&lt;li&gt;选择不同颜色的标签，以区分不同目标&lt;/li&gt;
+&lt;li&gt;涂抹图中目标区域&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/semantic-segmentation-with-masks-example_hu_db20c7177d717142.webp"
+ width="760"
+ height="472"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="带掩码的语义分割示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，便于进行精准标注。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;涂抹掩码时，尽量贴合目标像素范围，避免遗漏目标区域或过度覆盖背景区域；&lt;/li&gt;
+&lt;li&gt;对于纹理复杂的目标，可调整画笔参数提升标注精细度；&lt;/li&gt;
+&lt;li&gt;不同类别的目标需选择对应标签的掩码画笔，避免标签混淆，影响模型训练效果；&lt;/li&gt;
+&lt;li&gt;标注过程中可随时切换画笔、橡皮擦工具，或撤销已完成的涂抹操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/semantic-segmentation-with-masks_hu_6686771dc707bb4.webp"
+ width="1026"
+ height="657"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="带掩码的语义分割示例"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;BrushLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;tag&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;飞机a&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;rgba(255, 0, 0, 0.7)&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;飞机b&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;rgba(0, 0, 255, 0.7)&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;BrushLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="掩码语义分割标注配置代码说明"&gt;掩码语义分割标注配置代码说明&lt;/h3&gt;
+&lt;p&gt;以下代码用于实现掩码语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>基于多边形的语义分割 (Polygon Semantic Segmentation)</title><link>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/</guid><description>&lt;h1 id="基于多边形的语义分割使用说明"&gt;基于多边形的语义分割使用说明&lt;/h1&gt;
+&lt;p&gt;基于多边形的语义分割，核心是通过绘制不规则多边形，精准框选目标物体的完整轮廓，实现像素级的语义标注。区别于矩形框的粗略定位，适用于车辆、行人、动植物、建筑等轮廓复杂的目标标注场景，广泛应用于自动驾驶、图像识别、医学影像分析等领域。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;实现像素级目标分割：精准捕捉目标边缘，区分目标与背景，为语义分割模型提供高精度训练数据；&lt;/li&gt;
+&lt;li&gt;适配复杂轮廓场景：解决矩形框标注无法精准覆盖不规则目标的问题，提升标注数据的准确性；&lt;/li&gt;
+&lt;li&gt;支持多目标、多类别标注：可同时标注多个不同类别的目标，每个目标单独绘制多边形，关联对应标签与属性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;选择不同颜色的标签，以区分不同目标&lt;/li&gt;
+&lt;li&gt;点击图像边缘关键点，依次绘制多边形，贴合目标轮廓&lt;/li&gt;
+&lt;li&gt;完成绘制后，再次点击第一个关键点，即可自动生成该目标的语义分割标注&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/semantic-segmentation-with-polygons-example_hu_3ef5e986f69dcf71.webp"
+ width="750"
+ height="555"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="带掩码的语义分割示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，便于进行精准标注。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;绘制多边形时，关键点尽量贴合目标边缘，避免遗漏或多余标注，确保轮廓完整；&lt;/li&gt;
+&lt;li&gt;若目标轮廓复杂，可多添加关键点，提升标注精度；&lt;/li&gt;
+&lt;li&gt;不同类别的目标需选择对应标签，避免标签混淆，影响模型训练效果；&lt;/li&gt;
+&lt;li&gt;标注过程中可随时撤销操作，或修改已绘制的多边形轮廓。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/semantic-segmentation-with-polygons_hu_754a9fbc674b9aef.webp"
+ width="903"
+ height="768"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="基于多边形的语义分割使用说明"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;选择标签并且点击图片开始标注&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;PolygonLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;label&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;strokeWidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;3&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;pointSize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;opacity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;0.9&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;人物一&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;人物二&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;人物三&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;人物四&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;yellow&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;人物五&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;PolygonLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="多边形语义分割标注配置代码说明"&gt;多边形语义分割标注配置代码说明&lt;/h3&gt;
+&lt;p&gt;以下代码用于实现多边形语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>2D 矩形框标注 (Bounding Box)</title><link>https://docs.jujidata.com/docs/templates/gallery_cv/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/gallery_cv/</guid><description>&lt;h2 id="1-模版概述"&gt;1. 模版概述&lt;/h2&gt;
 &lt;p&gt;2.D 矩形框标注主要用于&lt;strong&gt;物体检测 (Object Detection)&lt;/strong&gt; 任务。标注员通过绘制与目标边缘紧密贴合的四边形框，确定物体在图像中的位置（坐标）和类别（标签）。&lt;/p&gt;
 &lt;h3 id="适用场景"&gt;适用场景&lt;/h3&gt;
 &lt;ul&gt;
