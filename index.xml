@@ -49,7 +49,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;灵活定制&lt;/strong&gt;：支持无限扩展自定义模版配置，像搭积木一样灵活组合标注组件，完美适配您的私有化协议和特殊业务逻辑。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="标注页面"&gt;
+&lt;p&gt;
 
 &lt;img
  src="./docs/quick_guides/images/labeling_hu_d46a3a0c7a1e17a2.webp"
@@ -60,7 +60,8 @@
  loading="lazy"
  alt="标注页面"
  id="h-rh-i-3"
-&gt;&lt;/h2&gt;
+&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id="2-丰富的标注团队资源"&gt;2. 丰富的标注团队资源&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;具备各领域标注专家团队。&lt;/li&gt;
@@ -76,6 +77,45 @@
  loading="lazy"
  alt="乙方团队"
  id="h-rh-i-4"
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提供&lt;strong&gt;多维度团队筛选功能&lt;/strong&gt;（支持按星级、位置、人数等进行企业筛选，快速匹配最优团队）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/quick_guides/images/star_filter_hu_cdeb0821828c7d6f.webp"
+ width="304"
+ height="242"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="星级筛选"
+ id="h-rh-i-5"
+&gt;
+
+
+&lt;img
+ src="./docs/quick_guides/images/location_filter_hu_5fc7f3007fb8c914.webp"
+ width="306"
+ height="242"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="位置筛选"
+ id="h-rh-i-6"
+&gt;
+
+
+&lt;img
+ src="./docs/quick_guides/images/member_filter_hu_c1cf16a65115ebb4.webp"
+ width="294"
+ height="242"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="人数筛选"
+ id="h-rh-i-7"
 &gt;&lt;/p&gt;</description></item><item><title>快速上手：项目发布者 (甲方)</title><link>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</guid><description>&lt;p&gt;欢迎使用据吉网（jujidata）！无论您是需要为语音、视频还是自动驾驶模型进行数据标注，本指南都将帮助您快速完成从注册到发布项目的全过程。&lt;/p&gt;
 &lt;h2 id="-第一阶段准入与发布"&gt;🟢 第一阶段：准入与发布&lt;/h2&gt;
 &lt;h3 id="1-账号注册与登录"&gt;1. 账号注册与登录&lt;/h3&gt;
