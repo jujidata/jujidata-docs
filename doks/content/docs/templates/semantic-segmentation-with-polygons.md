@@ -1,5 +1,5 @@
 ---
-title: "基于多边形的语义分割 (Polygon Semantic Segmentation)"
+title: "基于多边形的语义分割 (Semantic Segmentation with Polygons)"
 description: "高精度语义分割标注模版，支持复杂轮廓目标标注，适配多场景语义分割需求。"
 lead: "基于多边形的语义分割是计算机视觉中高精度目标分割的核心标注方式，适用于轮廓不规则、边缘复杂的目标标注，据吉网通过优化多边形绘制交互，兼顾标注精度与效率，助力语义分割模型训练。"
 date: 2026-03-22T08:00:00+08:00
@@ -11,16 +11,16 @@ menu:
     parent: "模版使用"
 params:
   seo:
-      title: "基于多边形的语义分割 (Polygon Semantic Segmentation)"
+      title: "基于多边形的语义分割 (Semantic Segmentation with Polygons)"
       description: "高精度语义分割标注模版，支持复杂轮廓目标标注，适配多场景语义分割需求。"
       keywords: ["标注模板", "基于多边形的语义分割"]
-      canonical: "https://www.jujidata.com"
+      canonical: "https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons"
       robots: "index, follow"
 ---
 
 # 基于多边形的语义分割使用说明
 
-基于多边形的语义分割，核心是通过绘制不规则多边形，精准框选目标物体的完整轮廓，实现像素级的语义标注。区别于矩形框的粗略定位，适用于车辆、行人、动植物、建筑等轮廓复杂的目标标注场景，广泛应用于自动驾驶、图像识别、医学影像分析等领域。
+基于多边形的语义分割，其实就是“沿着目标边缘一点点描出来”：在目标轮廓上依次点击关键点，连成不规则多边形并闭合，尽量贴合目标外形，从而得到像素级的分割标注。它适合轮廓相对清晰、边缘复杂的目标，比如车辆、行人、动植物、建筑等，广泛应用于自动驾驶、图像识别、医学影像分析等领域。
 
 ## 标注核心作用
 
