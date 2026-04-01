@@ -62,4 +62,6 @@
 - [目标检测(Object Detection with Bounding Boxes)](https://docs.jujidata.com/docs/templates/object-detection-with-bounding-boxes/): 基于矩形框的目标检测标注模版，支持多类别边界框标注，适配通用检测与显微、遥感等场景。
 - [关键点标注 (Keypoints)](https://docs.jujidata.com/docs/templates/keypoints/): 关键点（Keypoints）标注模版，支持为目标关键部位逐点标注，并输出关键点名称与坐标，适配人脸、人体姿态、动物与零部件定位等场景。
 - [图像分类 (Image Classification)](https://docs.jujidata.com/docs/templates/image-classification/): 图像分类标注模版，通过单选/多选方式为整张图片选择类别标签，适配场景分类、内容审核、材质识别等任务。
+- [库存跟踪 (Inventory Tracking)](https://docs.jujidata.com/docs/templates/inventory-tracking/): 库存跟踪标注模版，通过多边形方式对货架商品区域进行精细标注，支持基于动态类别集合的库存盘点与位置跟踪。
+- [带边框的医学图像分类 (Medical Image Classification with Boxes)](https://docs.jujidata.com/docs/templates/medical-image-classification-with-bboxes/): 带边框的医学图像分类标注模版，结合病灶框选与整图分类，适配病理切片、医学影像筛查与异常识别场景。
 

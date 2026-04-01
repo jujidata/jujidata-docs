@@ -362,4 +362,141 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="图像分类标注配置代码说明"&gt;图像分类标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现图像分类标注功能，可直接复制使用，关键部分可根据实际分类需求修改。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;以下代码用于实现图像分类标注功能，可直接复制使用，关键部分可根据实际分类需求修改。&lt;/p&gt;</description></item><item><title>库存跟踪 (Inventory Tracking)</title><link>https://docs.jujidata.com/docs/templates/inventory-tracking/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/inventory-tracking/</guid><description>&lt;h1 id="库存跟踪使用说明"&gt;库存跟踪使用说明&lt;/h1&gt;
+&lt;p&gt;库存跟踪可以理解为“先选品类，再沿边缘把商品区域圈出来”：在货架图像中选择对应对象类别后，用多边形逐点圈定商品或物料区域，输出可用于库存统计与位置追踪的结构化标注结果。它适合商品密集、遮挡较多、摆放不规则的场景，常用于零售货架盘点、仓储库存管理、陈列监测与补货分析等任务。与基于多边形的语义分割相比，库存跟踪更强调按业务对象做数量与位置追踪，而不是仅做语义区域划分。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;提供可追踪的库存数据：通过目标区域与类别信息结合，形成可用于库存统计与变化追踪的数据基础；&lt;/li&gt;
+&lt;li&gt;适配复杂货架场景：多边形标注可更贴合不规则商品外形，减少背景干扰；&lt;/li&gt;
+&lt;li&gt;支持动态类别扩展：类别可通过数据字段动态传入，便于不同业务场景复用同一模板。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在顶部对象区确认或选择目标类别；&lt;/li&gt;
+&lt;li&gt;在图像中沿目标商品边缘依次点击关键点，绘制多边形；&lt;/li&gt;
+&lt;li&gt;闭合多边形后完成一个目标标注，继续处理其他商品区域。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/inventory-tracking-example_hu_d109aa4b14cc53ba.webp"
+ width="744"
+ height="613"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="库存跟踪标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，提升密集货架区域的标注准确性。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;多边形关键点应尽量贴合商品可见边缘，避免过度包含相邻商品；&lt;/li&gt;
+&lt;li&gt;被遮挡商品按可见区域标注，并保持同一批次标注口径一致；&lt;/li&gt;
+&lt;li&gt;类别名称应与业务侧库存体系保持一致，避免同义词混用造成统计偏差。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/inventory-tracking_hu_bf22f3a6dd499862.webp"
+ width="753"
+ height="478"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="库存跟踪标注模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;display:flex;justify-content:center&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;PolygonLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;objects&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$objects&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="库存跟踪标注配置代码说明"&gt;库存跟踪标注配置代码说明&lt;/h3&gt;
+&lt;p&gt;以下代码用于实现库存跟踪场景下的多边形标注功能，可直接复制使用，关键参数可按业务需求调整。&lt;/p&gt;</description></item><item><title>带边框的医学图像分类 (Medical Image Classification with Boxes)</title><link>https://docs.jujidata.com/docs/templates/medical-image-classification-with-bboxes/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/medical-image-classification-with-bboxes/</guid><description>&lt;h1 id="带边框的医学图像分类使用说明"&gt;带边框的医学图像分类使用说明&lt;/h1&gt;
+&lt;p&gt;带边框的医学图像分类可以理解为“先框病灶区域，再给整张图做分类”：在图像中用矩形框标出重点病灶，再选择整图分类标签（如正常细胞/异常细胞），输出同时包含局部位置和整体判断的标注结果。它适合病理切片、细胞筛查、医学影像异常识别等场景。与目标检测相比，该任务除框选病灶外，还强调对整张图给出统一分类结论。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;同时提供局部与全局信息：病灶框用于定位可疑区域，整图分类用于输出样本级结论；&lt;/li&gt;
+&lt;li&gt;适配医学筛查流程：便于构建“区域提示 + 分类判断”的训练数据；&lt;/li&gt;
+&lt;li&gt;提升数据可用性：同一份标注数据可支持检测与分类等多类下游任务。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在标签栏选择病灶类别，如“肿瘤”或“癌症”；&lt;/li&gt;
+&lt;li&gt;在图片中框选对应区域；&lt;/li&gt;
+&lt;li&gt;在分类区选择整图类别，如“正常细胞”或“异常细胞”。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/medical-image-classification-with-boxes-example_hu_1c46868f265ef4a5.webp"
+ width="747"
+ height="570"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="带边框的医学图像分类标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：可使用右侧工具栏放大图像后再框选，避免遗漏微小病灶区域。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;病灶框尽量覆盖主要病变区域，避免包含过多无关背景；&lt;/li&gt;
+&lt;li&gt;整图分类标准需统一，确保“正常/异常”判定口径一致；&lt;/li&gt;
+&lt;li&gt;若一张图存在多个病灶，可分别框选，但整图分类仍需给出单一明确结论。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/medical-image-classification-with-boxes_hu_656029059b4f4561.webp"
+ width="747"
+ height="570"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="带边框的医学图像分类模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;label&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;肿瘤&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;癌症&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;classification&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;正常细胞&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;异常细胞&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="带边框的医学图像分类配置代码说明"&gt;带边框的医学图像分类配置代码说明&lt;/h3&gt;
+&lt;p&gt;以下代码用于实现“局部框选 + 整图分类”的复合标注功能，可直接复制使用。&lt;/p&gt;</description></item></channel></rss>
