@@ -57,6 +57,9 @@
 > 预置 10 大主流 AI 标注模版，支持高度自定义配置。
 
 - [带掩码的语义分割 (Semantic Segmentation with Masks)](https://docs.jujidata.com/docs/templates/semantic-segmentation-with-masks/): 掩码式高精度语义分割标注模版，支持像素级掩码涂抹标注，适配精细纹理、不规则区域的语义分割需求。
-- [基于多边形的语义分割 (Polygon Semantic Segmentation)](https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/): 高精度语义分割标注模版，支持复杂轮廓目标标注，适配多场景语义分割需求。
+- [基于多边形的语义分割 (Semantic Segmentation with Polygons)](https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/): 高精度语义分割标注模版，支持复杂轮廓目标标注，适配多场景语义分割需求。
 - [2D 矩形框标注 (Bounding Box)](https://docs.jujidata.com/docs/templates/gallery_cv/): 最通用的物体检测标注模版，支持多标签分类与复杂属性关联。
+- [目标检测(Object Detection with Bounding Boxes)](https://docs.jujidata.com/docs/templates/object-detection-with-bounding-boxes/): 基于矩形框的目标检测标注模版，支持多类别边界框标注，适配通用检测与显微、遥感等场景。
+- [关键点标注 (Keypoints)](https://docs.jujidata.com/docs/templates/keypoints/): 关键点（Keypoints）标注模版，支持为目标关键部位逐点标注，并输出关键点名称与坐标，适配人脸、人体姿态、动物与零部件定位等场景。
+- [图像分类 (Image Classification)](https://docs.jujidata.com/docs/templates/image-classification/): 图像分类标注模版，通过单选/多选方式为整张图片选择类别标签，适配场景分类、内容审核、材质识别等任务。
 

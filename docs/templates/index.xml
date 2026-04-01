@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模版中心 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/</link><description>Recent content in 模版中心 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 31 Mar 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/index.xml" rel="self" type="application/rss+xml"/><item><title>带掩码的语义分割 (Semantic Segmentation with Masks)</title><link>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-masks/</link><pubDate>Tue, 31 Mar 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-masks/</guid><description>&lt;h1 id="带掩码的语义分割使用说明"&gt;带掩码的语义分割使用说明&lt;/h1&gt;
-&lt;p&gt;带掩码的语义分割，核心是通过画笔掩码涂抹的方式，对目标物体进行像素级的覆盖标注，实现精细的语义分割标注。区别于多边形的轮廓式标注，适用于飞机、云朵、植被、医学影像病灶等无清晰轮廓或需要精细纹理标注的目标场景，广泛应用于航空航天影像分析、遥感图像识别、医疗影像诊断等领域。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模版中心 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/</link><description>Recent content in 模版中心 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/index.xml" rel="self" type="application/rss+xml"/><item><title>带掩码的语义分割 (Semantic Segmentation with Masks)</title><link>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-masks/</link><pubDate>Tue, 31 Mar 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-masks/</guid><description>&lt;h1 id="带掩码的语义分割使用说明"&gt;带掩码的语义分割使用说明&lt;/h1&gt;
+&lt;p&gt;带掩码的语义分割可以理解为“像涂色一样去标注”：选择对应类别的画笔，在目标区域上涂抹，让掩码按像素把目标覆盖出来，从而得到更精细的分割标注。它适合边缘不太清晰、形状不规则，或需要保留细节纹理的目标，比如飞机、云朵、植被、医学影像病灶等，广泛应用于航空航天影像分析、遥感图像识别、医疗影像诊断等领域。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;实现像素级精细标注：通过掩码涂抹精准覆盖目标区域，捕捉纹理细节，区分目标与背景的细微差异，为语义分割模型提供高密度训练数据；&lt;/li&gt;
@@ -65,8 +65,8 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="掩码语义分割标注配置代码说明"&gt;掩码语义分割标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现掩码语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>基于多边形的语义分割 (Polygon Semantic Segmentation)</title><link>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/</guid><description>&lt;h1 id="基于多边形的语义分割使用说明"&gt;基于多边形的语义分割使用说明&lt;/h1&gt;
-&lt;p&gt;基于多边形的语义分割，核心是通过绘制不规则多边形，精准框选目标物体的完整轮廓，实现像素级的语义标注。区别于矩形框的粗略定位，适用于车辆、行人、动植物、建筑等轮廓复杂的目标标注场景，广泛应用于自动驾驶、图像识别、医学影像分析等领域。&lt;/p&gt;
+&lt;p&gt;以下代码用于实现掩码语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>基于多边形的语义分割 (Semantic Segmentation with Polygons)</title><link>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/</guid><description>&lt;h1 id="基于多边形的语义分割使用说明"&gt;基于多边形的语义分割使用说明&lt;/h1&gt;
+&lt;p&gt;基于多边形的语义分割，其实就是“沿着目标边缘一点点描出来”：在目标轮廓上依次点击关键点，连成不规则多边形并闭合，尽量贴合目标外形，从而得到像素级的分割标注。它适合轮廓相对清晰、边缘复杂的目标，比如车辆、行人、动植物、建筑等，广泛应用于自动驾驶、图像识别、医学影像分析等领域。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;实现像素级目标分割：精准捕捉目标边缘，区分目标与背景，为语义分割模型提供高精度训练数据；&lt;/li&gt;
@@ -164,4 +164,202 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="属性关联机制"&gt;属性关联机制&lt;/h3&gt;
-&lt;p&gt;支持为每个矩形框配置多级属性。例如，在标注“车辆”时，可联动弹出：&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;支持为每个矩形框配置多级属性。例如，在标注“车辆”时，可联动弹出：&lt;/p&gt;</description></item><item><title>目标检测(Object Detection with Bounding Boxes)</title><link>https://docs.jujidata.com/docs/templates/object-detection-with-bounding-boxes/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/object-detection-with-bounding-boxes/</guid><description>&lt;h1 id="目标检测使用说明"&gt;目标检测使用说明&lt;/h1&gt;
+&lt;p&gt;基于矩形框的目标检测，其实就是“先选标签，再把目标框出来”：先在标签栏选好类别，再在图像里用矩形框圈住目标，最终得到“位置 + 类别”的检测标注。它适合需要快速完成目标定位与分类的场景，比如细胞、车辆、行人、缺陷点等，常用于显微影像、自动驾驶、工业质检、遥感解译等任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;快速完成目标定位与分类：用矩形框标出目标大致范围并绑定标签，为检测类模型提供标准训练数据；&lt;/li&gt;
+&lt;li&gt;适配多目标、多类别：同一图像中可绘制多个框，不同颜色/标签区分不同类别；&lt;/li&gt;
+&lt;li&gt;标注成本与精度平衡：在不需要轮廓级精度时，矩形框标注效率更高，便于大规模数据生产。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在底部标签栏选择要标注的类别（不同标签对应不同颜色）；&lt;/li&gt;
+&lt;li&gt;在图像上按住拖拽，绘制覆盖目标的矩形框。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/object-detection-with-bounding-boxes-example_hu_4845a9bb75fc24cf.webp"
+ width="747"
+ height="488"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="目标检测（矩形框）操作示例"
+ id="h-rh-i-0"
+&gt;
+说明：双击选中已有框后可进行旋转，调整大小或位置，或删除后重新标注。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;矩形框应尽量紧贴目标外接范围，避免框过大包含过多背景或框过小遗漏目标；&lt;/li&gt;
+&lt;li&gt;同一类别多个实例需分别框选，每个框选择对应标签；&lt;/li&gt;
+&lt;li&gt;标注过程中可随时撤销、修改或删除已绘制的框。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/object-detection-with-bounding-boxes_hu_2efe4bb458768ffc.webp"
+ width="763"
+ height="503"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="目标检测（矩形框）模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;label&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;细胞a&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;细胞b&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="目标检测矩形框标注配置代码说明"&gt;目标检测矩形框标注配置代码说明&lt;/h3&gt;
+&lt;p&gt;以下代码用于实现基于矩形框的目标检测标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>关键点标注 (Keypoints)</title><link>https://docs.jujidata.com/docs/templates/keypoints/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/keypoints/</guid><description>&lt;h1 id="关键点标注使用说明"&gt;关键点标注使用说明&lt;/h1&gt;
+&lt;p&gt;关键点标注其实就是“在图上标关键位置”：在目标的关键部位（如眼睛、鼻子、耳朵）逐一点选，并给每个点对应一个名称。和只画一个外框的目标检测、或覆盖整片区域的分割相比，关键点标注更关注各个关键部位之间的位置关系。它常用于人脸五官、人体姿态、动物特征点、工业零件结构点等场景，广泛应用于姿态估计、视觉跟踪、目标检测和精细化识别任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;为姿态与部位检测提供训练数据：逐点标记关键部位位置，并绑定关键点名称，为关键点检测类模型提供监督信号；&lt;/li&gt;
+&lt;li&gt;支持多目标、多关键点标注：同一图像可为多个目标分别标注，关键点列表可包含多种部位名称；&lt;/li&gt;
+&lt;li&gt;兼顾标注效率与细粒度表达：在不需要轮廓级精度的情况下，通过关键点坐标实现较高的结构化信息输出。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在底部标签栏选择要标注的关键点标签&lt;/li&gt;
+&lt;li&gt;在图像上依次点击关键点位置（例如眼睛、鼻子、耳朵）&lt;/li&gt;
+&lt;li&gt;根据需要继续为同一目标或其他目标添加关键点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/keypoints-example_hu_2df8d57c7a72117a.webp"
+ width="748"
+ height="517"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="关键点标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，便于进行精准点击标注。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;关键点应尽量落在关键部位的中心或特征点位置，避免偏移导致模型学习误差；&lt;/li&gt;
+&lt;li&gt;同一关键点类别需保持一致的标注位置定义（例如“眼睛”是瞳孔中心还是眼角中心）；&lt;/li&gt;
+&lt;li&gt;标注过程中可随时撤销、修改或删除已绘制的关键点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/keypoints_hu_7cca6969122b246c.webp"
+ width="766"
+ height="492"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="关键点标注模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;KeyPointLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;kp-1&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;眼睛&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;鼻子&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;耳朵&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;KeyPointLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="关键点标注配置代码说明"&gt;关键点标注配置代码说明&lt;/h3&gt;
+&lt;p&gt;以下代码用于实现关键点标注功能，可直接复制使用，关键部分可根据实际关键点需求修改。&lt;/p&gt;</description></item><item><title>图像分类 (Image Classification)</title><link>https://docs.jujidata.com/docs/templates/image-classification/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/image-classification/</guid><description>&lt;h1 id="图像分类使用说明"&gt;图像分类使用说明&lt;/h1&gt;
+&lt;p&gt;图像分类其实就是“看整张图，选对应标签”：先判断图片整体表达的内容，再选择对应标签，输出图片所属类别。它适合关注整体语义的任务，比如场景识别（高山/大海/沙漠等）、内容审核、材质与品类识别等，广泛应用于检索、推荐与通用分类模型训练等领域。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;快速生成分类训练数据：为图片选择类别标签，形成标准化的「图片 + 类别」数据；&lt;/li&gt;
+&lt;li&gt;支持多类别选择：可按业务需要配置多个候选类别标签供标注人员选择；&lt;/li&gt;
+&lt;li&gt;标注效率高：无需绘制形状或逐点标注，适合大规模数据快速生产。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;查看图片内容并判断所属类别&lt;/li&gt;
+&lt;li&gt;在底部选项区勾选对应类别标签&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/image-classification-example_hu_9853afaea7f78c6f.webp"
+ width="749"
+ height="420"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="图像分类标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，便于更准确判断图片类别。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;类别定义需清晰且互斥规则一致（例如“高山/大海/沙漠”的判定边界），避免同图多义造成训练噪声；&lt;/li&gt;
+&lt;li&gt;若允许多选，请在标签体系中明确多选场景与组合规则，保证数据一致性；&lt;/li&gt;
+&lt;li&gt;标注过程中可随时取消或重新选择类别。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/image-classification_hu_af5e8b9f916fe41d.webp"
+ width="745"
+ height="477"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="图像分类标注模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;choice&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;高山&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;大海&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;沙漠&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="图像分类标注配置代码说明"&gt;图像分类标注配置代码说明&lt;/h3&gt;
+&lt;p&gt;以下代码用于实现图像分类标注功能，可直接复制使用，关键部分可根据实际分类需求修改。&lt;/p&gt;</description></item></channel></rss>
