@@ -64,4 +64,8 @@
 - [图像分类 (Image Classification)](https://docs.jujidata.com/docs/templates/image-classification/): 图像分类标注模版，通过单选/多选方式为整张图片选择类别标签，适配场景分类、内容审核、材质识别等任务。
 - [库存跟踪 (Inventory Tracking)](https://docs.jujidata.com/docs/templates/inventory-tracking/): 库存跟踪标注模版，通过多边形方式对货架商品区域进行精细标注，支持基于动态类别集合的库存盘点与位置跟踪。
 - [带边框的医学图像分类 (Medical Image Classification with Boxes)](https://docs.jujidata.com/docs/templates/medical-image-classification-with-bboxes/): 带边框的医学图像分类标注模版，结合病灶框选与整图分类，适配病理切片、医学影像筛查与异常识别场景。
+- [多页文档标注 (Multipage Documents)](https://docs.jujidata.com/docs/templates/multipage-documents/): 多页文档标注模版，支持按页展示文档图像并进行矩形框标注，适配票据、报表、公告等结构化信息提取场景。
+- [光学字符识别 (Optical Character Recognition)](https://docs.jujidata.com/docs/templates/optical-character-recognition/): 光学字符识别标注模版，支持文本区域框选/多边形标注与逐区域转写，适配票据、合同、表单等文档识别场景。
+- [基因视觉 (Visual Genome)](https://docs.jujidata.com/docs/templates/visual-genome/): 基因视觉标注模版，支持区域、属性、关系三类标签分栏标注，适配图像语义理解与场景关系建模任务。
+- [视觉问答 (Visual Question Answering)](https://docs.jujidata.com/docs/templates/visual-question-answering/): 视觉问答标注模版，结合图像内容与多问题文本输入，支持属性识别、计数、比较、逻辑运算等问答任务标注。
 

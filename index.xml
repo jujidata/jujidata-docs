@@ -499,161 +499,155 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="带边框的医学图像分类配置代码说明"&gt;带边框的医学图像分类配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现“局部框选 + 整图分类”的复合标注功能，可直接复制使用。&lt;/p&gt;</description></item><item><title>据吉网：我们可以做什么？</title><link>https://docs.jujidata.com/docs/quick_guides/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/intro/</guid><description>&lt;h1 id="快速了解据吉网"&gt;快速了解据吉网&lt;/h1&gt;
-&lt;hr&gt;
-&lt;h2 id="1-全面的标注工具能力"&gt;1. 全面的标注工具能力&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;标准化工作流&lt;/strong&gt;：内置 &lt;strong&gt;10 大核心技术类别&lt;/strong&gt; 的标准化工作流。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;以下代码用于实现“局部框选 + 整图分类”的复合标注功能，可直接复制使用。&lt;/p&gt;</description></item><item><title>多页文档标注 (Multipage Documents)</title><link>https://docs.jujidata.com/docs/templates/multipage-documents/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/multipage-documents/</guid><description>&lt;h1 id="多页文档标注使用说明"&gt;多页文档标注使用说明&lt;/h1&gt;
+&lt;p&gt;多页文档标注可以理解为“按页翻看文档，再框选关键信息”：在文档的每一页中选择对应标签（如标题、日期、编辑、地点、数量），并用矩形框标出目标文本区域，输出可用于信息抽取的结构化标注结果。它适合新闻稿、报告、表单、票据等跨页文档场景，常用于字段检测、版面解析与文档自动化处理任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;支持跨页连续标注：可在同一任务中逐页处理文档内容，避免页间信息割裂；&lt;/li&gt;
+&lt;li&gt;便于字段级信息提取：通过标签与框选区域绑定，形成可训练的数据样本；&lt;/li&gt;
+&lt;li&gt;提升文档结构化效率：对固定字段进行规范标注，降低后续抽取与质检成本。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在顶部标签区选择字段类型（如“标题”“日期”等）；&lt;/li&gt;
+&lt;li&gt;在当前页框选对应文本区域；&lt;/li&gt;
+&lt;li&gt;切换到下一页后重复标注，直至完成所有页。&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;
 
 &lt;img
- src="./docs/quick_guides/images/templates_hu_a68666d17572411e.webp"
- width="329"
- height="295"
+ src="./docs/templates/images/multipage-documents-example_hu_4147c1009f4d0bde.webp"
+ width="754"
+ height="425"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="核心模版"
+ alt="多页文档标注示例"
  id="h-rh-i-0"
 &gt;&lt;/p&gt;
+&lt;p&gt;说明：建议先完成当前页全部字段再翻页，便于保持字段标准一致。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;AI 赋能&lt;/strong&gt;：支持第三方 AI 预标注插件接入，大幅提升标注效率。&lt;/li&gt;
+&lt;li&gt;框选区域尽量紧贴文本边界，避免框入过多空白或相邻字段；&lt;/li&gt;
+&lt;li&gt;同类字段在不同页面保持一致标注口径（如“日期”是否包含分隔符）；&lt;/li&gt;
+&lt;li&gt;多页文档中若字段缺失，可跳过该字段但保持标签体系不变。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
 &lt;p&gt;
 
 &lt;img
- src="./docs/quick_guides/images/preannotation_hu_6082b2acdadb856c.webp"
- width="418"
- height="306"
+ src="./docs/templates/images/multipage-documents_hu_aab973d3b82c3876.webp"
+ width="757"
+ height="487"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="预标注"
+ alt="多页文档标注模板预览"
  id="h-rh-i-1"
 &gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;开箱即用&lt;/strong&gt;：针对不同行业的精细化需求，提供 &lt;strong&gt;62 种预设场景模版&lt;/strong&gt;（如 OCR、对话评分、时间序列分析等）。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;rectangles&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pdf&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;showInline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;标题&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;日期&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;编辑&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;gold&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;地点&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;数量&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;valueList&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$pages&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pdf&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="多页文档标注配置代码说明"&gt;多页文档标注配置代码说明&lt;/h3&gt;
+&lt;p&gt;以下代码用于实现多页文档的字段框选标注，可直接复制使用。&lt;/p&gt;</description></item><item><title>光学字符识别 (Optical Character Recognition)</title><link>https://docs.jujidata.com/docs/templates/optical-character-recognition/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/optical-character-recognition/</guid><description>&lt;h1 id="光学字符识别使用说明"&gt;光学字符识别使用说明&lt;/h1&gt;
+&lt;p&gt;光学字符识别可以理解为“先标出文字区域，再填写识别文本”：在图片中用矩形或多边形圈定文字位置，给区域选择标签（如文本、标题、编号、金额），并为每个区域录入对应文字内容。它适合票据、合同、报告、表单等场景，常用于文字检测、文本识别与关键信息抽取任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;同时提供定位与转写数据：区域标注用于文本定位，转写结果用于识别训练；&lt;/li&gt;
+&lt;li&gt;适配复杂版式文档：支持矩形与多边形两种区域形状，便于处理倾斜或不规则文本；&lt;/li&gt;
+&lt;li&gt;支持字段化管理：通过标签区分不同文本类型，提升后续抽取与质检效率。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;选择标签类型，如“文本”“标题”“编号”“金额”；&lt;/li&gt;
+&lt;li&gt;在图中使用矩形或多边形标出文字区域；&lt;/li&gt;
+&lt;li&gt;在对应区域输入识别文本并提交。&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;
 
 &lt;img
- src="./docs/quick_guides/images/refined_templates_hu_c19678b118ae7534.webp"
- width="537"
- height="310"
+ src="./docs/templates/images/optical-character-recognition-example_hu_108dada55e84ba4d.webp"
+ width="742"
+ height="686"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="模版细分"
- id="h-rh-i-2"
-&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;灵活定制&lt;/strong&gt;：支持无限扩展自定义模版配置，像搭积木一样灵活组合标注组件，完美适配您的私有化协议和特殊业务逻辑。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/quick_guides/images/labeling_hu_d46a3a0c7a1e17a2.webp"
- width="429"
- height="282"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="标注页面"
- id="h-rh-i-3"
-&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="2-丰富的标注团队资源"&gt;2. 丰富的标注团队资源&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;具备各领域标注专家团队。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/quick_guides/images/labelingteams_hu_a2746207090f16c8.webp"
- width="708"
- height="476"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="乙方团队"
- id="h-rh-i-4"
-&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;提供&lt;strong&gt;多维度团队筛选功能&lt;/strong&gt;（支持按星级、位置、人数等进行企业筛选，快速匹配最优团队）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/quick_guides/images/star_filter_hu_cdeb0821828c7d6f.webp"
- width="304"
- height="242"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="星级筛选"
- id="h-rh-i-5"
-&gt;
-
-
-&lt;img
- src="./docs/quick_guides/images/location_filter_hu_5fc7f3007fb8c914.webp"
- width="306"
- height="242"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="位置筛选"
- id="h-rh-i-6"
-&gt;
-
-
-&lt;img
- src="./docs/quick_guides/images/member_filter_hu_c1cf16a65115ebb4.webp"
- width="294"
- height="242"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="人数筛选"
- id="h-rh-i-7"
-&gt;&lt;/p&gt;</description></item><item><title>快速上手：项目发布者 (甲方)</title><link>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/buyer_guide/</guid><description>&lt;p&gt;欢迎使用据吉网（jujidata）！无论您是需要为语音、视频还是自动驾驶模型进行数据标注，本指南都将帮助您快速完成从注册到发布项目的全过程。&lt;/p&gt;
-&lt;h2 id="-第一阶段准入与发布"&gt;🟢 第一阶段：准入与发布&lt;/h2&gt;
-&lt;h3 id="1-账号注册与登录"&gt;1. 账号注册与登录&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;登录方式&lt;/strong&gt;：支持 &lt;strong&gt;手机号验证码&lt;/strong&gt;、&lt;strong&gt;微信扫码&lt;/strong&gt; 等多种快捷方式，确保访问安全便捷。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;信息完善&lt;/strong&gt;：建议首次登录后在 &lt;strong&gt;“个人主页”&lt;/strong&gt; 中完善企业资质或个人信息，这有助于后续合同签署和提升企业信誉。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/quick_guides/images/user_info_hu_65e565d79971f41.webp"
- width="1884"
- height="761"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="用户信息界面"
+ alt="光学字符识别标注示例"
  id="h-rh-i-0"
 &gt;&lt;/p&gt;
-&lt;h3 id="2-发布项目需求"&gt;2. 发布项目需求&lt;/h3&gt;
+&lt;p&gt;说明：建议先完成区域标注，再统一填写转写文本，减少漏标和错配。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;操作路径&lt;/strong&gt;：进入 &lt;code&gt;项目管理&lt;/code&gt; 页面 -&amp;gt; 点击 &lt;code&gt;发布项目&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;填写要点&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;基础信息&lt;/strong&gt;：明确项目名称、任务类型（如：点云、语义分割）及数据规模。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;标注规则&lt;/strong&gt;：上传详尽的 PDF 或文档说明，建议包含正负样例。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;交付时间&lt;/strong&gt;：设置合理的预研、试标及最终交付节点。&lt;/li&gt;
+&lt;li&gt;标注区域尽量贴合文字边界，避免包含相邻无关内容；&lt;/li&gt;
+&lt;li&gt;转写文本需与原文一致，保留必要符号与格式（如编号、金额小数点）；&lt;/li&gt;
+&lt;li&gt;对难辨识文字可按项目规范记录，不要随意猜测。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id="-第二阶段选商与撮合"&gt;🟡 第二阶段：选商与撮合&lt;/h2&gt;
-&lt;h3 id="3-筛选并选定乙方"&gt;3. 筛选并选定乙方&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;申请列表&lt;/strong&gt;：在项目详情页实时查看所有意向服务商（乙方）的投标申请。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多维评估&lt;/strong&gt;：系统提供乙方的 &lt;strong&gt;历史评分&lt;/strong&gt;、&lt;strong&gt;擅长领域&lt;/strong&gt; 及 &lt;strong&gt;过往案例&lt;/strong&gt; 供您参考。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;确认合作&lt;/strong&gt;：点击 &lt;code&gt;选定乙方&lt;/code&gt;，平台将锁定合作意向并开启商务流程。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="4-前置交易管理"&gt;4. 前置交易管理&lt;/h3&gt;
-&lt;p&gt;在项目正式启动前，需在后台完成以下关键操作：&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/templates/images/optical-character-recognition_hu_df95998ae7da76a1.webp"
+ width="1024"
+ height="656"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="光学字符识别模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Labels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;label&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;文本&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;标题&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;编号&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;金额&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Labels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Rectangle&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;bbox&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;strokeWidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Polygon&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;poly&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;strokeWidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;TextArea&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;transcription&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;editable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;perRegion&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;maxSubmissions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;rows&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;5&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;placeholder&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Recognized Text&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;displayMode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;region-list&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="光学字符识别配置代码说明"&gt;光学字符识别配置代码说明&lt;/h3&gt;
+&lt;p&gt;以下代码用于实现 OCR 场景下的“区域定位 + 文本转写”联合标注。&lt;/p&gt;</description></item></channel></rss>
