@@ -79,4 +79,8 @@
 - [ASR 假设选择 (ASR Hypotheses)](https://docs.jujidata.com/docs/templates/asr-hypotheses/): ASR 假设选择标注模版，结合波形播放器与多条候选转写，支持在听清音频后勾选最贴近真实发音的一条结果。
 - [基于内容图像检索 (Content-Based Image Search)](https://docs.jujidata.com/docs/templates/content-based-image-search/): 基于内容图像检索标注模版，展示查询图与若干候选图，支持多选判定与检索相关性标注。
 - [文档检索 (Document Retrieval)](https://docs.jujidata.com/docs/templates/document-retrieval/): 文档检索标注模版，给定查询语句与多条候选文档，支持单选相关文档判定，适配检索排序与召回评估场景。
+- [成对分类 (Pairwise Classification)](https://docs.jujidata.com/docs/templates/pairwise-classification/): 成对分类标注模版，展示两条候选内容并进行二选一判断，适配偏好学习、排序对比与质量评估场景。
+- [成对回归 (Pairwise Regression)](https://docs.jujidata.com/docs/templates/pairwise-regression/): 成对回归标注模版，展示两张图片并通过评分组件标注相同对象可能性，适配相似度学习与检索打分场景。
+- [搜索页面排序 (SERP Ranking)](https://docs.jujidata.com/docs/templates/serp-ranking/): 搜索页面排序标注模版，支持对检索结果进行多选相关性判断，并补充搜索质量评分与标注置信度。
+- [文本到图像生成 (Text-to-Image)](https://docs.jujidata.com/docs/templates/text-to-image/): 文本到图像生成标注模版，展示提示词与多张候选图，支持多选评估生成结果与提示词的一致性。
 
