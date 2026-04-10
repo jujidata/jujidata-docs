@@ -56,15 +56,9 @@
 
 > 预置 10 大主流 AI 标注模版，支持高度自定义配置。
 
+- [自然语言处理](https://docs.jujidata.com/docs/templates/natural-language-processing/): 文本与语言类标注模版，覆盖分类、摘要、实体、问答、审核与翻译等常见 NLP 任务。
 - [计算机视觉](https://docs.jujidata.com/docs/templates/computer-vision/): 预置 10 大主流 AI 标注模版，支持高度自定义配置。
 - [2D 矩形框标注 (Bounding Box)](https://docs.jujidata.com/docs/templates/gallery_cv/): 最通用的物体检测标注模版，支持多标签分类与复杂属性关联。
-- [问答系统 (Question Answering)](https://docs.jujidata.com/docs/templates/question-answering/): 问答系统标注模版，支持阅读段落、根据问题在原文中划出答案片段，适配抽取式阅读理解与机器阅读理解任务。
-- [文本分类 (Text Classification)](https://docs.jujidata.com/docs/templates/text-classification/): 文本分类标注模版，支持展示待分类文本并以单选方式选择类别，适配情感分析、主题分类、意图识别等 NLP 任务。
-- [命名实体识别 (Named Entity Recognition)](https://docs.jujidata.com/docs/templates/named-entity-recognition/): 命名实体识别标注模版，支持在文本中直接划选并标记实体类别，适配人物、时间、地点、事件等信息抽取任务。
-- [分类体系 (Taxonomy)](https://docs.jujidata.com/docs/templates/taxonomy/): 分类体系标注模版，支持多级树形标签选择，适配层级分类、主题归档与知识结构化场景。
-- [内容审核 (Content Moderation)](https://docs.jujidata.com/docs/templates/content-moderation/): 内容审核标注模版，支持多标签风险类别选择与补充评论，适配文本安全审查、社区治理与合规风控场景。
-- [机器翻译 (Machine Translation)](https://docs.jujidata.com/docs/templates/machine-translation/): 机器翻译标注模版，支持阅读源语言文本并录入目标语言译文，适配翻译数据构建、术语对齐与多语种模型训练场景。
-- [文本摘要 (Text Summarization)](https://docs.jujidata.com/docs/templates/text-summarization/): 文本摘要标注模版，支持阅读原文后输出一句话总结，适配摘要生成、关键信息压缩与内容理解评测场景。
 - [ASR 假设选择 (ASR Hypotheses)](https://docs.jujidata.com/docs/templates/asr-hypotheses/): ASR 假设选择标注模版，结合波形播放器与多条候选转写，支持在听清音频后勾选最贴近真实发音的一条结果。
 - [基于内容图像检索 (Content-Based Image Search)](https://docs.jujidata.com/docs/templates/content-based-image-search/): 基于内容图像检索标注模版，展示查询图与若干候选图，支持多选判定与检索相关性标注。
 - [文档检索 (Document Retrieval)](https://docs.jujidata.com/docs/templates/document-retrieval/): 文档检索标注模版，给定查询语句与多条候选文档，支持单选相关文档判定，适配检索排序与召回评估场景。

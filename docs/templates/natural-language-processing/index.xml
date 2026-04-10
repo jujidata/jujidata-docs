@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自然语言处理 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/</link><description>Recent content in 自然语言处理 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/natural-language-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>文本分类 (Text Classification)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/text-classification/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/text-classification/</guid><description>&lt;h1 id="文本分类使用说明"&gt;文本分类使用说明&lt;/h1&gt;
+&lt;p&gt;文本分类可以理解为「读一句话或一段字，选一个最贴切的标签」：界面先展示 &lt;code&gt;$text&lt;/code&gt; 绑定的正文，再在下方卡片中从若干互斥选项里点选一项（如情感分析中的积极 / 消极 / 中性）。它适合评论舆情、客服意图、新闻主题等场景，常用于情感分类、主题标注与意图识别训练。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;输出标准类别标签：与文本一一对应，便于直接训练分类器；&lt;/li&gt;
+&lt;li&gt;单选约束清晰：&lt;code&gt;choice=&amp;quot;single&amp;quot;&lt;/code&gt; 避免一条样本多标签冲突（除非业务改为多选）；&lt;/li&gt;
+&lt;li&gt;布局集中：正文与选项分区展示，阅读与点选路径短。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读上方待分类文本，把握整体语气或主题；&lt;/li&gt;
+&lt;li&gt;在下方卡片标题「选择文本情感」对应区域，点选一项，可自动提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/text-classification-example_hu_9c8f0a6fcc235eb8.webp"
+ width="722"
+ height="326"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="文本分类标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：若项目对「中性」与「无明显情感」有区分，需在标注规范中写清边界；快捷键 &lt;code&gt;[1]&lt;/code&gt; &lt;code&gt;[2]&lt;/code&gt; &lt;code&gt;[3]&lt;/code&gt; 以平台实际显示为准。&lt;/p&gt;</description></item><item><title>分类体系 (Taxonomy)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/taxonomy/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/taxonomy/</guid><description>&lt;h1 id="分类体系使用说明"&gt;分类体系使用说明&lt;/h1&gt;
+&lt;p&gt;分类体系可以理解为“选择最符合文本的标签”：先阅读文本，再从树形选项中选择最匹配的分类节点。与普通单层分类不同，Taxonomy 能表达“父类 -&amp;gt; 子类”的层级关系，例如先是“美洲板块”，再细分到“北美洲/南美洲”。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;支持层级标签表达：不仅知道“属于哪类”，还能表示“属于该类下的哪一支”；&lt;/li&gt;
+&lt;li&gt;提升分类一致性：统一树形体系后，跨团队标注口径更稳定；&lt;/li&gt;
+&lt;li&gt;便于后续检索统计：可按父类聚合，也可按叶子节点细分分析。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读题目内容，点击右侧下拉箭头展开分类树；&lt;/li&gt;
+&lt;li&gt;在列表中选择目标节点；若为父子结构，可按需展开后选子类；&lt;/li&gt;
+&lt;li&gt;提交前核对已选标签是否完整、是否存在误选。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/taxonomy-example_hu_1c659867a8f268c2.webp"
+ width="705"
+ height="425"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="分类体系标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：示例中“美洲板块”下含“北美洲/南美洲”子项；若业务要求更细粒度（如国家、地区），可继续向下扩展 &lt;code&gt;Choice&lt;/code&gt; 层级。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;父子节点命名应避免语义重叠，减少“该选父类还是子类”的歧义；&lt;/li&gt;
+&lt;li&gt;若项目只允许最末级节点生效，需在标注规范中明确“禁止只选父类”；&lt;/li&gt;
+&lt;li&gt;调整树结构后，建议同步更新历史数据映射与质检规则。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/taxonomy_hu_1a9a91fb3d22fddc.webp"
+ width="1079"
+ height="662"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="分类体系模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>内容审核 (Content Moderation)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/content-moderation/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/content-moderation/</guid><description>&lt;h1 id="内容审核使用说明"&gt;内容审核使用说明&lt;/h1&gt;
+&lt;p&gt;内容审核可以理解为“先判断文本涉及哪些类别，再补充审核意见”：标注员先阅读文本内容，勾选一个或多个标签（如侮辱、威胁、积极、温暖），再在评论框写下必要说明，用于支撑判定依据或记录边界情况。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;支持多标签判定：同一文本可同时命中多个类别，贴合真实审核场景；&lt;/li&gt;
+&lt;li&gt;保留人工解释：评论字段可沉淀判定依据，便于质检复核；&lt;/li&gt;
+&lt;li&gt;适配策略优化：标签与评论结合后，可用于规则迭代与模型微调。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;通读文本，判断文本类别；&lt;/li&gt;
+&lt;li&gt;在标签区勾选一个或多个标签；&lt;/li&gt;
+&lt;li&gt;可以在“请补充一些意见或评论”区域填写说明，回车即可添加评论；&lt;/li&gt;
+&lt;li&gt;提交前复核标签是否漏选、评论是否清晰。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/content-moderation-example_hu_dd7520d4804baec0.webp"
+ width="719"
+ height="534"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="内容审核标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：若文本同时包含冲突信号（如“积极”与“威胁”并存），应按项目规范保留多标签并在评论中解释上下文。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;choice=&amp;quot;multiple&amp;quot;&lt;/code&gt; 表示多选模式，若业务改为互斥判定需调整为单选；&lt;/li&gt;
+&lt;li&gt;标签定义需配套审核准则（命中条件、例外条件、优先级）；&lt;/li&gt;
+&lt;li&gt;评论建议聚焦“为什么命中该标签”，避免无信息量描述。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/content-moderation_hu_87f0c3cdf2f644b4.webp"
+ width="1010"
+ height="648"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="内容审核模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Text&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$text&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;content_moderation&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;choice&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;multiple&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;showInline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;false&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;侮辱&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;威胁&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;brown&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;积极&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;温暖&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;margin: var(--spacing-tight); box-shadow: 0 4px 8px rgba(var(--color-neutral-shadow-raw) / 10%); padding: var(--spacing-tight) var(--spacing-base); border-radius: var(--corner-radius-small); background-color: var(--color-neutral-background); border: 1px solid var(--color-neutral-border);&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;请补充一些意见或评论&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;TextArea&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;comments&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;false&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="内容审核配置代码说明"&gt;内容审核配置代码说明&lt;/h3&gt;
+&lt;p&gt;以上代码用于实现“文本审核 + 多标签分类 + 备注说明”的联合标注流程。&lt;/p&gt;</description></item><item><title>机器翻译 (Machine Translation)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/machine-translation/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/machine-translation/</guid><description>&lt;h1 id="机器翻译使用说明"&gt;机器翻译使用说明&lt;/h1&gt;
+&lt;p&gt;机器翻译：标注员先阅读中文源文本，再在右侧输入框中填写西班牙语译文。该模板适合通用文本翻译、行业语料构建、术语库校对等场景，常用于多语种翻译模型训练与质量评估。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;构建高质量平行语料：源文与译文一一对应，可直接用于训练与评测；&lt;/li&gt;
+&lt;li&gt;保持术语一致性：通过统一译法降低模型输出波动；&lt;/li&gt;
+&lt;li&gt;提升人工可控性：支持人工逐条翻译与复核，便于质量管控。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读左侧中文段落，理解整体语义和句间逻辑；&lt;/li&gt;
+&lt;li&gt;在右侧输入框填写西班牙语译文，注意检查是否漏译、误译或语法不通顺；&lt;/li&gt;
+&lt;li&gt;点击添加按钮提交译文；&lt;/li&gt;
+&lt;li&gt;提交后可以点击编辑键进行编辑，或者点击删除键以删除译文。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/machine-translation-example_hu_741e31f401a75bad.webp"
+ width="721"
+ height="309"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="机器翻译标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：建议优先保证“忠实原意 + 语句通顺”；若项目有术语表，请严格按术语表翻译。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 表示译文必填，空内容无法提交；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;maxSubmissions=&amp;quot;1&amp;quot;&lt;/code&gt; 限制每条样本只提交一版译文，避免重复记录；&lt;/li&gt;
+&lt;li&gt;涉及专有名词时，优先使用项目约定译法并保持全量数据一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/machine-translation_hu_7279857cbcfc7d40.webp"
+ width="952"
+ height="685"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="机器翻译模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>文本摘要 (Text Summarization)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/text-summarization/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/text-summarization/</guid><description>&lt;h1 id="文本摘要使用说明"&gt;文本摘要使用说明&lt;/h1&gt;
+&lt;p&gt;文本摘要可以理解为“读完原文，用一句话提炼核心信息”：标注员先阅读正文，再在输入框中写出简洁、准确、信息完整的一句话总结。该模板适用于资讯摘要、文档浓缩、内容分发与知识整理等场景。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;构建高质量“原文-摘要”样本，用于摘要模型训练与评测；&lt;/li&gt;
+&lt;li&gt;压缩冗余信息，保留关键事实，提升内容消费效率；&lt;/li&gt;
+&lt;li&gt;统一摘要口径，便于后续质检与多版本对比。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;通读原文，识别主要对象、场景与核心观点；&lt;/li&gt;
+&lt;li&gt;在“请用一句话进行总结”输入框中填写摘要，并检查摘要是否忠实原文、是否遗漏关键要点；&lt;/li&gt;
+&lt;li&gt;点击添加按钮提交摘要。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/text-summarization-example_hu_5b122e386707df86.webp"
+ width="726"
+ height="440"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="文本摘要标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：摘要建议控制在一句完整语义内，避免逐句拼接原文；优先“准确”再“精炼”。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 表示摘要必填，空值不可提交；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;maxSubmissions=&amp;quot;1&amp;quot;&lt;/code&gt; 限制单条样本仅提交一条摘要；&lt;/li&gt;
+&lt;li&gt;避免加入原文未出现的事实或主观推断，确保信息保真。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/text-summarization_hu_448b7ab9f3837a85.webp"
+ width="1010"
+ height="650"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="文本摘要模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;请阅读下面的文本：&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Text&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$text&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;请用一句话进行总结：&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;TextArea&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;answer&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;showSubmitButton&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;maxSubmissions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;editable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="文本摘要配置代码说明"&gt;文本摘要配置代码说明&lt;/h3&gt;
+&lt;p&gt;以上代码用于实现“阅读文本 -&amp;gt; 输出一句话摘要”的流程。&lt;/p&gt;</description></item><item><title>问答系统 (Question Answering)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</guid><description>&lt;h1 id="问答系统使用说明"&gt;问答系统使用说明&lt;/h1&gt;
+&lt;p&gt;问答系统可以理解为「读一段文字，按问题在原文里标出答案」：先阅读给定段落，再看问题，最后在段落中拖选能直接回答问题的连续文字片段。它适合新闻、百科、说明书等场景，常用于抽取式问答、阅读理解与检索增强类模型训练。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;提供可定位的答案监督：答案与原文片段对齐，便于训练与评测；&lt;/li&gt;
+&lt;li&gt;约束答案来源：答案必须来自段落中的连续文本，减少凭空编造；&lt;/li&gt;
+&lt;li&gt;标注流程清晰：先选标签再划词，与常见阅读标注习惯一致。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;通读下方段落，理解大意；&lt;/li&gt;
+&lt;li&gt;阅读问题，明确要回答的要点；&lt;/li&gt;
+&lt;li&gt;点选「回答」标签，在段落中拖选作为答案的连续文字；&lt;/li&gt;
+&lt;li&gt;核对所选片段是否完整、无多余内容后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/question-answering-example_hu_1f3615f764465ef4.webp"
+ width="749"
+ height="304"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="问答系统标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：答案应尽量是完整短语或句子，避免只选半个词；若段落中不存在合适答案，按项目约定处理（如标空或跳过）。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;划选范围需与问题严格对应，避免包含无关邻句；&lt;/li&gt;
+&lt;li&gt;同一问题通常只保留一条答案片段，与 &lt;code&gt;maxUsage=&amp;quot;1&amp;quot;&lt;/code&gt; 一致；&lt;/li&gt;
+&lt;li&gt;示例数据里的 &lt;code&gt;text&lt;/code&gt; 字段建议写成&lt;strong&gt;单行字符串&lt;/strong&gt;（不在 JSON 内换行），以免与字符偏移不一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/question-answering_hu_c72ea479c67c7ff.webp"
+ width="1302"
+ height="800"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="问答系统模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>命名实体识别 (Named Entity Recognition)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/named-entity-recognition/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/named-entity-recognition/</guid><description>&lt;h1 id="命名实体识别使用说明"&gt;命名实体识别使用说明&lt;/h1&gt;
+&lt;p&gt;命名实体识别可以理解为「先选实体类别，再在原文中圈出对应片段」：例如先点选“人物”，再在文本里拖选“女孩林晓”；切换到“时间”后再标注“深秋的傍晚”。它适合新闻、合同、医疗记录、客服对话等文本场景，常用于实体抽取、关系抽取和知识图谱构建任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将非结构化文本转成结构化实体数据，便于检索和统计；&lt;/li&gt;
+&lt;li&gt;支持多类别并行标注，提升信息抽取覆盖度；&lt;/li&gt;
+&lt;li&gt;通过统一标签口径，降低模型训练时的语义噪声。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;通读文本，识别其中的人物、事实、时间、环境等关键信息；&lt;/li&gt;
+&lt;li&gt;点选下方实体标签（如“人物”）；&lt;/li&gt;
+&lt;li&gt;在文本中拖选对应片段完成标注；&lt;/li&gt;
+&lt;li&gt;重复以上步骤，直到主要实体标注完成。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/named-entity-recognition-example_hu_1f2c6390ac6be47d.webp"
+ width="719"
+ height="595"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="命名实体识别标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：建议按“人物 -&amp;gt; 事实 -&amp;gt; 时间 -&amp;gt; 环境”的顺序标注，完成后在下方历史区复核，避免漏标或类别选错。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;实体边界尽量紧凑，避免把上下文虚词一并选入；&lt;/li&gt;
+&lt;li&gt;同一类型实体在整批任务中保持统一口径（如时间是否包含修饰词）；&lt;/li&gt;
+&lt;li&gt;若同一片段可能落入多个类别，优先按项目标注规范处理，避免重复冲突。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/named-entity-recognition_hu_4ac2d95929145e8b.webp"
+ width="1010"
+ height="648"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="命名实体识别模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item></channel></rss>
