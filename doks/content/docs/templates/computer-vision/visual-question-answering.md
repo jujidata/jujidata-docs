@@ -14,7 +14,7 @@ params:
       title: "视觉问答 (Visual Question Answering)"
       description: "视觉问答标注模版，结合图像内容与多问题文本输入，支持属性识别、计数、比较、逻辑运算等问答任务标注。"
       keywords: ["标注模板", "视觉问答", "VQA", "Visual Question Answering"]
-      canonical: "https://docs.jujidata.com/docs/templates/visual-question-answering"
+      canonical: "https://docs.jujidata.com/docs/templates/computer-vision/visual-question-answering"
       robots: "index, follow"
 ---
 

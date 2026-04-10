@@ -14,7 +14,7 @@ params:
       title: "图像分类 (Image Classification)"
       description: "图像分类标注模版，通过单选/多选方式为整张图片选择类别标签，适配场景分类、内容审核、材质识别等任务。"
       keywords: ["标注模板", "图像分类标注使用说明", "Image Classification"]
-      canonical: "https://docs.jujidata.com/docs/templates/image-classification"
+      canonical: "https://docs.jujidata.com/docs/templates/computer-vision/image-classification"
       robots: "index, follow"
 ---
 
