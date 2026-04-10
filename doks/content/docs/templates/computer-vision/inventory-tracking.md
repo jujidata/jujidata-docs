@@ -14,7 +14,7 @@ params:
       title: "库存跟踪 (Inventory Tracking)"
       description: "库存跟踪标注模版，通过多边形方式对货架商品区域进行精细标注，支持基于动态类别集合的库存盘点与位置跟踪。"
       keywords: ["标注模板", "库存跟踪使用说明", "Inventory Tracking"]
-      canonical: "https://docs.jujidata.com/docs/templates/inventory-tracking"
+      canonical: "https://docs.jujidata.com/docs/templates/computer-vision/inventory-tracking"
       robots: "index, follow"
 ---
 

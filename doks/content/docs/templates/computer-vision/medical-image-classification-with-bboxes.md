@@ -14,7 +14,7 @@ params:
       title: "带边框的医学图像分类 (Medical Image Classification with Boxes)"
       description: "带边框的医学图像分类标注模版，结合病灶框选与整图分类，适配病理切片、医学影像筛查与异常识别场景。"
       keywords: ["标注模板", "医学图像分类", "边框标注", "Medical Image Classification with BBoxes"]
-      canonical: "https://docs.jujidata.com/docs/templates/medical-image-classification-with-bboxes"
+      canonical: "https://docs.jujidata.com/docs/templates/computer-vision/medical-image-classification-with-bboxes"
       robots: "index, follow"
 ---
 

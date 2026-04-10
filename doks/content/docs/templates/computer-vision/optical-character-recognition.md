@@ -14,7 +14,7 @@ params:
       title: "光学字符识别 (Optical Character Recognition)"
       description: "光学字符识别标注模版，支持文本区域框选/多边形标注与逐区域转写，适配票据、合同、表单等文档识别场景。"
       keywords: ["标注模板", "光学字符识别", "OCR", "Optical Character Recognition"]
-      canonical: "https://docs.jujidata.com/docs/templates/optical-character-recognition"
+      canonical: "https://docs.jujidata.com/docs/templates/computer-vision/optical-character-recognition"
       robots: "index, follow"
 ---
 

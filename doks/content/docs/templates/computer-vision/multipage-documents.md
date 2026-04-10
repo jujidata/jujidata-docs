@@ -14,7 +14,7 @@ params:
       title: "多页文档标注 (Multipage Documents)"
       description: "多页文档标注模版，支持按页展示文档图像并进行矩形框标注，适配票据、报表、公告等结构化信息提取场景。"
       keywords: ["标注模板", "多页文档标注", "Multipage Documents"]
-      canonical: "https://docs.jujidata.com/docs/templates/multipage-documents"
+      canonical: "https://docs.jujidata.com/docs/templates/computer-vision/multipage-documents"
       robots: "index, follow"
 ---
 
