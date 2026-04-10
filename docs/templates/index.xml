@@ -1,144 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模版中心 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/</link><description>Recent content in 模版中心 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/index.xml" rel="self" type="application/rss+xml"/><item><title>带掩码的语义分割 (Semantic Segmentation with Masks)</title><link>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-masks/</link><pubDate>Tue, 31 Mar 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-masks/</guid><description>&lt;h1 id="带掩码的语义分割使用说明"&gt;带掩码的语义分割使用说明&lt;/h1&gt;
-&lt;p&gt;带掩码的语义分割可以理解为“像涂色一样去标注”：选择对应类别的画笔，在目标区域上涂抹，让掩码按像素把目标覆盖出来，从而得到更精细的分割标注。它适合边缘不太清晰、形状不规则，或需要保留细节纹理的目标，比如飞机、云朵、植被、医学影像病灶等，广泛应用于航空航天影像分析、遥感图像识别、医疗影像诊断等领域。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;实现像素级精细标注：通过掩码涂抹精准覆盖目标区域，捕捉纹理细节，区分目标与背景的细微差异，为语义分割模型提供高密度训练数据；&lt;/li&gt;
-&lt;li&gt;适配无明确轮廓场景：解决多边形标注无法覆盖模糊边缘、复杂纹理目标的问题，提升标注数据的完整性；&lt;/li&gt;
-&lt;li&gt;支持多目标、多类别标注：可选择不同标签的掩码画笔，分别涂抹标注多个不同类别的目标，每个掩码区域关联对应标签。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;选择画笔，可调节画笔大小&lt;/li&gt;
-&lt;li&gt;选择不同颜色的标签，以区分不同目标&lt;/li&gt;
-&lt;li&gt;涂抹图中目标区域&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../docs/templates/images/semantic-segmentation-with-masks-example_hu_db20c7177d717142.webp"
- width="760"
- height="472"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="带掩码的语义分割示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，便于进行精准标注。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;涂抹掩码时，尽量贴合目标像素范围，避免遗漏目标区域或过度覆盖背景区域；&lt;/li&gt;
-&lt;li&gt;对于纹理复杂的目标，可调整画笔参数提升标注精细度；&lt;/li&gt;
-&lt;li&gt;不同类别的目标需选择对应标签的掩码画笔，避免标签混淆，影响模型训练效果；&lt;/li&gt;
-&lt;li&gt;标注过程中可随时切换画笔、橡皮擦工具，或撤销已完成的涂抹操作。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../docs/templates/images/semantic-segmentation-with-masks_hu_6686771dc707bb4.webp"
- width="1026"
- height="657"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="带掩码的语义分割示例"
- id="h-rh-i-1"
-&gt;&lt;/p&gt;
-&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
-&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;BrushLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;tag&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;飞机a&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;rgba(255, 0, 0, 0.7)&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;飞机b&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;rgba(0, 0, 255, 0.7)&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;BrushLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h3 id="掩码语义分割标注配置代码说明"&gt;掩码语义分割标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现掩码语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>基于多边形的语义分割 (Semantic Segmentation with Polygons)</title><link>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/</guid><description>&lt;h1 id="基于多边形的语义分割使用说明"&gt;基于多边形的语义分割使用说明&lt;/h1&gt;
-&lt;p&gt;基于多边形的语义分割，其实就是“沿着目标边缘一点点描出来”：在目标轮廓上依次点击关键点，连成不规则多边形并闭合，尽量贴合目标外形，从而得到像素级的分割标注。它适合轮廓相对清晰、边缘复杂的目标，比如车辆、行人、动植物、建筑等，广泛应用于自动驾驶、图像识别、医学影像分析等领域。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;实现像素级目标分割：精准捕捉目标边缘，区分目标与背景，为语义分割模型提供高精度训练数据；&lt;/li&gt;
-&lt;li&gt;适配复杂轮廓场景：解决矩形框标注无法精准覆盖不规则目标的问题，提升标注数据的准确性；&lt;/li&gt;
-&lt;li&gt;支持多目标、多类别标注：可同时标注多个不同类别的目标，每个目标单独绘制多边形，关联对应标签与属性。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;选择不同颜色的标签，以区分不同目标&lt;/li&gt;
-&lt;li&gt;点击图像边缘关键点，依次绘制多边形，贴合目标轮廓&lt;/li&gt;
-&lt;li&gt;完成绘制后，再次点击第一个关键点，即可自动生成该目标的语义分割标注&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../docs/templates/images/semantic-segmentation-with-polygons-example_hu_3ef5e986f69dcf71.webp"
- width="750"
- height="555"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="带掩码的语义分割示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，便于进行精准标注。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;绘制多边形时，关键点尽量贴合目标边缘，避免遗漏或多余标注，确保轮廓完整；&lt;/li&gt;
-&lt;li&gt;若目标轮廓复杂，可多添加关键点，提升标注精度；&lt;/li&gt;
-&lt;li&gt;不同类别的目标需选择对应标签，避免标签混淆，影响模型训练效果；&lt;/li&gt;
-&lt;li&gt;标注过程中可随时撤销操作，或修改已绘制的多边形轮廓。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../docs/templates/images/semantic-segmentation-with-polygons_hu_754a9fbc674b9aef.webp"
- width="903"
- height="768"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="基于多边形的语义分割使用说明"
- id="h-rh-i-1"
-&gt;&lt;/p&gt;
-&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
-&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;选择标签并且点击图片开始标注&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;PolygonLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;label&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;strokeWidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;3&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;pointSize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;small&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;opacity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;0.9&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;人物一&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;人物二&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;人物三&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;人物四&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;yellow&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;人物五&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;PolygonLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h3 id="多边形语义分割标注配置代码说明"&gt;多边形语义分割标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现多边形语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>2D 矩形框标注 (Bounding Box)</title><link>https://docs.jujidata.com/docs/templates/gallery_cv/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/gallery_cv/</guid><description>&lt;h2 id="1-模版概述"&gt;1. 模版概述&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模版中心 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/</link><description>Recent content in 模版中心 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/index.xml" rel="self" type="application/rss+xml"/><item><title>2D 矩形框标注 (Bounding Box)</title><link>https://docs.jujidata.com/docs/templates/gallery_cv/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/gallery_cv/</guid><description>&lt;h2 id="1-模版概述"&gt;1. 模版概述&lt;/h2&gt;
 &lt;p&gt;2.D 矩形框标注主要用于&lt;strong&gt;物体检测 (Object Detection)&lt;/strong&gt; 任务。标注员通过绘制与目标边缘紧密贴合的四边形框，确定物体在图像中的位置（坐标）和类别（标签）。&lt;/p&gt;
 &lt;h3 id="适用场景"&gt;适用场景&lt;/h3&gt;
 &lt;ul&gt;
@@ -164,454 +24,213 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="属性关联机制"&gt;属性关联机制&lt;/h3&gt;
-&lt;p&gt;支持为每个矩形框配置多级属性。例如，在标注“车辆”时，可联动弹出：&lt;/p&gt;</description></item><item><title>目标检测(Object Detection with Bounding Boxes)</title><link>https://docs.jujidata.com/docs/templates/object-detection-with-bounding-boxes/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/object-detection-with-bounding-boxes/</guid><description>&lt;h1 id="目标检测使用说明"&gt;目标检测使用说明&lt;/h1&gt;
-&lt;p&gt;基于矩形框的目标检测，其实就是“先选标签，再把目标框出来”：先在标签栏选好类别，再在图像里用矩形框圈住目标，最终得到“位置 + 类别”的检测标注。它适合需要快速完成目标定位与分类的场景，比如细胞、车辆、行人、缺陷点等，常用于显微影像、自动驾驶、工业质检、遥感解译等任务。&lt;/p&gt;
+&lt;p&gt;支持为每个矩形框配置多级属性。例如，在标注“车辆”时，可联动弹出：&lt;/p&gt;</description></item><item><title>问答系统 (Question Answering)</title><link>https://docs.jujidata.com/docs/templates/question-answering/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/question-answering/</guid><description>&lt;h1 id="问答系统使用说明"&gt;问答系统使用说明&lt;/h1&gt;
+&lt;p&gt;问答系统可以理解为「读一段文字，按问题在原文里标出答案」：先阅读给定段落，再看问题，最后在段落中拖选能直接回答问题的连续文字片段。它适合新闻、百科、说明书等场景，常用于抽取式问答、阅读理解与检索增强类模型训练。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;快速完成目标定位与分类：用矩形框标出目标大致范围并绑定标签，为检测类模型提供标准训练数据；&lt;/li&gt;
-&lt;li&gt;适配多目标、多类别：同一图像中可绘制多个框，不同颜色/标签区分不同类别；&lt;/li&gt;
-&lt;li&gt;标注成本与精度平衡：在不需要轮廓级精度时，矩形框标注效率更高，便于大规模数据生产。&lt;/li&gt;
+&lt;li&gt;提供可定位的答案监督：答案与原文片段对齐，便于训练与评测；&lt;/li&gt;
+&lt;li&gt;约束答案来源：答案必须来自段落中的连续文本，减少凭空编造；&lt;/li&gt;
+&lt;li&gt;标注流程清晰：先选标签再划词，与常见阅读标注习惯一致。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;在底部标签栏选择要标注的类别（不同标签对应不同颜色）；&lt;/li&gt;
-&lt;li&gt;在图像上按住拖拽，绘制覆盖目标的矩形框。&lt;/li&gt;
+&lt;li&gt;通读下方段落，理解大意；&lt;/li&gt;
+&lt;li&gt;阅读问题，明确要回答的要点；&lt;/li&gt;
+&lt;li&gt;点选「回答」标签，在段落中拖选作为答案的连续文字；&lt;/li&gt;
+&lt;li&gt;核对所选片段是否完整、无多余内容后提交。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;
 
 &lt;img
- src="../../docs/templates/images/object-detection-with-bounding-boxes-example_hu_4845a9bb75fc24cf.webp"
- width="747"
- height="488"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="目标检测（矩形框）操作示例"
- id="h-rh-i-0"
-&gt;
-说明：双击选中已有框后可进行旋转，调整大小或位置，或删除后重新标注。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;矩形框应尽量紧贴目标外接范围，避免框过大包含过多背景或框过小遗漏目标；&lt;/li&gt;
-&lt;li&gt;同一类别多个实例需分别框选，每个框选择对应标签；&lt;/li&gt;
-&lt;li&gt;标注过程中可随时撤销、修改或删除已绘制的框。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../docs/templates/images/object-detection-with-bounding-boxes_hu_2efe4bb458768ffc.webp"
- width="763"
- height="503"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="目标检测（矩形框）模板预览"
- id="h-rh-i-1"
-&gt;&lt;/p&gt;
-&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
-&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;label&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;细胞a&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;细胞b&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h3 id="目标检测矩形框标注配置代码说明"&gt;目标检测矩形框标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现基于矩形框的目标检测标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>关键点标注 (Keypoints)</title><link>https://docs.jujidata.com/docs/templates/keypoints/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/keypoints/</guid><description>&lt;h1 id="关键点标注使用说明"&gt;关键点标注使用说明&lt;/h1&gt;
-&lt;p&gt;关键点标注其实就是“在图上标关键位置”：在目标的关键部位（如眼睛、鼻子、耳朵）逐一点选，并给每个点对应一个名称。和只画一个外框的目标检测、或覆盖整片区域的分割相比，关键点标注更关注各个关键部位之间的位置关系。它常用于人脸五官、人体姿态、动物特征点、工业零件结构点等场景，广泛应用于姿态估计、视觉跟踪、目标检测和精细化识别任务。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;为姿态与部位检测提供训练数据：逐点标记关键部位位置，并绑定关键点名称，为关键点检测类模型提供监督信号；&lt;/li&gt;
-&lt;li&gt;支持多目标、多关键点标注：同一图像可为多个目标分别标注，关键点列表可包含多种部位名称；&lt;/li&gt;
-&lt;li&gt;兼顾标注效率与细粒度表达：在不需要轮廓级精度的情况下，通过关键点坐标实现较高的结构化信息输出。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;在底部标签栏选择要标注的关键点标签&lt;/li&gt;
-&lt;li&gt;在图像上依次点击关键点位置（例如眼睛、鼻子、耳朵）&lt;/li&gt;
-&lt;li&gt;根据需要继续为同一目标或其他目标添加关键点&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../docs/templates/images/keypoints-example_hu_2df8d57c7a72117a.webp"
- width="748"
- height="517"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="关键点标注示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，便于进行精准点击标注。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;关键点应尽量落在关键部位的中心或特征点位置，避免偏移导致模型学习误差；&lt;/li&gt;
-&lt;li&gt;同一关键点类别需保持一致的标注位置定义（例如“眼睛”是瞳孔中心还是眼角中心）；&lt;/li&gt;
-&lt;li&gt;标注过程中可随时撤销、修改或删除已绘制的关键点。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../docs/templates/images/keypoints_hu_7cca6969122b246c.webp"
- width="766"
- height="492"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="关键点标注模板预览"
- id="h-rh-i-1"
-&gt;&lt;/p&gt;
-&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
-&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;KeyPointLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;kp-1&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;眼睛&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;鼻子&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;耳朵&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;KeyPointLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h3 id="关键点标注配置代码说明"&gt;关键点标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现关键点标注功能，可直接复制使用，关键部分可根据实际关键点需求修改。&lt;/p&gt;</description></item><item><title>图像分类 (Image Classification)</title><link>https://docs.jujidata.com/docs/templates/image-classification/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/image-classification/</guid><description>&lt;h1 id="图像分类使用说明"&gt;图像分类使用说明&lt;/h1&gt;
-&lt;p&gt;图像分类其实就是“看整张图，选对应标签”：先判断图片整体表达的内容，再选择对应标签，输出图片所属类别。它适合关注整体语义的任务，比如场景识别（高山/大海/沙漠等）、内容审核、材质与品类识别等，广泛应用于检索、推荐与通用分类模型训练等领域。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;快速生成分类训练数据：为图片选择类别标签，形成标准化的「图片 + 类别」数据；&lt;/li&gt;
-&lt;li&gt;支持多类别选择：可按业务需要配置多个候选类别标签供标注人员选择；&lt;/li&gt;
-&lt;li&gt;标注效率高：无需绘制形状或逐点标注，适合大规模数据快速生产。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;查看图片内容并判断所属类别&lt;/li&gt;
-&lt;li&gt;在底部选项区勾选对应类别标签&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../docs/templates/images/image-classification-example_hu_9853afaea7f78c6f.webp"
+ src="../../docs/templates/images/question-answering-example_hu_1f3615f764465ef4.webp"
  width="749"
- height="420"
+ height="304"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="图像分类标注示例"
+ alt="问答系统标注示例"
  id="h-rh-i-0"
 &gt;&lt;/p&gt;
-&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，便于更准确判断图片类别。&lt;/p&gt;
+&lt;p&gt;说明：答案应尽量是完整短语或句子，避免只选半个词；若段落中不存在合适答案，按项目约定处理（如标空或跳过）。&lt;/p&gt;
 &lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;类别定义需清晰且互斥规则一致（例如“高山/大海/沙漠”的判定边界），避免同图多义造成训练噪声；&lt;/li&gt;
-&lt;li&gt;若允许多选，请在标签体系中明确多选场景与组合规则，保证数据一致性；&lt;/li&gt;
-&lt;li&gt;标注过程中可随时取消或重新选择类别。&lt;/li&gt;
+&lt;li&gt;划选范围需与问题严格对应，避免包含无关邻句；&lt;/li&gt;
+&lt;li&gt;同一问题通常只保留一条答案片段，与 &lt;code&gt;maxUsage=&amp;quot;1&amp;quot;&lt;/code&gt; 一致；&lt;/li&gt;
+&lt;li&gt;示例数据里的 &lt;code&gt;text&lt;/code&gt; 字段建议写成&lt;strong&gt;单行字符串&lt;/strong&gt;（不在 JSON 内换行），以免与字符偏移不一致。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
 &lt;p&gt;
 
 &lt;img
- src="../../docs/templates/images/image-classification_hu_af5e8b9f916fe41d.webp"
- width="745"
- height="477"
+ src="../../docs/templates/images/question-answering_hu_359a7e2f899e9163.webp"
+ width="749"
+ height="304"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="图像分类标注模板预览"
+ alt="问答系统模板预览"
  id="h-rh-i-1"
-&gt;&lt;/p&gt;
-&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
-&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;choice&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;高山&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;大海&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;沙漠&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h3 id="图像分类标注配置代码说明"&gt;图像分类标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现图像分类标注功能，可直接复制使用，关键部分可根据实际分类需求修改。&lt;/p&gt;</description></item><item><title>库存跟踪 (Inventory Tracking)</title><link>https://docs.jujidata.com/docs/templates/inventory-tracking/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/inventory-tracking/</guid><description>&lt;h1 id="库存跟踪使用说明"&gt;库存跟踪使用说明&lt;/h1&gt;
-&lt;p&gt;库存跟踪可以理解为“先选品类，再沿边缘把商品区域圈出来”：在货架图像中选择对应对象类别后，用多边形逐点圈定商品或物料区域，输出可用于库存统计与位置追踪的结构化标注结果。它适合商品密集、遮挡较多、摆放不规则的场景，常用于零售货架盘点、仓储库存管理、陈列监测与补货分析等任务。与基于多边形的语义分割相比，库存跟踪更强调按业务对象做数量与位置追踪，而不是仅做语义区域划分。&lt;/p&gt;
+&gt;&lt;/p&gt;</description></item><item><title>文本分类 (Text Classification)</title><link>https://docs.jujidata.com/docs/templates/text-classification/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/text-classification/</guid><description>&lt;h1 id="文本分类使用说明"&gt;文本分类使用说明&lt;/h1&gt;
+&lt;p&gt;文本分类可以理解为「读一句话或一段字，选一个最贴切的标签」：界面先展示 &lt;code&gt;$text&lt;/code&gt; 绑定的正文，再在下方卡片中从若干互斥选项里点选一项（如情感分析中的积极 / 消极 / 中性）。它适合评论舆情、客服意图、新闻主题等场景，常用于情感分类、主题标注与意图识别训练。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;提供可追踪的库存数据：通过目标区域与类别信息结合，形成可用于库存统计与变化追踪的数据基础；&lt;/li&gt;
-&lt;li&gt;适配复杂货架场景：多边形标注可更贴合不规则商品外形，减少背景干扰；&lt;/li&gt;
-&lt;li&gt;支持动态类别扩展：类别可通过数据字段动态传入，便于不同业务场景复用同一模板。&lt;/li&gt;
+&lt;li&gt;输出标准类别标签：与文本一一对应，便于直接训练分类器；&lt;/li&gt;
+&lt;li&gt;单选约束清晰：&lt;code&gt;choice=&amp;quot;single&amp;quot;&lt;/code&gt; 避免一条样本多标签冲突（除非业务改为多选）；&lt;/li&gt;
+&lt;li&gt;布局集中：正文与选项分区展示，阅读与点选路径短。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;在顶部对象区确认或选择目标类别；&lt;/li&gt;
-&lt;li&gt;在图像中沿目标商品边缘依次点击关键点，绘制多边形；&lt;/li&gt;
-&lt;li&gt;闭合多边形后完成一个目标标注，继续处理其他商品区域。&lt;/li&gt;
+&lt;li&gt;阅读上方待分类文本，把握整体语气或主题；&lt;/li&gt;
+&lt;li&gt;在下方卡片标题「选择文本情感」对应区域，点选一项，可自动提交。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;
 
 &lt;img
- src="../../docs/templates/images/inventory-tracking-example_hu_d109aa4b14cc53ba.webp"
- width="744"
- height="613"
+ src="../../docs/templates/images/text-classification-example_hu_9c8f0a6fcc235eb8.webp"
+ width="722"
+ height="326"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="库存跟踪标注示例"
+ alt="文本分类标注示例"
  id="h-rh-i-0"
 &gt;&lt;/p&gt;
-&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，提升密集货架区域的标注准确性。&lt;/p&gt;
+&lt;p&gt;说明：若项目对「中性」与「无明显情感」有区分，需在标注规范中写清边界；快捷键 &lt;code&gt;[1]&lt;/code&gt; &lt;code&gt;[2]&lt;/code&gt; &lt;code&gt;[3]&lt;/code&gt; 以平台实际显示为准。&lt;/p&gt;</description></item><item><title>命名实体识别 (Named Entity Recognition)</title><link>https://docs.jujidata.com/docs/templates/named-entity-recognition/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/named-entity-recognition/</guid><description>&lt;h1 id="命名实体识别使用说明"&gt;命名实体识别使用说明&lt;/h1&gt;
+&lt;p&gt;命名实体识别可以理解为「先选实体类别，再在原文中圈出对应片段」：例如先点选“人物”，再在文本里拖选“女孩林晓”；切换到“时间”后再标注“深秋的傍晚”。它适合新闻、合同、医疗记录、客服对话等文本场景，常用于实体抽取、关系抽取和知识图谱构建任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将非结构化文本转成结构化实体数据，便于检索和统计；&lt;/li&gt;
+&lt;li&gt;支持多类别并行标注，提升信息抽取覆盖度；&lt;/li&gt;
+&lt;li&gt;通过统一标签口径，降低模型训练时的语义噪声。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;通读文本，识别其中的人物、事实、时间、环境等关键信息；&lt;/li&gt;
+&lt;li&gt;点选下方实体标签（如“人物”）；&lt;/li&gt;
+&lt;li&gt;在文本中拖选对应片段完成标注；&lt;/li&gt;
+&lt;li&gt;重复以上步骤，直到主要实体标注完成。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/named-entity-recognition-example_hu_1f2c6390ac6be47d.webp"
+ width="719"
+ height="595"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="命名实体识别标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：建议按“人物 -&amp;gt; 事实 -&amp;gt; 时间 -&amp;gt; 环境”的顺序标注，完成后在下方历史区复核，避免漏标或类别选错。&lt;/p&gt;
 &lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;多边形关键点应尽量贴合商品可见边缘，避免过度包含相邻商品；&lt;/li&gt;
-&lt;li&gt;被遮挡商品按可见区域标注，并保持同一批次标注口径一致；&lt;/li&gt;
-&lt;li&gt;类别名称应与业务侧库存体系保持一致，避免同义词混用造成统计偏差。&lt;/li&gt;
+&lt;li&gt;实体边界尽量紧凑，避免把上下文虚词一并选入；&lt;/li&gt;
+&lt;li&gt;同一类型实体在整批任务中保持统一口径（如时间是否包含修饰词）；&lt;/li&gt;
+&lt;li&gt;若同一片段可能落入多个类别，优先按项目标注规范处理，避免重复冲突。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
 &lt;p&gt;
 
 &lt;img
- src="../../docs/templates/images/inventory-tracking_hu_bf22f3a6dd499862.webp"
- width="753"
- height="478"
+ src="../../docs/templates/images/named-entity-recognition_hu_4ac2d95929145e8b.webp"
+ width="1010"
+ height="648"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="库存跟踪标注模板预览"
+ alt="命名实体识别模板预览"
  id="h-rh-i-1"
-&gt;&lt;/p&gt;
-&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
-&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;display:flex;justify-content:center&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;PolygonLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;objects&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$objects&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h3 id="库存跟踪标注配置代码说明"&gt;库存跟踪标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现库存跟踪场景下的多边形标注功能，可直接复制使用，关键参数可按业务需求调整。&lt;/p&gt;</description></item><item><title>带边框的医学图像分类 (Medical Image Classification with Boxes)</title><link>https://docs.jujidata.com/docs/templates/medical-image-classification-with-bboxes/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/medical-image-classification-with-bboxes/</guid><description>&lt;h1 id="带边框的医学图像分类使用说明"&gt;带边框的医学图像分类使用说明&lt;/h1&gt;
-&lt;p&gt;带边框的医学图像分类可以理解为“先框病灶区域，再给整张图做分类”：在图像中用矩形框标出重点病灶，再选择整图分类标签（如正常细胞/异常细胞），输出同时包含局部位置和整体判断的标注结果。它适合病理切片、细胞筛查、医学影像异常识别等场景。与目标检测相比，该任务除框选病灶外，还强调对整张图给出统一分类结论。&lt;/p&gt;
+&gt;&lt;/p&gt;</description></item><item><title>分类体系 (Taxonomy)</title><link>https://docs.jujidata.com/docs/templates/taxonomy/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/taxonomy/</guid><description>&lt;h1 id="分类体系使用说明"&gt;分类体系使用说明&lt;/h1&gt;
+&lt;p&gt;分类体系可以理解为“选择最符合文本的标签”：先阅读文本，再从树形选项中选择最匹配的分类节点。与普通单层分类不同，Taxonomy 能表达“父类 -&amp;gt; 子类”的层级关系，例如先是“美洲板块”，再细分到“北美洲/南美洲”。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;同时提供局部与全局信息：病灶框用于定位可疑区域，整图分类用于输出样本级结论；&lt;/li&gt;
-&lt;li&gt;适配医学筛查流程：便于构建“区域提示 + 分类判断”的训练数据；&lt;/li&gt;
-&lt;li&gt;提升数据可用性：同一份标注数据可支持检测与分类等多类下游任务。&lt;/li&gt;
+&lt;li&gt;支持层级标签表达：不仅知道“属于哪类”，还能表示“属于该类下的哪一支”；&lt;/li&gt;
+&lt;li&gt;提升分类一致性：统一树形体系后，跨团队标注口径更稳定；&lt;/li&gt;
+&lt;li&gt;便于后续检索统计：可按父类聚合，也可按叶子节点细分分析。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;在标签栏选择病灶类别，如“肿瘤”或“癌症”；&lt;/li&gt;
-&lt;li&gt;在图片中框选对应区域；&lt;/li&gt;
-&lt;li&gt;在分类区选择整图类别，如“正常细胞”或“异常细胞”。&lt;/li&gt;
+&lt;li&gt;阅读题目内容，点击右侧下拉箭头展开分类树；&lt;/li&gt;
+&lt;li&gt;在列表中选择目标节点；若为父子结构，可按需展开后选子类；&lt;/li&gt;
+&lt;li&gt;提交前核对已选标签是否完整、是否存在误选。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;
 
 &lt;img
- src="../../docs/templates/images/medical-image-classification-with-boxes-example_hu_1c46868f265ef4a5.webp"
- width="747"
- height="570"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="带边框的医学图像分类标注示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：可使用右侧工具栏放大图像后再框选，避免遗漏微小病灶区域。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;病灶框尽量覆盖主要病变区域，避免包含过多无关背景；&lt;/li&gt;
-&lt;li&gt;整图分类标准需统一，确保“正常/异常”判定口径一致；&lt;/li&gt;
-&lt;li&gt;若一张图存在多个病灶，可分别框选，但整图分类仍需给出单一明确结论。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../docs/templates/images/medical-image-classification-with-boxes_hu_656029059b4f4561.webp"
- width="747"
- height="570"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="带边框的医学图像分类模板预览"
- id="h-rh-i-1"
-&gt;&lt;/p&gt;
-&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
-&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;label&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;肿瘤&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;癌症&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;classification&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;正常细胞&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;异常细胞&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h3 id="带边框的医学图像分类配置代码说明"&gt;带边框的医学图像分类配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现“局部框选 + 整图分类”的复合标注功能，可直接复制使用。&lt;/p&gt;</description></item><item><title>多页文档标注 (Multipage Documents)</title><link>https://docs.jujidata.com/docs/templates/multipage-documents/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/multipage-documents/</guid><description>&lt;h1 id="多页文档标注使用说明"&gt;多页文档标注使用说明&lt;/h1&gt;
-&lt;p&gt;多页文档标注可以理解为“按页翻看文档，再框选关键信息”：在文档的每一页中选择对应标签（如标题、日期、编辑、地点、数量），并用矩形框标出目标文本区域，输出可用于信息抽取的结构化标注结果。它适合新闻稿、报告、表单、票据等跨页文档场景，常用于字段检测、版面解析与文档自动化处理任务。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;支持跨页连续标注：可在同一任务中逐页处理文档内容，避免页间信息割裂；&lt;/li&gt;
-&lt;li&gt;便于字段级信息提取：通过标签与框选区域绑定，形成可训练的数据样本；&lt;/li&gt;
-&lt;li&gt;提升文档结构化效率：对固定字段进行规范标注，降低后续抽取与质检成本。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;在顶部标签区选择字段类型（如“标题”“日期”等）；&lt;/li&gt;
-&lt;li&gt;在当前页框选对应文本区域；&lt;/li&gt;
-&lt;li&gt;切换到下一页后重复标注，直至完成所有页。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../docs/templates/images/multipage-documents-example_hu_4147c1009f4d0bde.webp"
- width="754"
+ src="../../docs/templates/images/taxonomy-example_hu_1c659867a8f268c2.webp"
+ width="705"
  height="425"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="多页文档标注示例"
+ alt="分类体系标注示例"
  id="h-rh-i-0"
 &gt;&lt;/p&gt;
-&lt;p&gt;说明：建议先完成当前页全部字段再翻页，便于保持字段标准一致。&lt;/p&gt;
+&lt;p&gt;说明：示例中“美洲板块”下含“北美洲/南美洲”子项；若业务要求更细粒度（如国家、地区），可继续向下扩展 &lt;code&gt;Choice&lt;/code&gt; 层级。&lt;/p&gt;
 &lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;框选区域尽量紧贴文本边界，避免框入过多空白或相邻字段；&lt;/li&gt;
-&lt;li&gt;同类字段在不同页面保持一致标注口径（如“日期”是否包含分隔符）；&lt;/li&gt;
-&lt;li&gt;多页文档中若字段缺失，可跳过该字段但保持标签体系不变。&lt;/li&gt;
+&lt;li&gt;父子节点命名应避免语义重叠，减少“该选父类还是子类”的歧义；&lt;/li&gt;
+&lt;li&gt;若项目只允许最末级节点生效，需在标注规范中明确“禁止只选父类”；&lt;/li&gt;
+&lt;li&gt;调整树结构后，建议同步更新历史数据映射与质检规则。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
 &lt;p&gt;
 
 &lt;img
- src="../../docs/templates/images/multipage-documents_hu_aab973d3b82c3876.webp"
- width="757"
- height="487"
+ src="../../docs/templates/images/taxonomy_hu_1a9a91fb3d22fddc.webp"
+ width="1079"
+ height="662"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="多页文档标注模板预览"
+ alt="分类体系模板预览"
  id="h-rh-i-1"
-&gt;&lt;/p&gt;
-&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
-&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;rectangles&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pdf&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;showInline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;标题&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;日期&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;编辑&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;gold&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;地点&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;数量&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;RectangleLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;valueList&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$pages&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pdf&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h3 id="多页文档标注配置代码说明"&gt;多页文档标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现多页文档的字段框选标注，可直接复制使用。&lt;/p&gt;</description></item><item><title>光学字符识别 (Optical Character Recognition)</title><link>https://docs.jujidata.com/docs/templates/optical-character-recognition/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/optical-character-recognition/</guid><description>&lt;h1 id="光学字符识别使用说明"&gt;光学字符识别使用说明&lt;/h1&gt;
-&lt;p&gt;光学字符识别可以理解为“先标出文字区域，再填写识别文本”：在图片中用矩形或多边形圈定文字位置，给区域选择标签（如文本、标题、编号、金额），并为每个区域录入对应文字内容。它适合票据、合同、报告、表单等场景，常用于文字检测、文本识别与关键信息抽取任务。&lt;/p&gt;
+&gt;&lt;/p&gt;</description></item><item><title>内容审核 (Content Moderation)</title><link>https://docs.jujidata.com/docs/templates/content-moderation/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/content-moderation/</guid><description>&lt;h1 id="内容审核使用说明"&gt;内容审核使用说明&lt;/h1&gt;
+&lt;p&gt;内容审核可以理解为“先判断文本涉及哪些类别，再补充审核意见”：标注员先阅读文本内容，勾选一个或多个标签（如侮辱、威胁、积极、温暖），再在评论框写下必要说明，用于支撑判定依据或记录边界情况。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;同时提供定位与转写数据：区域标注用于文本定位，转写结果用于识别训练；&lt;/li&gt;
-&lt;li&gt;适配复杂版式文档：支持矩形与多边形两种区域形状，便于处理倾斜或不规则文本；&lt;/li&gt;
-&lt;li&gt;支持字段化管理：通过标签区分不同文本类型，提升后续抽取与质检效率。&lt;/li&gt;
+&lt;li&gt;支持多标签判定：同一文本可同时命中多个类别，贴合真实审核场景；&lt;/li&gt;
+&lt;li&gt;保留人工解释：评论字段可沉淀判定依据，便于质检复核；&lt;/li&gt;
+&lt;li&gt;适配策略优化：标签与评论结合后，可用于规则迭代与模型微调。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;选择标签类型，如“文本”“标题”“编号”“金额”；&lt;/li&gt;
-&lt;li&gt;在图中使用矩形或多边形标出文字区域；&lt;/li&gt;
-&lt;li&gt;在对应区域输入识别文本并提交。&lt;/li&gt;
+&lt;li&gt;通读文本，判断文本类别；&lt;/li&gt;
+&lt;li&gt;在标签区勾选一个或多个标签；&lt;/li&gt;
+&lt;li&gt;可以在“请补充一些意见或评论”区域填写说明，回车即可添加评论；&lt;/li&gt;
+&lt;li&gt;提交前复核标签是否漏选、评论是否清晰。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;
 
 &lt;img
- src="../../docs/templates/images/optical-character-recognition-example_hu_108dada55e84ba4d.webp"
- width="742"
- height="686"
+ src="../../docs/templates/images/content-moderation-example_hu_dd7520d4804baec0.webp"
+ width="719"
+ height="534"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="光学字符识别标注示例"
+ alt="内容审核标注示例"
  id="h-rh-i-0"
 &gt;&lt;/p&gt;
-&lt;p&gt;说明：建议先完成区域标注，再统一填写转写文本，减少漏标和错配。&lt;/p&gt;
+&lt;p&gt;说明：若文本同时包含冲突信号（如“积极”与“威胁”并存），应按项目规范保留多标签并在评论中解释上下文。&lt;/p&gt;
 &lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;标注区域尽量贴合文字边界，避免包含相邻无关内容；&lt;/li&gt;
-&lt;li&gt;转写文本需与原文一致，保留必要符号与格式（如编号、金额小数点）；&lt;/li&gt;
-&lt;li&gt;对难辨识文字可按项目规范记录，不要随意猜测。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;choice=&amp;quot;multiple&amp;quot;&lt;/code&gt; 表示多选模式，若业务改为互斥判定需调整为单选；&lt;/li&gt;
+&lt;li&gt;标签定义需配套审核准则（命中条件、例外条件、优先级）；&lt;/li&gt;
+&lt;li&gt;评论建议聚焦“为什么命中该标签”，避免无信息量描述。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
 &lt;p&gt;
 
 &lt;img
- src="../../docs/templates/images/optical-character-recognition_hu_df95998ae7da76a1.webp"
- width="1024"
- height="656"
+ src="../../docs/templates/images/content-moderation_hu_87f0c3cdf2f644b4.webp"
+ width="1010"
+ height="648"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="光学字符识别模板预览"
+ alt="内容审核模板预览"
  id="h-rh-i-1"
 &gt;&lt;/p&gt;
 &lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
@@ -625,29 +244,209 @@
  &lt;span class="title"&gt;&lt;/span&gt;
  &lt;/figcaption&gt;
  &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Text&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$text&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Labels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;label&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;文本&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;标题&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;编号&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;金额&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Labels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;content_moderation&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;choice&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;multiple&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;showInline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;false&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;侮辱&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;威胁&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;brown&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;积极&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choice&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;温暖&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Rectangle&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;bbox&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;strokeWidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Polygon&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;poly&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;strokeWidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;TextArea&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;transcription&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;editable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;perRegion&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;maxSubmissions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;rows&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;5&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;placeholder&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Recognized Text&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;displayMode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;region-list&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;margin: var(--spacing-tight); box-shadow: 0 4px 8px rgba(var(--color-neutral-shadow-raw) / 10%); padding: var(--spacing-tight) var(--spacing-base); border-radius: var(--corner-radius-small); background-color: var(--color-neutral-background); border: 1px solid var(--color-neutral-border);&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;请补充一些意见或评论&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;TextArea&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;comments&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;false&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
  &lt;/figure&gt;
 &lt;/div&gt;
-&lt;h3 id="光学字符识别配置代码说明"&gt;光学字符识别配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现 OCR 场景下的“区域定位 + 文本转写”联合标注。&lt;/p&gt;</description></item></channel></rss>
+&lt;h3 id="内容审核配置代码说明"&gt;内容审核配置代码说明&lt;/h3&gt;
+&lt;p&gt;以上代码用于实现“文本审核 + 多标签分类 + 备注说明”的联合标注流程。&lt;/p&gt;</description></item><item><title>机器翻译 (Machine Translation)</title><link>https://docs.jujidata.com/docs/templates/machine-translation/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/machine-translation/</guid><description>&lt;h1 id="机器翻译使用说明"&gt;机器翻译使用说明&lt;/h1&gt;
+&lt;p&gt;机器翻译：标注员先阅读中文源文本，再在右侧输入框中填写西班牙语译文。该模板适合通用文本翻译、行业语料构建、术语库校对等场景，常用于多语种翻译模型训练与质量评估。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;构建高质量平行语料：源文与译文一一对应，可直接用于训练与评测；&lt;/li&gt;
+&lt;li&gt;保持术语一致性：通过统一译法降低模型输出波动；&lt;/li&gt;
+&lt;li&gt;提升人工可控性：支持人工逐条翻译与复核，便于质量管控。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读左侧中文段落，理解整体语义和句间逻辑；&lt;/li&gt;
+&lt;li&gt;在右侧输入框填写西班牙语译文，注意检查是否漏译、误译或语法不通顺；&lt;/li&gt;
+&lt;li&gt;点击添加按钮提交译文；&lt;/li&gt;
+&lt;li&gt;提交后可以点击编辑键进行编辑，或者点击删除键以删除译文。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/machine-translation-example_hu_741e31f401a75bad.webp"
+ width="721"
+ height="309"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="机器翻译标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：建议优先保证“忠实原意 + 语句通顺”；若项目有术语表，请严格按术语表翻译。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 表示译文必填，空内容无法提交；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;maxSubmissions=&amp;quot;1&amp;quot;&lt;/code&gt; 限制每条样本只提交一版译文，避免重复记录；&lt;/li&gt;
+&lt;li&gt;涉及专有名词时，优先使用项目约定译法并保持全量数据一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/machine-translation_hu_7279857cbcfc7d40.webp"
+ width="952"
+ height="685"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="机器翻译模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>文本摘要 (Text Summarization)</title><link>https://docs.jujidata.com/docs/templates/text-summarization/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/text-summarization/</guid><description>&lt;h1 id="文本摘要使用说明"&gt;文本摘要使用说明&lt;/h1&gt;
+&lt;p&gt;文本摘要可以理解为“读完原文，用一句话提炼核心信息”：标注员先阅读正文，再在输入框中写出简洁、准确、信息完整的一句话总结。该模板适用于资讯摘要、文档浓缩、内容分发与知识整理等场景。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;构建高质量“原文-摘要”样本，用于摘要模型训练与评测；&lt;/li&gt;
+&lt;li&gt;压缩冗余信息，保留关键事实，提升内容消费效率；&lt;/li&gt;
+&lt;li&gt;统一摘要口径，便于后续质检与多版本对比。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;通读原文，识别主要对象、场景与核心观点；&lt;/li&gt;
+&lt;li&gt;在“请用一句话进行总结”输入框中填写摘要，并检查摘要是否忠实原文、是否遗漏关键要点；&lt;/li&gt;
+&lt;li&gt;点击添加按钮提交摘要。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/text-summarization-example_hu_5b122e386707df86.webp"
+ width="726"
+ height="440"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="文本摘要标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：摘要建议控制在一句完整语义内，避免逐句拼接原文；优先“准确”再“精炼”。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 表示摘要必填，空值不可提交；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;maxSubmissions=&amp;quot;1&amp;quot;&lt;/code&gt; 限制单条样本仅提交一条摘要；&lt;/li&gt;
+&lt;li&gt;避免加入原文未出现的事实或主观推断，确保信息保真。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/text-summarization_hu_448b7ab9f3837a85.webp"
+ width="1010"
+ height="650"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="文本摘要模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;请阅读下面的文本：&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Text&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$text&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;请用一句话进行总结：&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;TextArea&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;answer&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;showSubmitButton&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;maxSubmissions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;editable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="文本摘要配置代码说明"&gt;文本摘要配置代码说明&lt;/h3&gt;
+&lt;p&gt;以上代码用于实现“阅读文本 -&amp;gt; 输出一句话摘要”的流程。&lt;/p&gt;</description></item><item><title>ASR 假设选择 (ASR Hypotheses)</title><link>https://docs.jujidata.com/docs/templates/asr-hypotheses/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/asr-hypotheses/</guid><description>&lt;h1 id="asr-假设选择使用说明"&gt;ASR 假设选择使用说明&lt;/h1&gt;
+&lt;p&gt;ASR 假设选择可以理解为「先听清，再选对」：同一段音频会对应多条略有差异的转写候选，标注员需要结合听觉判断，选出与说话内容最一致的一条。&lt;/p&gt;
+&lt;p&gt;这个模板适合语音识别纠错、候选重排序、听写评测等任务。播放器支持音量调节、语速调节、前进/后退，以及在波形上选区循环播放，适合对可疑片段反复比对后再选择答案。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;为 ASR 多候选输出提供人工裁决，形成高质量监督数据；&lt;/li&gt;
+&lt;li&gt;帮助识别音近词、形近词与语义干扰，提升模型鲁棒性；&lt;/li&gt;
+&lt;li&gt;支持检索难例与误识别模式，反哺模型迭代。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;先完整听一遍音频，了解整体语义；&lt;/li&gt;
+&lt;li&gt;用前进、后退、调速和选区循环精听关键片段；&lt;/li&gt;
+&lt;li&gt;在候选列表中勾选与音频最一致的一项；&lt;/li&gt;
+&lt;li&gt;提交前再次核对关键差异词。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/asr-hypotheses-example_hu_90b6f314008175bf.webp"
+ width="802"
+ height="508"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="ASR 假设选择标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：建议优先以音频事实为准，不要仅凭文本流畅度做判断。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;听不清时优先降低语速并重复播放问题区间；&lt;/li&gt;
+&lt;li&gt;关注专有名词、术语和否定词，避免“听起来像”但语义错误；&lt;/li&gt;
+&lt;li&gt;候选列表应与音频内容同域同任务，避免无效干扰项。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/asr-hypotheses_hu_9854d22568610e56.webp"
+ width="802"
+ height="508"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="ASR 假设选择模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>基于内容图像检索 (Content-Based Image Search)</title><link>https://docs.jujidata.com/docs/templates/content-based-image-search/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/content-based-image-search/</guid><description>&lt;h1 id="基于内容图像检索使用说明"&gt;基于内容图像检索使用说明&lt;/h1&gt;
+&lt;p&gt;基于内容图像检索可以理解为「看查询图，再从候选里挑出像它的」：上方为 &lt;strong&gt;查询图&lt;/strong&gt;（query），下方三张为 &lt;strong&gt;候选图&lt;/strong&gt;；勾选「图片一 / 图片二 / 图片三」对应左、中、右三张图是否 &lt;strong&gt;内容相近&lt;/strong&gt;。支持 &lt;strong&gt;多选&lt;/strong&gt;（&lt;code&gt;choice=&amp;quot;multiple&amp;quot;&lt;/code&gt;），即可以同时认为多张候选与查询相似，也可以只选一张或不选（若项目允许空选，需单独约定；本配置中 &lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 表示必须至少选一项）。&lt;/p&gt;
+&lt;p&gt;每张图旁通常带有缩放、平移等查看工具，便于放大细节后再判断相似性。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;提供「查询–候选」相关性的人工标签，用于训练或评估检索模型；&lt;/li&gt;
+&lt;li&gt;区分「看起来像」与「语义相关」（如物种、场景、风格），可按项目定义相似口径；&lt;/li&gt;
+&lt;li&gt;多选支持召回型标注：凡符合标准的候选均可勾选。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;观察查询图的主体、场景、风格与关键细节；&lt;/li&gt;
+&lt;li&gt;依次查看三张候选图，必要时使用缩放工具；&lt;/li&gt;
+&lt;li&gt;勾选与查询在既定标准下相似的选项，可多选；&lt;/li&gt;
+&lt;li&gt;提交前确认勾选与图片位置一一对应。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/templates/images/content-based-image-search-example_hu_a1f63a9914fdd89a.webp"
+ width="763"
+ height="847"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="基于内容图像检索标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item></channel></rss>

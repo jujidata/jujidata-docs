@@ -56,19 +56,8 @@
 
 > 预置 10 大主流 AI 标注模版，支持高度自定义配置。
 
-- [带掩码的语义分割 (Semantic Segmentation with Masks)](https://docs.jujidata.com/docs/templates/semantic-segmentation-with-masks/): 掩码式高精度语义分割标注模版，支持像素级掩码涂抹标注，适配精细纹理、不规则区域的语义分割需求。
-- [基于多边形的语义分割 (Semantic Segmentation with Polygons)](https://docs.jujidata.com/docs/templates/semantic-segmentation-with-polygons/): 高精度语义分割标注模版，支持复杂轮廓目标标注，适配多场景语义分割需求。
+- [计算机视觉](https://docs.jujidata.com/docs/templates/computer-vision/): 预置 10 大主流 AI 标注模版，支持高度自定义配置。
 - [2D 矩形框标注 (Bounding Box)](https://docs.jujidata.com/docs/templates/gallery_cv/): 最通用的物体检测标注模版，支持多标签分类与复杂属性关联。
-- [目标检测(Object Detection with Bounding Boxes)](https://docs.jujidata.com/docs/templates/object-detection-with-bounding-boxes/): 基于矩形框的目标检测标注模版，支持多类别边界框标注，适配通用检测与显微、遥感等场景。
-- [关键点标注 (Keypoints)](https://docs.jujidata.com/docs/templates/keypoints/): 关键点（Keypoints）标注模版，支持为目标关键部位逐点标注，并输出关键点名称与坐标，适配人脸、人体姿态、动物与零部件定位等场景。
-- [图像分类 (Image Classification)](https://docs.jujidata.com/docs/templates/image-classification/): 图像分类标注模版，通过单选/多选方式为整张图片选择类别标签，适配场景分类、内容审核、材质识别等任务。
-- [库存跟踪 (Inventory Tracking)](https://docs.jujidata.com/docs/templates/inventory-tracking/): 库存跟踪标注模版，通过多边形方式对货架商品区域进行精细标注，支持基于动态类别集合的库存盘点与位置跟踪。
-- [带边框的医学图像分类 (Medical Image Classification with Boxes)](https://docs.jujidata.com/docs/templates/medical-image-classification-with-bboxes/): 带边框的医学图像分类标注模版，结合病灶框选与整图分类，适配病理切片、医学影像筛查与异常识别场景。
-- [多页文档标注 (Multipage Documents)](https://docs.jujidata.com/docs/templates/multipage-documents/): 多页文档标注模版，支持按页展示文档图像并进行矩形框标注，适配票据、报表、公告等结构化信息提取场景。
-- [光学字符识别 (Optical Character Recognition)](https://docs.jujidata.com/docs/templates/optical-character-recognition/): 光学字符识别标注模版，支持文本区域框选/多边形标注与逐区域转写，适配票据、合同、表单等文档识别场景。
-- [基因视觉 (Visual Genome)](https://docs.jujidata.com/docs/templates/visual-genome/): 基因视觉标注模版，支持区域、属性、关系三类标签分栏标注，适配图像语义理解与场景关系建模任务。
-- [视觉问答 (Visual Question Answering)](https://docs.jujidata.com/docs/templates/visual-question-answering/): 视觉问答标注模版，结合图像内容与多问题文本输入，支持属性识别、计数、比较、逻辑运算等问答任务标注。
-- [图像描述 (Image Captioning)](https://docs.jujidata.com/docs/templates/image-captioning/): 图像描述标注模版，支持在查看图像后输入自然语言描述，适配图像字幕、多模态理解与图文对齐等任务。
 - [问答系统 (Question Answering)](https://docs.jujidata.com/docs/templates/question-answering/): 问答系统标注模版，支持阅读段落、根据问题在原文中划出答案片段，适配抽取式阅读理解与机器阅读理解任务。
 - [文本分类 (Text Classification)](https://docs.jujidata.com/docs/templates/text-classification/): 文本分类标注模版，支持展示待分类文本并以单选方式选择类别，适配情感分析、主题分类、意图识别等 NLP 任务。
 - [命名实体识别 (Named Entity Recognition)](https://docs.jujidata.com/docs/templates/named-entity-recognition/): 命名实体识别标注模版，支持在文本中直接划选并标记实体类别，适配人物、时间、地点、事件等信息抽取任务。

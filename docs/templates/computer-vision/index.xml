@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</title><link>https://docs.jujidata.com/</link><description>Recent content in 欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/index.xml" rel="self" type="application/rss+xml"/><item><title>基于多边形的语义分割 (Semantic Segmentation with Polygons)</title><link>https://docs.jujidata.com/docs/templates/computer-vision/semantic-segmentation-with-polygons/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/computer-vision/semantic-segmentation-with-polygons/</guid><description>&lt;h1 id="基于多边形的语义分割使用说明"&gt;基于多边形的语义分割使用说明&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机视觉 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/computer-vision/</link><description>Recent content in 计算机视觉 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/computer-vision/index.xml" rel="self" type="application/rss+xml"/><item><title>基于多边形的语义分割 (Semantic Segmentation with Polygons)</title><link>https://docs.jujidata.com/docs/templates/computer-vision/semantic-segmentation-with-polygons/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/computer-vision/semantic-segmentation-with-polygons/</guid><description>&lt;h1 id="基于多边形的语义分割使用说明"&gt;基于多边形的语义分割使用说明&lt;/h1&gt;
 &lt;p&gt;基于多边形的语义分割，其实就是“沿着目标边缘一点点描出来”：在目标轮廓上依次点击关键点，连成不规则多边形并闭合，尽量贴合目标外形，从而得到像素级的分割标注。它适合轮廓相对清晰、边缘复杂的目标，比如车辆、行人、动植物、建筑等，广泛应用于自动驾驶、图像识别、医学影像分析等领域。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -15,7 +15,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/semantic-segmentation-with-polygons-example_hu_3ef5e986f69dcf71.webp"
+ src="../../../docs/templates/computer-vision/images/semantic-segmentation-with-polygons-example_hu_3ef5e986f69dcf71.webp"
  width="750"
  height="555"
  decoding="async"
@@ -36,7 +36,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/semantic-segmentation-with-polygons_hu_754a9fbc674b9aef.webp"
+ src="../../../docs/templates/computer-vision/images/semantic-segmentation-with-polygons_hu_754a9fbc674b9aef.webp"
  width="903"
  height="768"
  decoding="async"
@@ -88,7 +88,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/semantic-segmentation-with-masks-example_hu_db20c7177d717142.webp"
+ src="../../../docs/templates/computer-vision/images/semantic-segmentation-with-masks-example_hu_db20c7177d717142.webp"
  width="760"
  height="472"
  decoding="async"
@@ -109,7 +109,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/semantic-segmentation-with-masks_hu_6686771dc707bb4.webp"
+ src="../../../docs/templates/computer-vision/images/semantic-segmentation-with-masks_hu_6686771dc707bb4.webp"
  width="1026"
  height="657"
  decoding="async"
@@ -154,7 +154,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/object-detection-with-bounding-boxes-example_hu_4845a9bb75fc24cf.webp"
+ src="../../../docs/templates/computer-vision/images/object-detection-with-bounding-boxes-example_hu_4845a9bb75fc24cf.webp"
  width="747"
  height="488"
  decoding="async"
@@ -174,7 +174,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/object-detection-with-bounding-boxes_hu_2efe4bb458768ffc.webp"
+ src="../../../docs/templates/computer-vision/images/object-detection-with-bounding-boxes_hu_2efe4bb458768ffc.webp"
  width="763"
  height="503"
  decoding="async"
@@ -203,33 +203,7 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="目标检测矩形框标注配置代码说明"&gt;目标检测矩形框标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现基于矩形框的目标检测标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>2D 矩形框标注 (Bounding Box)</title><link>https://docs.jujidata.com/docs/templates/gallery_cv/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/gallery_cv/</guid><description>&lt;h2 id="1-模版概述"&gt;1. 模版概述&lt;/h2&gt;
-&lt;p&gt;2.D 矩形框标注主要用于&lt;strong&gt;物体检测 (Object Detection)&lt;/strong&gt; 任务。标注员通过绘制与目标边缘紧密贴合的四边形框，确定物体在图像中的位置（坐标）和类别（标签）。&lt;/p&gt;
-&lt;h3 id="适用场景"&gt;适用场景&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;自动驾驶&lt;/strong&gt;：车辆、行人、交通标志检测。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;智慧安防&lt;/strong&gt;：人脸识别、违禁品检测。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;新零售&lt;/strong&gt;：货架商品识别、客流分析。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;医疗影像&lt;/strong&gt;：病灶区域初筛。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id="2-核心交互功能"&gt;2. 核心交互功能&lt;/h2&gt;
-&lt;p&gt;据吉网的 2D 矩形框模版集成了多项提效工具：&lt;/p&gt;
-&lt;h3 id="智能辅助与快捷键"&gt;智能辅助与快捷键&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;十字准星辅助&lt;/strong&gt;：提供全屏十字参照线，确保框选边缘与像素精准对齐。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;快速缩放&lt;/strong&gt;：支持鼠标滚轮以光标为中心实时缩放，方便处理远端微小目标。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;快捷键作业&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;N&lt;/code&gt;：创建新矩形框。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Delete&lt;/code&gt;：删除选中框。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Ctrl + Z&lt;/code&gt;：撤销上一步操作。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;方向键&lt;/code&gt;：微调选中框的像素位置。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="属性关联机制"&gt;属性关联机制&lt;/h3&gt;
-&lt;p&gt;支持为每个矩形框配置多级属性。例如，在标注“车辆”时，可联动弹出：&lt;/p&gt;</description></item><item><title>关键点标注 (Keypoints)</title><link>https://docs.jujidata.com/docs/templates/computer-vision/keypoints/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/computer-vision/keypoints/</guid><description>&lt;h1 id="关键点标注使用说明"&gt;关键点标注使用说明&lt;/h1&gt;
+&lt;p&gt;以下代码用于实现基于矩形框的目标检测标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>关键点标注 (Keypoints)</title><link>https://docs.jujidata.com/docs/templates/computer-vision/keypoints/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/computer-vision/keypoints/</guid><description>&lt;h1 id="关键点标注使用说明"&gt;关键点标注使用说明&lt;/h1&gt;
 &lt;p&gt;关键点标注其实就是“在图上标关键位置”：在目标的关键部位（如眼睛、鼻子、耳朵）逐一点选，并给每个点对应一个名称。和只画一个外框的目标检测、或覆盖整片区域的分割相比，关键点标注更关注各个关键部位之间的位置关系。它常用于人脸五官、人体姿态、动物特征点、工业零件结构点等场景，广泛应用于姿态估计、视觉跟踪、目标检测和精细化识别任务。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -246,7 +220,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/keypoints-example_hu_2df8d57c7a72117a.webp"
+ src="../../../docs/templates/computer-vision/images/keypoints-example_hu_2df8d57c7a72117a.webp"
  width="748"
  height="517"
  decoding="async"
@@ -266,7 +240,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/keypoints_hu_7cca6969122b246c.webp"
+ src="../../../docs/templates/computer-vision/images/keypoints_hu_7cca6969122b246c.webp"
  width="766"
  height="492"
  decoding="async"
@@ -313,7 +287,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/image-captioning-example_hu_f7c252d691af7209.webp"
+ src="../../../docs/templates/computer-vision/images/image-captioning-example_hu_f7c252d691af7209.webp"
  width="748"
  height="629"
  decoding="async"
@@ -333,7 +307,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/image-captioning_hu_6085778b983c2cd1.webp"
+ src="../../../docs/templates/computer-vision/images/image-captioning_hu_6085778b983c2cd1.webp"
  width="750"
  height="493"
  decoding="async"
@@ -377,7 +351,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/image-classification-example_hu_9853afaea7f78c6f.webp"
+ src="../../../docs/templates/computer-vision/images/image-classification-example_hu_9853afaea7f78c6f.webp"
  width="749"
  height="420"
  decoding="async"
@@ -397,7 +371,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/image-classification_hu_af5e8b9f916fe41d.webp"
+ src="../../../docs/templates/computer-vision/images/image-classification_hu_af5e8b9f916fe41d.webp"
  width="745"
  height="477"
  decoding="async"
@@ -444,7 +418,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/inventory-tracking-example_hu_d109aa4b14cc53ba.webp"
+ src="../../../docs/templates/computer-vision/images/inventory-tracking-example_hu_d109aa4b14cc53ba.webp"
  width="744"
  height="613"
  decoding="async"
@@ -464,7 +438,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/inventory-tracking_hu_bf22f3a6dd499862.webp"
+ src="../../../docs/templates/computer-vision/images/inventory-tracking_hu_bf22f3a6dd499862.webp"
  width="753"
  height="478"
  decoding="async"
@@ -509,7 +483,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/medical-image-classification-with-boxes-example_hu_1c46868f265ef4a5.webp"
+ src="../../../docs/templates/computer-vision/images/medical-image-classification-with-boxes-example_hu_1c46868f265ef4a5.webp"
  width="747"
  height="570"
  decoding="async"
@@ -529,7 +503,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/medical-image-classification-with-boxes_hu_656029059b4f4561.webp"
+ src="../../../docs/templates/computer-vision/images/medical-image-classification-with-boxes_hu_656029059b4f4561.webp"
  width="747"
  height="570"
  decoding="async"
@@ -581,7 +555,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/multipage-documents-example_hu_4147c1009f4d0bde.webp"
+ src="../../../docs/templates/computer-vision/images/multipage-documents-example_hu_4147c1009f4d0bde.webp"
  width="754"
  height="425"
  decoding="async"
@@ -601,7 +575,7 @@
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/computer-vision/images/multipage-documents_hu_aab973d3b82c3876.webp"
+ src="../../../docs/templates/computer-vision/images/multipage-documents_hu_aab973d3b82c3876.webp"
  width="757"
  height="487"
  decoding="async"
@@ -633,4 +607,86 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="多页文档标注配置代码说明"&gt;多页文档标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现多页文档的字段框选标注，可直接复制使用。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;以下代码用于实现多页文档的字段框选标注，可直接复制使用。&lt;/p&gt;</description></item><item><title>光学字符识别 (Optical Character Recognition)</title><link>https://docs.jujidata.com/docs/templates/computer-vision/optical-character-recognition/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/computer-vision/optical-character-recognition/</guid><description>&lt;h1 id="光学字符识别使用说明"&gt;光学字符识别使用说明&lt;/h1&gt;
+&lt;p&gt;光学字符识别可以理解为“先标出文字区域，再填写识别文本”：在图片中用矩形或多边形圈定文字位置，给区域选择标签（如文本、标题、编号、金额），并为每个区域录入对应文字内容。它适合票据、合同、报告、表单等场景，常用于文字检测、文本识别与关键信息抽取任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;同时提供定位与转写数据：区域标注用于文本定位，转写结果用于识别训练；&lt;/li&gt;
+&lt;li&gt;适配复杂版式文档：支持矩形与多边形两种区域形状，便于处理倾斜或不规则文本；&lt;/li&gt;
+&lt;li&gt;支持字段化管理：通过标签区分不同文本类型，提升后续抽取与质检效率。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;选择标签类型，如“文本”“标题”“编号”“金额”；&lt;/li&gt;
+&lt;li&gt;在图中使用矩形或多边形标出文字区域；&lt;/li&gt;
+&lt;li&gt;在对应区域输入识别文本并提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/computer-vision/images/optical-character-recognition-example_hu_108dada55e84ba4d.webp"
+ width="742"
+ height="686"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="光学字符识别标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：建议先完成区域标注，再统一填写转写文本，减少漏标和错配。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;标注区域尽量贴合文字边界，避免包含相邻无关内容；&lt;/li&gt;
+&lt;li&gt;转写文本需与原文一致，保留必要符号与格式（如编号、金额小数点）；&lt;/li&gt;
+&lt;li&gt;对难辨识文字可按项目规范记录，不要随意猜测。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/computer-vision/images/optical-character-recognition_hu_df95998ae7da76a1.webp"
+ width="1024"
+ height="656"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="光学字符识别模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Labels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;label&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;文本&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;标题&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;编号&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;金额&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Labels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Rectangle&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;bbox&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;strokeWidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Polygon&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;poly&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;strokeWidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;TextArea&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;transcription&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;editable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;perRegion&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;maxSubmissions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;rows&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;5&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;placeholder&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Recognized Text&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;displayMode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;region-list&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="光学字符识别配置代码说明"&gt;光学字符识别配置代码说明&lt;/h3&gt;
+&lt;p&gt;以下代码用于实现 OCR 场景下的“区域定位 + 文本转写”联合标注。&lt;/p&gt;</description></item></channel></rss>
