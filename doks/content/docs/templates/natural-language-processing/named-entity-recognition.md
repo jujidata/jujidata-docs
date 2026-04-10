@@ -14,7 +14,7 @@ params:
       title: "命名实体识别 (Named Entity Recognition)"
       description: "命名实体识别标注模版，支持在文本中直接划选并标记实体类别，适配人物、时间、地点、事件等信息抽取任务。"
       keywords: ["标注模板", "命名实体识别", "NER", "Named Entity Recognition"]
-      canonical: "https://docs.jujidata.com/docs/templates/named-entity-recognition"
+      canonical: "https://docs.jujidata.com/docs/templates/natural-language-processing/named-entity-recognition"
       robots: "index, follow"
 ---
 

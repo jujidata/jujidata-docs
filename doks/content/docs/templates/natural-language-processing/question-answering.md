@@ -14,7 +14,7 @@ params:
       title: "问答系统 (Question Answering)"
       description: "问答系统标注模版，支持阅读段落、根据问题在原文中划出答案片段，适配抽取式阅读理解与机器阅读理解任务。"
       keywords: ["标注模板", "问答系统", "Question Answering"]
-      canonical: "https://docs.jujidata.com/docs/templates/question-answering"
+      canonical: "https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering"
       robots: "index, follow"
 ---
 

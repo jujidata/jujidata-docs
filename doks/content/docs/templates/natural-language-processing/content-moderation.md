@@ -5,7 +5,7 @@ lead: "内容审核通过为文本打上一个或多个风险/倾向标签，并
 date: 2026-04-01 08:00:00
 lastmod: 2026-04-01 08:00:00
 draft: false
-weight: 18
+weight: 6
 menu:
   sidebar_docs:
     parent: "模版使用"
@@ -14,7 +14,7 @@ params:
       title: "内容审核 (Content Moderation)"
       description: "内容审核标注模版，支持多标签风险类别选择与补充评论，适配文本安全审查、社区治理与合规风控场景。"
       keywords: ["标注模板", "内容审核", "Content Moderation", "文本安全"]
-      canonical: "https://docs.jujidata.com/docs/templates/content-moderation"
+      canonical: "https://docs.jujidata.com/docs/templates/natural-language-processing/content-moderation"
       robots: "index, follow"
 ---
 
