@@ -58,5 +58,6 @@
 
 - [自然语言处理](https://docs.jujidata.com/docs/templates/natural-language-processing/): 文本与语言类标注模版，覆盖分类、摘要、实体、问答、审核与翻译等常见 NLP 任务。
 - [计算机视觉](https://docs.jujidata.com/docs/templates/computer-vision/): 预置 10 大主流 AI 标注模版，支持高度自定义配置。
+- [对话式 AI](https://docs.jujidata.com/docs/templates/conversational-ai/): 面向对话理解、共指消解与实体相关任务的文本标注模版，可与对话或配置字段联动。
 - [排序与评分](https://docs.jujidata.com/docs/templates/ranking-and-scoring/): 排序、检索偏好与相关性标注模版，覆盖 ASR 假设选择、图像/文档检索、成对比较与搜索排序等任务。
 

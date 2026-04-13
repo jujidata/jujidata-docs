@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自然语言处理 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/</link><description>Recent content in 自然语言处理 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/natural-language-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>问答系统 (Question Answering)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</guid><description>&lt;h1 id="问答系统使用说明"&gt;问答系统使用说明&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自然语言处理 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/</link><description>Recent content in 自然语言处理 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Mon, 13 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/natural-language-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>问答系统 (Question Answering)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</guid><description>&lt;h1 id="问答系统使用说明"&gt;问答系统使用说明&lt;/h1&gt;
 &lt;p&gt;问答系统可以理解为「读一段文字，按问题在原文里标出答案」：先阅读给定段落，再看问题，最后在段落中拖选能直接回答问题的连续文字片段。它适合新闻、百科、说明书等场景，常用于抽取式问答、阅读理解与检索增强类模型训练。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -113,6 +113,53 @@
  fetchpriority="auto"
  loading="lazy"
  alt="分类体系模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>关系抽取 (Relation Extraction)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/relation-extraction/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/relation-extraction/</guid><description>&lt;h1 id="关系抽取使用说明"&gt;关系抽取使用说明&lt;/h1&gt;
+&lt;p&gt;关系抽取可以理解为「先按类型标出两个（或多个）文本片段，再用关系类型把它们连起来」：例如先为「文天祥」打上名词类标签、为「他」打上代词类标签，再通过界面中的关系工具在二者之间建立一条边，表示代词指向该名词。它适合共指消解、实体关系分类、事件论元关联等场景，常与命名实体识别配合使用。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;输出实体对级别的结构化监督，便于训练关系分类器或图神经网络；&lt;/li&gt;
+&lt;li&gt;关系类型由 &lt;code&gt;Relations&lt;/code&gt; 预定义，保证全项目口径一致；&lt;/li&gt;
+&lt;li&gt;可视化连线降低漏标、错向（头尾颠倒）的概率。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;点选实体类型标签，并在文本中拖选对应片段完成实体标注（至少需要两个标注的实体才能进行关系抽取）；&lt;/li&gt;
+&lt;li&gt;在下方面板切换到「信息」板块；&lt;/li&gt;
+&lt;li&gt;选中其中一个实体作为关系一端的区域；&lt;/li&gt;
+&lt;li&gt;点击关系图标，即可创建关系；&lt;/li&gt;
+&lt;li&gt;点击另一个实体，就能完成关系链接。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/relation-extraction-example_hu_7d9ee24d01ef662b.webp"
+ width="769"
+ height="544"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="关系抽取标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：完成以上步骤之后，点击截图中「关系」板块，选择对应的关系对即可选择具体关系类型（关系类型可自己定义）。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;实体边界尽量紧凑，避免把标点或无关邻词选入同一跨度；&lt;/li&gt;
+&lt;li&gt;同一对实体是否允许多条关系、是否区分方向，需在标注规范中写清；&lt;/li&gt;
+&lt;li&gt;示例中的 &lt;code&gt;org:founded_by&lt;/code&gt; / &lt;code&gt;org:founded&lt;/code&gt; 仅为配置演示，与中文传记样例无字面语义对应时，应替换为真实关系集合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/relation-extraction_hu_31c60f6e91defb76.webp"
+ width="1009"
+ height="646"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="关系抽取模板预览"
  id="h-rh-i-1"
 &gt;&lt;/p&gt;</description></item><item><title>内容审核 (Content Moderation)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/content-moderation/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/content-moderation/</guid><description>&lt;h1 id="内容审核使用说明"&gt;内容审核使用说明&lt;/h1&gt;
 &lt;p&gt;内容审核可以理解为“先判断文本涉及哪些类别，再补充审核意见”：标注员先阅读文本内容，勾选一个或多个标签（如侮辱、威胁、积极、温暖），再在评论框写下必要说明，用于支撑判定依据或记录边界情况。&lt;/p&gt;

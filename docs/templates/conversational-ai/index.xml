@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>对话式 AI on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/conversational-ai/</link><description>Recent content in 对话式 AI on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Mon, 13 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/conversational-ai/index.xml" rel="self" type="application/rss+xml"/><item><title>共指消解和实体链接 (Coreference Resolution and Entity Linking)</title><link>https://docs.jujidata.com/docs/templates/conversational-ai/coreference-resolution-and-entity-linking/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/conversational-ai/coreference-resolution-and-entity-linking/</guid><description>&lt;h1 id="共指消解和实体链接使用说明"&gt;共指消解和实体链接使用说明&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;可以理解为「在文中标出代词与名词等提及，并在需要时用连线表达&lt;strong&gt;同一实体&lt;/strong&gt;上的指代关系」。&lt;/li&gt;
+&lt;li&gt;与 
+
+&lt;a class="link link--text" href="../../../docs/templates/natural-language-processing/relation-extraction/"&gt;关系抽取&lt;/a&gt; 相比：&lt;strong&gt;关系抽取&lt;/strong&gt;回答的是「两个跨度之间属于哪一种&lt;strong&gt;预定义语义关系&lt;/strong&gt;」（如人物—就职—机构），连线可定义关系类型，侧重图谱或事件结构中的&lt;strong&gt;有类型边&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;共指消解&lt;/strong&gt;回答的是「两个跨度是否在指称&lt;strong&gt;同一对象&lt;/strong&gt;」，连线表示指代链或共指簇，侧重&lt;strong&gt;同指/代词先行词&lt;/strong&gt;，通常不依赖一整套业务关系枚举。&lt;strong&gt;实体链接&lt;/strong&gt;则常在名词提及侧对齐知识库标准条目（ID、规范名等）。它适合新闻、对话、评论等需要消解「他/她/其」指向的语料，也可作为实体链接流水线的前置跨度标注。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;显式区分代词与名词短语，降低共指模型学习的类别混淆；&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;confText&lt;/code&gt; 字段可与对话配置、任务说明等上游数据对齐；&lt;/li&gt;
+&lt;li&gt;与关系标注配合时，可导出「提及对 + 指代」结构，便于评测与训练。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;点选实体类型标签，并在文本中拖选对应片段完成实体标注（至少需要两个标注的实体才能进行实体链接）；&lt;/li&gt;
+&lt;li&gt;在下方面板切换到「信息」板块；&lt;/li&gt;
+&lt;li&gt;选中其中一个实体作为链接一端的区域；&lt;/li&gt;
+&lt;li&gt;点击关系图标，即可创建关系；&lt;/li&gt;
+&lt;li&gt;最后点击另一个实体，就能完成关系链接。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/conversational-ai/images/coreference-resolution-and-entity-linking-example_hu_6bca0f30bfdd9df2.webp"
+ width="818"
+ height="505"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="共指消解和实体链接标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>意图分类和槽填充 (Intent Classification and Slot Filling)</title><link>https://docs.jujidata.com/docs/templates/conversational-ai/intent-classification-and-slot-filling/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/conversational-ai/intent-classification-and-slot-filling/</guid><description>&lt;h1 id="意图分类和槽填充使用说明"&gt;意图分类和槽填充使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「上面用槽位类型在对话里圈出实体片段，下面为整段对话选一个意图标签」。例如点餐对话中，在用户话轮里标出「东方面馆」「东大门街道」「一份」等跨度，并在底部勾选「客户请求」。它适合任务型对话、智能客服、语音助手等需要同时产出&lt;strong&gt;对话意图&lt;/strong&gt;与&lt;strong&gt;槽位监督&lt;/strong&gt;的训练数据。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;同屏完成&lt;strong&gt;整段对话意图&lt;/strong&gt;与&lt;strong&gt;轮内槽位跨度&lt;/strong&gt;，减少拆任务与对齐成本；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ParagraphLabels&lt;/code&gt; 与 &lt;code&gt;Paragraphs&lt;/code&gt; 绑定，槽位标注直接落在对话原文上；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choices&lt;/code&gt; 单选约束清晰，便于统计各类意图分布。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;自上而下阅读人机多轮对话，把握用户目标与关键信息；&lt;/li&gt;
+&lt;li&gt;点选槽位标签，在对应话轮中标注对应文本片段；&lt;/li&gt;
+&lt;li&gt;在底部「意图」区域点选一项，确认与整段对话语义一致；&lt;/li&gt;
+&lt;li&gt;复核槽位边界与意图类别后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/conversational-ai/images/intent-classification-and-slot-filling-example_hu_170d189de7ab5c2.webp"
+ width="710"
+ height="654"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="意图分类和槽填充标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：截图中①—③示意槽位选择与意图勾选；快捷键序号以平台实际显示为准。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;槽位边界尽量只包含有效取值，避免带上「示例：」等提示性前缀（若项目约定保留则统一口径）；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;choice=&amp;quot;single&amp;quot;&lt;/code&gt; 表示意图互斥，若业务需要多意图需调整配置与规范；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;humanMachineDialogue&lt;/code&gt; 须为&lt;strong&gt;对象数组&lt;/strong&gt;，每条含默认的 &lt;code&gt;author&lt;/code&gt; 与 &lt;code&gt;text&lt;/code&gt;（或与 &lt;code&gt;nameKey&lt;/code&gt; / &lt;code&gt;textKey&lt;/code&gt; 一致），否则段落组件无法渲染；&lt;/li&gt;
+&lt;li&gt;轮次作者取值需与 &lt;code&gt;layout=&amp;quot;dialogue&amp;quot;&lt;/code&gt; 的展示约定一致（如人类 / 机器人），导入数据前请与工程侧对齐。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/conversational-ai/images/intent-classification-and-slot-filling_hu_666d92769a7b8b8a.webp"
+ width="1024"
+ height="630"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="意图分类和槽填充模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>响应生成 (Response Generation)</title><link>https://docs.jujidata.com/docs/templates/conversational-ai/response-generation/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/conversational-ai/response-generation/</guid><description>&lt;h1 id="响应生成使用说明"&gt;响应生成使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「读完上面的多轮对话后，在下方文本框里写出最合适回复的内容」。它适合需要&lt;strong&gt;开放式字符串标签&lt;/strong&gt;的对话生成、话术润色与模型对齐数据构建。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;输出与上下文连贯的自然语言回复，可直接用于评测集或人工基线；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TextArea&lt;/code&gt; 与 &lt;code&gt;Paragraphs&lt;/code&gt; 绑定（&lt;code&gt;toName=&amp;quot;chat&amp;quot;&lt;/code&gt;），导出时可将回复与对话对象关联；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;maxSubmissions&lt;/code&gt; 可限制每条任务提交次数，降低重复标注噪声。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;自上而下阅读对话，确认当前轮次应由哪一方回复、需满足哪些事实；&lt;/li&gt;
+&lt;li&gt;在「提供回复」下方的文本框中撰写或修改回复全文；&lt;/li&gt;
+&lt;li&gt;点击界面「添加」等提交控件，即可保存提交；&lt;/li&gt;
+&lt;li&gt;自检语气、事实与合规要求后，完成任务。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/conversational-ai/images/response-generation-example_hu_5cb616e38fe0a017.webp"
+ width="768"
+ height="540"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="响应生成标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：提交后可以点击编辑键修改已有回复，或者删除此条，并重新添加回复。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dialogue&lt;/code&gt; 须为对象数组，元素包含 &lt;code&gt;author&lt;/code&gt; 与 &lt;code&gt;text&lt;/code&gt;，并与 &lt;code&gt;Paragraphs&lt;/code&gt; 的 &lt;code&gt;value=&amp;quot;$dialogue&amp;quot;&lt;/code&gt; 一致；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rows&lt;/code&gt;、&lt;code&gt;editable&lt;/code&gt; 可按交互需求调整；&lt;code&gt;maxSubmissions=&amp;quot;1&amp;quot;&lt;/code&gt; 表示通常只允许一条最终回复，若需多稿对比请调整配置与规范；&lt;/li&gt;
+&lt;li&gt;若预填模型草稿，可在任务数据中通过平台支持的字段注入初始文本（以实际版本能力为准）；&lt;/li&gt;
+&lt;li&gt;话术风格、是否必须包含订单号等，应在项目说明中写清。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/conversational-ai/images/response-generation_hu_9847bc5e8a595c6a.webp"
+ width="1024"
+ height="629"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="响应生成模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>响应选择 (Response Selection)</title><link>https://docs.jujidata.com/docs/templates/conversational-ai/response-selection/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/conversational-ai/response-selection/</guid><description>&lt;h1 id="响应选择使用说明"&gt;响应选择使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先看完上面的对话历史，再在下面两条（或多条）候选回复里&lt;strong&gt;单选&lt;/strong&gt;更恰当的一条」。它适合客服机器人、语音助手、开放域对话等需要&lt;strong&gt;成对或成组比较回复质量&lt;/strong&gt;的数据构建。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将「上下文—候选回复—人工偏好」打包为一条样本，便于训练排序或判别模型；&lt;/li&gt;
+&lt;li&gt;与 &lt;code&gt;Paragraphs&lt;/code&gt; 绑定后，选择结果可与整段对话在导出结构中关联；&lt;/li&gt;
+&lt;li&gt;每条候选独立 &lt;code&gt;Choices&lt;/code&gt; + &lt;code&gt;single-radio&lt;/code&gt;，避免两条同时误选（以平台行为为准）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;自上而下阅读人机多轮对话，确认用户意图与约束；&lt;/li&gt;
+&lt;li&gt;阅读「请选择合适的回复」下方的每条候选全文；&lt;/li&gt;
+&lt;li&gt;在「回复一」「回复二」旁点选单选按钮，选出整体更合适的一条；&lt;/li&gt;
+&lt;li&gt;若有均不合格等情况，按项目规范处理（如跳过或选「无法判断」类扩展项）后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/conversational-ai/images/response-selection-example_hu_e511a4676ecbeaf1.webp"
+ width="733"
+ height="535"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="响应选择标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：截图中箭头示意最终选中的候选；快捷键 &lt;code&gt;[1]&lt;/code&gt; &lt;code&gt;[2]&lt;/code&gt; 以平台显示为准。&lt;/p&gt;</description></item></channel></rss>
