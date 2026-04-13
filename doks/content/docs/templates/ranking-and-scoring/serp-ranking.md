@@ -5,7 +5,7 @@ lead: "SERP Ranking 用于评估查询与候选结果的匹配质量，通过结
 date: 2026-04-01 08:00:00
 lastmod: 2026-04-01 08:00:00
 draft: false
-weight: 26
+weight: 6
 menu:
   sidebar_docs:
     parent: "模版使用"
