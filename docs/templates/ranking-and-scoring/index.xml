@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>排序与评分 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/ranking-and-scoring/</link><description>Recent content in 排序与评分 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/ranking-and-scoring/index.xml" rel="self" type="application/rss+xml"/><item><title>ASR 假设选择 (ASR Hypotheses)</title><link>https://docs.jujidata.com/docs/templates/ranking-and-scoring/asr-hypotheses/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/ranking-and-scoring/asr-hypotheses/</guid><description>&lt;h1 id="asr-假设选择使用说明"&gt;ASR 假设选择使用说明&lt;/h1&gt;
+&lt;p&gt;ASR 假设选择可以理解为「先听清，再选对」：同一段音频会对应多条略有差异的转写候选，标注员需要结合听觉判断，选出与说话内容最一致的一条。&lt;/p&gt;
+&lt;p&gt;这个模板适合语音识别纠错、候选重排序、听写评测等任务。播放器支持音量调节、语速调节、前进/后退，以及在波形上选区循环播放，适合对可疑片段反复比对后再选择答案。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;为 ASR 多候选输出提供人工裁决，形成高质量监督数据；&lt;/li&gt;
+&lt;li&gt;帮助识别音近词、形近词与语义干扰，提升模型鲁棒性；&lt;/li&gt;
+&lt;li&gt;支持检索难例与误识别模式，反哺模型迭代。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;先完整听一遍音频，了解整体语义；&lt;/li&gt;
+&lt;li&gt;用前进、后退、调速和选区循环精听关键片段；&lt;/li&gt;
+&lt;li&gt;在候选列表中勾选与音频最一致的一项；&lt;/li&gt;
+&lt;li&gt;提交前再次核对关键差异词。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/asr-hypotheses-example_hu_90b6f314008175bf.webp"
+ width="802"
+ height="508"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="ASR 假设选择标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：建议优先以音频事实为准，不要仅凭文本流畅度做判断。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;听不清时优先降低语速并重复播放问题区间；&lt;/li&gt;
+&lt;li&gt;关注专有名词、术语和否定词，避免“听起来像”但语义错误；&lt;/li&gt;
+&lt;li&gt;候选列表应与音频内容同域同任务，避免无效干扰项。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/asr-hypotheses_hu_9854d22568610e56.webp"
+ width="802"
+ height="508"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="ASR 假设选择模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>基于内容图像检索 (Content-Based Image Search)</title><link>https://docs.jujidata.com/docs/templates/ranking-and-scoring/content-based-image-search/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/ranking-and-scoring/content-based-image-search/</guid><description>&lt;h1 id="基于内容图像检索使用说明"&gt;基于内容图像检索使用说明&lt;/h1&gt;
+&lt;p&gt;基于内容图像检索可以理解为「看查询图，再从候选里挑出像它的」：上方为 &lt;strong&gt;查询图&lt;/strong&gt;（query），下方三张为 &lt;strong&gt;候选图&lt;/strong&gt;；勾选「图片一 / 图片二 / 图片三」对应左、中、右三张图是否 &lt;strong&gt;内容相近&lt;/strong&gt;。支持 &lt;strong&gt;多选&lt;/strong&gt;（&lt;code&gt;choice=&amp;quot;multiple&amp;quot;&lt;/code&gt;），即可以同时认为多张候选与查询相似，也可以只选一张或不选（若项目允许空选，需单独约定；本配置中 &lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 表示必须至少选一项）。&lt;/p&gt;
+&lt;p&gt;每张图旁通常带有缩放、平移等查看工具，便于放大细节后再判断相似性。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;提供「查询–候选」相关性的人工标签，用于训练或评估检索模型；&lt;/li&gt;
+&lt;li&gt;区分「看起来像」与「语义相关」（如物种、场景、风格），可按项目定义相似口径；&lt;/li&gt;
+&lt;li&gt;多选支持召回型标注：凡符合标准的候选均可勾选。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;观察查询图的主体、场景、风格与关键细节；&lt;/li&gt;
+&lt;li&gt;依次查看三张候选图，必要时使用缩放工具；&lt;/li&gt;
+&lt;li&gt;勾选与查询在既定标准下相似的选项，可多选；&lt;/li&gt;
+&lt;li&gt;提交前确认勾选与图片位置一一对应。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/content-based-image-search-example_hu_a1f63a9914fdd89a.webp"
+ width="763"
+ height="847"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="基于内容图像检索标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>文档检索 (Document Retrieval)</title><link>https://docs.jujidata.com/docs/templates/ranking-and-scoring/document-retrieval/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/ranking-and-scoring/document-retrieval/</guid><description>&lt;h1 id="文档检索使用说明"&gt;文档检索使用说明&lt;/h1&gt;
+&lt;p&gt;文档检索可以理解为「先看查询，再选最相关文档」：上方显示用户查询，下方展示多条候选文本。标注员根据语义匹配程度，在候选中选择与查询最相关的一项。&lt;/p&gt;
+&lt;p&gt;本模板采用每行一个单选按钮（&lt;code&gt;choice=&amp;quot;single-radio&amp;quot;&lt;/code&gt;）的形式，让标注员在三条候选文档中完成相关性判断。适用于 FAQ 检索、知识库问答召回、搜索排序训练等任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;构建查询-文档相关性样本，提升检索模型排序质量；&lt;/li&gt;
+&lt;li&gt;用人工判断纠正词面匹配误差，强化语义匹配能力；&lt;/li&gt;
+&lt;li&gt;为问答系统提供高质量“命中文档”监督信号。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读查询句，并逐条查看候选文档内容；&lt;/li&gt;
+&lt;li&gt;在最相关的一条右侧勾选对应选项，可多选；&lt;/li&gt;
+&lt;li&gt;提交前确认未误选、漏选。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/document-retrieval-example_hu_81dd96efa1881c96.webp"
+ width="689"
+ height="355"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="文档检索标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：若两条候选都部分相关，优先选择“更直接回答查询”的那一条。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;当前配置是“每行一个独立单选组件”，默认可出现多行同时被选；若业务要求“全局只能选一条”，建议改为单个 &lt;code&gt;Choices&lt;/code&gt; 包含多个 &lt;code&gt;Choice&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;相关性判定以“是否回答查询”优先，不只看关键词重合；&lt;/li&gt;
+&lt;li&gt;若候选数量扩展，需同步新增 &lt;code&gt;Text&lt;/code&gt; 与对应 &lt;code&gt;Choices&lt;/code&gt; 区块。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/document-retrieval_hu_e62ec3e4d75709d9.webp"
+ width="1024"
+ height="635"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="文档检索模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>成对分类 (Pairwise Classification)</title><link>https://docs.jujidata.com/docs/templates/ranking-and-scoring/pairwise-classification/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/ranking-and-scoring/pairwise-classification/</guid><description>&lt;h1 id="成对分类使用说明"&gt;成对分类使用说明&lt;/h1&gt;
+&lt;p&gt;成对分类可以理解为「给你两个候选，只选更优那个」：界面同时展示两条待比较内容，标注员基于统一标准做二选一判断。它适合答案偏好学习、文案 A/B 对比、模型输出优劣评估等场景。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;构建“成对偏好”监督信号，支撑排序与偏好模型训练；&lt;/li&gt;
+&lt;li&gt;将主观质量判断结构化，便于后续统计和回放分析；&lt;/li&gt;
+&lt;li&gt;相比绝对打分更稳定，适合快速批量标注。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读两条候选文本，按任务标准比较质量；&lt;/li&gt;
+&lt;li&gt;在界面中选择更优的一项。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/pairwise-classification-example_hu_d04e201f5a874813.webp"
+ width="720"
+ height="208"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="成对分类标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：若两项质量接近，优先依据项目既定规则（如事实准确性、完整性、可读性）做出稳定选择。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;两条候选应保持可比性（同任务、同维度）；&lt;/li&gt;
+&lt;li&gt;标注前建议先统一“更优”的判断标准，降低主观漂移；&lt;/li&gt;
+&lt;li&gt;若业务需要“可平局”机制，需在模板层增加第三种选择。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/pairwise-classification_hu_3ee8af4ac2463bd8.webp"
+ width="920"
+ height="660"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="成对分类模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;请从以下两个项目中选择一个&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Pairwise&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pw&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text1,text2&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Text&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text1&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$pairText1&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Text&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text2&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$pairText2&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="配置说明"&gt;配置说明&lt;/h3&gt;
+&lt;p&gt;以上代码用于实现“两条候选文本的二选一偏好判断”。&lt;/p&gt;</description></item><item><title>成对回归 (Pairwise Regression)</title><link>https://docs.jujidata.com/docs/templates/ranking-and-scoring/pairwise-regression/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/ranking-and-scoring/pairwise-regression/</guid><description>&lt;h1 id="成对回归使用说明"&gt;成对回归使用说明&lt;/h1&gt;
+&lt;p&gt;成对回归可以理解为「看两张图，给一个相似度分数」：它不是二选一，而是用连续评分表达“两张图代表同一对象的可能性”。该模板适合图像相似度学习、检索重排打分、视觉质量评测等任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;提供连续监督信号，支持细粒度相似度建模；&lt;/li&gt;
+&lt;li&gt;兼顾“是否相似”与“相似程度”两层信息；&lt;/li&gt;
+&lt;li&gt;可作为检索排序或匹配模型的高质量训练样本。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;对比两张图片的主体、场景、构图和关键细节；&lt;/li&gt;
+&lt;li&gt;使用评分组件给出“同一对象可能性”分值；&lt;/li&gt;
+&lt;li&gt;提交前确认评分与任务标准一致。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/pairwise-regression-example_hu_a1c5d9ec6d9e5ac2.webp"
+ width="726"
+ height="417"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="成对回归标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：建议先制定统一评分口径（如 1~5 每档含义），再开展批量标注，减少个体偏差。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;评分应重点关注任务定义的“同一对象”标准，而非单纯视觉好看与否；&lt;/li&gt;
+&lt;li&gt;相似但非同一对象的样本应给中低分，避免误导模型；&lt;/li&gt;
+&lt;li&gt;数据集若包含风格差异较大的图像，建议加强标注前校准。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/pairwise-regression_hu_76fdd9e7cc355e08.webp"
+ width="1024"
+ height="635"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="成对回归模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;请设置这些图片代表相同对象的可能性：&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Header&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Rating&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;rating&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image1,image2&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;display: flex; gap: 16px; align-items: flex-start;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image1&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image1&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image2&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image2&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="配置说明"&gt;配置说明&lt;/h3&gt;
+&lt;p&gt;以上代码用于实现“两张图像的相似度连续评分”。&lt;/p&gt;</description></item><item><title>搜索页面排序 (SERP Ranking)</title><link>https://docs.jujidata.com/docs/templates/ranking-and-scoring/serp-ranking/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/ranking-and-scoring/serp-ranking/</guid><description>&lt;h1 id="搜索页面排序使用说明"&gt;搜索页面排序使用说明&lt;/h1&gt;
+&lt;p&gt;搜索页面排序可以理解为“根据搜索判断哪些结果相关、整体质量如何、你有多确定”：上方显示查询词，中间是可多选的搜索结果列表，底部补充搜索质量星级与标注置信度。该模板适用于搜索引擎排序评估、检索模型重排训练与人工质检场景。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;结果多选标注：支持一次标记多个相关结果，贴合真实检索场景；&lt;/li&gt;
+&lt;li&gt;质量信号增强：&lt;code&gt;Rating&lt;/code&gt; 提供查询级别整体质量分；&lt;/li&gt;
+&lt;li&gt;置信度补充：低/高置信度可用于后续样本加权与复核分流。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读查询词，明确用户意图；&lt;/li&gt;
+&lt;li&gt;在结果列表中勾选相关项，支持多选与嵌套项；&lt;/li&gt;
+&lt;li&gt;对当前搜索结果整体质量进行星级评分；&lt;/li&gt;
+&lt;li&gt;选择“低/高置信度”并提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/serp-ranking-example_hu_dda60e3f8429c3a5.webp"
+ width="789"
+ height="853"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="搜索页面排序标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：遇到边界样本时，先按相关性标准打标，再用“低置信度”标记不确定样本，便于二次复核。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;selection=&amp;quot;checkbox&amp;quot;&lt;/code&gt; 与 &lt;code&gt;choice=&amp;quot;multiple&amp;quot;&lt;/code&gt; 表示结果可多选；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;allownested=&amp;quot;true&amp;quot;&lt;/code&gt; 支持父子结果结构，注意父子项的相关性独立判断；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;showInLine=&amp;quot;true&amp;quot;&lt;/code&gt; 为当前模板写法，如平台仅识别 &lt;code&gt;showInline&lt;/code&gt;，请按运行环境调整。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/serp-ranking_hu_85783f8feca0d088.webp"
+ width="1024"
+ height="635"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="搜索页面排序模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>文本到图像生成 (Text-to-Image)</title><link>https://docs.jujidata.com/docs/templates/ranking-and-scoring/text-to-image/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/ranking-and-scoring/text-to-image/</guid><description>&lt;h1 id="文本到图像生成使用说明"&gt;文本到图像生成使用说明&lt;/h1&gt;
+&lt;p&gt;文本到图像生成可以理解为「先看提示词，再选匹配图」：界面顶部展示生成提示词，下方展示多张候选图，标注员根据“是否符合提示词语义与细节”勾选一张或多张更匹配的结果。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;建立“提示词-图像”对齐监督，提升生成质量评测能力；&lt;/li&gt;
+&lt;li&gt;支持多选，便于保留多个合格候选；&lt;/li&gt;
+&lt;li&gt;通过统一视觉标准，沉淀可用于模型迭代的偏好数据。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读提示词，提取主体、场景与风格约束；&lt;/li&gt;
+&lt;li&gt;对比下方候选图，判断哪些图更符合描述；&lt;/li&gt;
+&lt;li&gt;勾选符合要求的候选图后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/text-to-image-example_hu_ddafcd8ff646f564.webp"
+ width="657"
+ height="326"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="文本到图像生成标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：当多张候选都满足提示词时可同时勾选；当存在明显违背提示词要素的图像时不勾选。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;勾选依据优先看“语义匹配”，其次看清晰度与美观度；&lt;/li&gt;
+&lt;li&gt;若提示词包含关键约束（如物体、动作、风格），需重点核对；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;choice=&amp;quot;multiple&amp;quot;&lt;/code&gt; 为多选模式，若业务要求单选需改为单选配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/ranking-and-scoring/images/text-to-image_hu_99bd29d393fc1d5a.webp"
+ width="922"
+ height="661"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="文本到图像生成模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
+&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
+
+
+
+&lt;div class="expressive-code"&gt;
+ &lt;figure class="frame not-content"&gt;
+ &lt;figcaption class="header"&gt;
+ &lt;span class="title"&gt;&lt;/span&gt;
+ &lt;/figcaption&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt; &lt;span class="na"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;ch-title&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Text&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;prompt&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$prompt&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt; &lt;span class="na"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;highlight&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Choices&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;images&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;prompt&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$images&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;choice&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;multiple&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;inline&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="文本到图像生成配置代码说明"&gt;文本到图像生成配置代码说明&lt;/h3&gt;
+&lt;p&gt;1、提示词展示：&lt;code&gt;Text name=&amp;quot;prompt&amp;quot;&lt;/code&gt; 显示生成任务描述。&lt;br&gt;
+2、候选图选择：&lt;code&gt;Choices name=&amp;quot;images&amp;quot;&lt;/code&gt; 通过 &lt;code&gt;value=&amp;quot;$images&amp;quot;&lt;/code&gt; 动态加载图像选项，&lt;code&gt;layout=&amp;quot;inline&amp;quot;&lt;/code&gt; 横向展示，&lt;code&gt;choice=&amp;quot;multiple&amp;quot;&lt;/code&gt; 支持多选。&lt;br&gt;
+3、样式高亮：通过 &lt;code&gt;Style&lt;/code&gt; 隐藏默认复选框并用边框高亮选中项，提升视觉可读性。&lt;/p&gt;</description></item></channel></rss>
