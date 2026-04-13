@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自然语言处理 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/</link><description>Recent content in 自然语言处理 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/natural-language-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>文本分类 (Text Classification)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/text-classification/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/text-classification/</guid><description>&lt;h1 id="文本分类使用说明"&gt;文本分类使用说明&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自然语言处理 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/</link><description>Recent content in 自然语言处理 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/natural-language-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>问答系统 (Question Answering)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</guid><description>&lt;h1 id="问答系统使用说明"&gt;问答系统使用说明&lt;/h1&gt;
+&lt;p&gt;问答系统可以理解为「读一段文字，按问题在原文里标出答案」：先阅读给定段落，再看问题，最后在段落中拖选能直接回答问题的连续文字片段。它适合新闻、百科、说明书等场景，常用于抽取式问答、阅读理解与检索增强类模型训练。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;提供可定位的答案监督：答案与原文片段对齐，便于训练与评测；&lt;/li&gt;
+&lt;li&gt;约束答案来源：答案必须来自段落中的连续文本，减少凭空编造；&lt;/li&gt;
+&lt;li&gt;标注流程清晰：先选标签再划词，与常见阅读标注习惯一致。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;通读下方段落，理解大意；&lt;/li&gt;
+&lt;li&gt;阅读问题，明确要回答的要点；&lt;/li&gt;
+&lt;li&gt;点选「回答」标签，在段落中拖选作为答案的连续文字；&lt;/li&gt;
+&lt;li&gt;核对所选片段是否完整、无多余内容后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/question-answering-example_hu_1f3615f764465ef4.webp"
+ width="749"
+ height="304"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="问答系统标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：答案应尽量是完整短语或句子，避免只选半个词；若段落中不存在合适答案，按项目约定处理（如标空或跳过）。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;划选范围需与问题严格对应，避免包含无关邻句；&lt;/li&gt;
+&lt;li&gt;同一问题通常只保留一条答案片段，与 &lt;code&gt;maxUsage=&amp;quot;1&amp;quot;&lt;/code&gt; 一致；&lt;/li&gt;
+&lt;li&gt;示例数据里的 &lt;code&gt;text&lt;/code&gt; 字段建议写成&lt;strong&gt;单行字符串&lt;/strong&gt;（不在 JSON 内换行），以免与字符偏移不一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/natural-language-processing/images/question-answering_hu_c72ea479c67c7ff.webp"
+ width="1302"
+ height="800"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="问答系统模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>文本分类 (Text Classification)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/text-classification/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/text-classification/</guid><description>&lt;h1 id="文本分类使用说明"&gt;文本分类使用说明&lt;/h1&gt;
 &lt;p&gt;文本分类可以理解为「读一句话或一段字，选一个最贴切的标签」：界面先展示 &lt;code&gt;$text&lt;/code&gt; 绑定的正文，再在下方卡片中从若干互斥选项里点选一项（如情感分析中的积极 / 消极 / 中性）。它适合评论舆情、客服意图、新闻主题等场景，常用于情感分类、主题标注与意图识别训练。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -257,53 +303,7 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="文本摘要配置代码说明"&gt;文本摘要配置代码说明&lt;/h3&gt;
-&lt;p&gt;以上代码用于实现“阅读文本 -&amp;gt; 输出一句话摘要”的流程。&lt;/p&gt;</description></item><item><title>问答系统 (Question Answering)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</guid><description>&lt;h1 id="问答系统使用说明"&gt;问答系统使用说明&lt;/h1&gt;
-&lt;p&gt;问答系统可以理解为「读一段文字，按问题在原文里标出答案」：先阅读给定段落，再看问题，最后在段落中拖选能直接回答问题的连续文字片段。它适合新闻、百科、说明书等场景，常用于抽取式问答、阅读理解与检索增强类模型训练。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;提供可定位的答案监督：答案与原文片段对齐，便于训练与评测；&lt;/li&gt;
-&lt;li&gt;约束答案来源：答案必须来自段落中的连续文本，减少凭空编造；&lt;/li&gt;
-&lt;li&gt;标注流程清晰：先选标签再划词，与常见阅读标注习惯一致。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;通读下方段落，理解大意；&lt;/li&gt;
-&lt;li&gt;阅读问题，明确要回答的要点；&lt;/li&gt;
-&lt;li&gt;点选「回答」标签，在段落中拖选作为答案的连续文字；&lt;/li&gt;
-&lt;li&gt;核对所选片段是否完整、无多余内容后提交。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../../docs/templates/natural-language-processing/images/question-answering-example_hu_1f3615f764465ef4.webp"
- width="749"
- height="304"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="问答系统标注示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：答案应尽量是完整短语或句子，避免只选半个词；若段落中不存在合适答案，按项目约定处理（如标空或跳过）。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;划选范围需与问题严格对应，避免包含无关邻句；&lt;/li&gt;
-&lt;li&gt;同一问题通常只保留一条答案片段，与 &lt;code&gt;maxUsage=&amp;quot;1&amp;quot;&lt;/code&gt; 一致；&lt;/li&gt;
-&lt;li&gt;示例数据里的 &lt;code&gt;text&lt;/code&gt; 字段建议写成&lt;strong&gt;单行字符串&lt;/strong&gt;（不在 JSON 内换行），以免与字符偏移不一致。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="../../../docs/templates/natural-language-processing/images/question-answering_hu_c72ea479c67c7ff.webp"
- width="1302"
- height="800"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="问答系统模板预览"
- id="h-rh-i-1"
-&gt;&lt;/p&gt;</description></item><item><title>命名实体识别 (Named Entity Recognition)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/named-entity-recognition/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/named-entity-recognition/</guid><description>&lt;h1 id="命名实体识别使用说明"&gt;命名实体识别使用说明&lt;/h1&gt;
+&lt;p&gt;以上代码用于实现“阅读文本 -&amp;gt; 输出一句话摘要”的流程。&lt;/p&gt;</description></item><item><title>命名实体识别 (Named Entity Recognition)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/named-entity-recognition/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/named-entity-recognition/</guid><description>&lt;h1 id="命名实体识别使用说明"&gt;命名实体识别使用说明&lt;/h1&gt;
 &lt;p&gt;命名实体识别可以理解为「先选实体类别，再在原文中圈出对应片段」：例如先点选“人物”，再在文本里拖选“女孩林晓”；切换到“时间”后再标注“深秋的傍晚”。它适合新闻、合同、医疗记录、客服对话等文本场景，常用于实体抽取、关系抽取和知识图谱构建任务。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;

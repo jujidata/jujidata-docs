@@ -45,6 +45,52 @@
  loading="lazy"
  alt="ASR 假设选择模板预览"
  id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>问答系统 (Question Answering)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/question-answering/</guid><description>&lt;h1 id="问答系统使用说明"&gt;问答系统使用说明&lt;/h1&gt;
+&lt;p&gt;问答系统可以理解为「读一段文字，按问题在原文里标出答案」：先阅读给定段落，再看问题，最后在段落中拖选能直接回答问题的连续文字片段。它适合新闻、百科、说明书等场景，常用于抽取式问答、阅读理解与检索增强类模型训练。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;提供可定位的答案监督：答案与原文片段对齐，便于训练与评测；&lt;/li&gt;
+&lt;li&gt;约束答案来源：答案必须来自段落中的连续文本，减少凭空编造；&lt;/li&gt;
+&lt;li&gt;标注流程清晰：先选标签再划词，与常见阅读标注习惯一致。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;通读下方段落，理解大意；&lt;/li&gt;
+&lt;li&gt;阅读问题，明确要回答的要点；&lt;/li&gt;
+&lt;li&gt;点选「回答」标签，在段落中拖选作为答案的连续文字；&lt;/li&gt;
+&lt;li&gt;核对所选片段是否完整、无多余内容后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/templates/natural-language-processing/images/question-answering-example_hu_1f3615f764465ef4.webp"
+ width="749"
+ height="304"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="问答系统标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：答案应尽量是完整短语或句子，避免只选半个词；若段落中不存在合适答案，按项目约定处理（如标空或跳过）。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;划选范围需与问题严格对应，避免包含无关邻句；&lt;/li&gt;
+&lt;li&gt;同一问题通常只保留一条答案片段，与 &lt;code&gt;maxUsage=&amp;quot;1&amp;quot;&lt;/code&gt; 一致；&lt;/li&gt;
+&lt;li&gt;示例数据里的 &lt;code&gt;text&lt;/code&gt; 字段建议写成&lt;strong&gt;单行字符串&lt;/strong&gt;（不在 JSON 内换行），以免与字符偏移不一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/templates/natural-language-processing/images/question-answering_hu_c72ea479c67c7ff.webp"
+ width="1302"
+ height="800"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="问答系统模板预览"
+ id="h-rh-i-1"
 &gt;&lt;/p&gt;</description></item><item><title>基于多边形的语义分割 (Semantic Segmentation with Polygons)</title><link>https://docs.jujidata.com/docs/templates/computer-vision/semantic-segmentation-with-polygons/</link><pubDate>Sun, 22 Mar 2026 08:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/templates/computer-vision/semantic-segmentation-with-polygons/</guid><description>&lt;h1 id="基于多边形的语义分割使用说明"&gt;基于多边形的语义分割使用说明&lt;/h1&gt;
 &lt;p&gt;基于多边形的语义分割，其实就是“沿着目标边缘一点点描出来”：在目标轮廓上依次点击关键点，连成不规则多边形并闭合，尽量贴合目标外形，从而得到像素级的分割标注。它适合轮廓相对清晰、边缘复杂的目标，比如车辆、行人、动植物、建筑等，广泛应用于自动驾驶、图像识别、医学影像分析等领域。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
@@ -457,71 +503,4 @@
  loading="lazy"
  alt="分类体系模板预览"
  id="h-rh-i-1"
-&gt;&lt;/p&gt;</description></item><item><title>关键点标注 (Keypoints)</title><link>https://docs.jujidata.com/docs/templates/computer-vision/keypoints/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/computer-vision/keypoints/</guid><description>&lt;h1 id="关键点标注使用说明"&gt;关键点标注使用说明&lt;/h1&gt;
-&lt;p&gt;关键点标注其实就是“在图上标关键位置”：在目标的关键部位（如眼睛、鼻子、耳朵）逐一点选，并给每个点对应一个名称。和只画一个外框的目标检测、或覆盖整片区域的分割相比，关键点标注更关注各个关键部位之间的位置关系。它常用于人脸五官、人体姿态、动物特征点、工业零件结构点等场景，广泛应用于姿态估计、视觉跟踪、目标检测和精细化识别任务。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;为姿态与部位检测提供训练数据：逐点标记关键部位位置，并绑定关键点名称，为关键点检测类模型提供监督信号；&lt;/li&gt;
-&lt;li&gt;支持多目标、多关键点标注：同一图像可为多个目标分别标注，关键点列表可包含多种部位名称；&lt;/li&gt;
-&lt;li&gt;兼顾标注效率与细粒度表达：在不需要轮廓级精度的情况下，通过关键点坐标实现较高的结构化信息输出。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;在底部标签栏选择要标注的关键点标签&lt;/li&gt;
-&lt;li&gt;在图像上依次点击关键点位置（例如眼睛、鼻子、耳朵）&lt;/li&gt;
-&lt;li&gt;根据需要继续为同一目标或其他目标添加关键点&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/computer-vision/images/keypoints-example_hu_2df8d57c7a72117a.webp"
- width="748"
- height="517"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="关键点标注示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，便于进行精准点击标注。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;关键点应尽量落在关键部位的中心或特征点位置，避免偏移导致模型学习误差；&lt;/li&gt;
-&lt;li&gt;同一关键点类别需保持一致的标注位置定义（例如“眼睛”是瞳孔中心还是眼角中心）；&lt;/li&gt;
-&lt;li&gt;标注过程中可随时撤销、修改或删除已绘制的关键点。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/computer-vision/images/keypoints_hu_7cca6969122b246c.webp"
- width="766"
- height="492"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="关键点标注模板预览"
- id="h-rh-i-1"
-&gt;&lt;/p&gt;
-&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
-&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;KeyPointLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;kp-1&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;眼睛&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;red&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;鼻子&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;green&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;耳朵&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;blue&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;KeyPointLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h3 id="关键点标注配置代码说明"&gt;关键点标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现关键点标注功能，可直接复制使用，关键部分可根据实际关键点需求修改。&lt;/p&gt;</description></item></channel></rss>
+&gt;&lt;/p&gt;</description></item></channel></rss>
