@@ -31,6 +31,31 @@
  loading="lazy"
  alt="共指消解和实体链接标注示例"
  id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>监督式语言模型微调 (Supervised LLM Fine-tuning)</title><link>https://docs.jujidata.com/docs/templates/generative-ai/supervised-llm/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/generative-ai/supervised-llm/</guid><description>&lt;h1 id="监督式语言模型微调使用说明"&gt;监督式语言模型微调使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「根据上面指令或题目，下面在文本框里写出模型应当学会模仿的标准答案」。根据提示提示，标注员在答案区补全完整可运行代码或者文本。它适合指令微调、代码生成、长文作答等需要&lt;strong&gt;成对 (prompt, response)&lt;/strong&gt; 数据的任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将提示与参考答案约束在同屏，减少跨字段对齐错误；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;required&lt;/code&gt; 与 &lt;code&gt;requiredMessage&lt;/code&gt; 可降低空交率；&lt;/li&gt;
+&lt;li&gt;通过 &lt;code&gt;Style&lt;/code&gt; 与 &lt;code&gt;className&lt;/code&gt; 区分提示区与作答区，提升长文本阅读体验。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读蓝色提示区中的 &lt;code&gt;prompt&lt;/code&gt; 全文，明确任务类型与输出格式要求；&lt;/li&gt;
+&lt;li&gt;在下方答案区撰写或粘贴完整回复（如代码需包含必要函数体与返回值）；&lt;/li&gt;
+&lt;li&gt;点击「添加」即可提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/templates/generative-ai/images/supervised-llm-example_hu_8ef6067d58cab701.webp"
+ width="1024"
+ height="629"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="监督式语言模型微调标注示例"
+ id="h-rh-i-0"
 &gt;&lt;/p&gt;</description></item><item><title>ASR 假设选择 (ASR Hypotheses)</title><link>https://docs.jujidata.com/docs/templates/ranking-and-scoring/asr-hypotheses/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/ranking-and-scoring/asr-hypotheses/</guid><description>&lt;h1 id="asr-假设选择使用说明"&gt;ASR 假设选择使用说明&lt;/h1&gt;
 &lt;p&gt;ASR 假设选择可以理解为「先听清，再选对」：同一段音频会对应多条略有差异的转写候选，标注员需要结合听觉判断，选出与说话内容最一致的一条。&lt;/p&gt;
 &lt;p&gt;这个模板适合语音识别纠错、候选重排序、听写评测等任务。播放器支持音量调节、语速调节、前进/后退，以及在波形上选区循环播放，适合对可疑片段反复比对后再选择答案。&lt;/p&gt;
@@ -197,7 +222,32 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="多边形语义分割标注配置代码说明"&gt;多边形语义分割标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现多边形语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>意图分类和槽填充 (Intent Classification and Slot Filling)</title><link>https://docs.jujidata.com/docs/templates/conversational-ai/intent-classification-and-slot-filling/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/conversational-ai/intent-classification-and-slot-filling/</guid><description>&lt;h1 id="意图分类和槽填充使用说明"&gt;意图分类和槽填充使用说明&lt;/h1&gt;
+&lt;p&gt;以下代码用于实现多边形语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>人类偏好收集 (Human Feedback Collection)</title><link>https://docs.jujidata.com/docs/templates/generative-ai/human-feedback-collection/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/generative-ai/human-feedback-collection/</guid><description>&lt;h1 id="人类偏好收集使用说明"&gt;人类偏好收集使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「上面是共同的问题或指令，下面是两条不同回答，点选你认为更好、更合适或更符合规范的一条」。同一提示下对比可减少位置偏差带来的先验；导出结果通常可映射为「胜 / 负」或偏好分数。它适合 RLHF 数据管线、对话质量排序与安全偏好标注。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;成对比较同一 &lt;code&gt;prompt&lt;/code&gt; 下的 &lt;code&gt;answer1&lt;/code&gt; 与 &lt;code&gt;answer2&lt;/code&gt;，直接服务偏好学习与奖励建模；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Pairwise&lt;/code&gt; 的 &lt;code&gt;selectionStyle&lt;/code&gt; 高亮被选侧，降低误触与漏选；&lt;/li&gt;
+&lt;li&gt;布局与样式与监督式提示模版风格统一，便于在同一项目中混排任务类型。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;完整阅读蓝色提示区中的问题或指令；&lt;/li&gt;
+&lt;li&gt;依次阅读左右两个答案框中的全文，并按项目规范比较事实性、完整性、安全与风格；&lt;/li&gt;
+&lt;li&gt;点击更优答案所在区域完成选择（选中后会出现绿色高亮等样式，以实际渲染为准）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/templates/generative-ai/images/human-feedback-collection-example_hu_39485b10d3f92d65.webp"
+ width="769"
+ height="617"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="人类偏好收集标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>意图分类和槽填充 (Intent Classification and Slot Filling)</title><link>https://docs.jujidata.com/docs/templates/conversational-ai/intent-classification-and-slot-filling/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/conversational-ai/intent-classification-and-slot-filling/</guid><description>&lt;h1 id="意图分类和槽填充使用说明"&gt;意图分类和槽填充使用说明&lt;/h1&gt;
 &lt;p&gt;可以理解为「上面用槽位类型在对话里圈出实体片段，下面为整段对话选一个意图标签」。例如点餐对话中，在用户话轮里标出「东方面馆」「东大门街道」「一份」等跨度，并在底部勾选「客户请求」。它适合任务型对话、智能客服、语音助手等需要同时产出&lt;strong&gt;对话意图&lt;/strong&gt;与&lt;strong&gt;槽位监督&lt;/strong&gt;的训练数据。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -363,97 +413,4 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="掩码语义分割标注配置代码说明"&gt;掩码语义分割标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现掩码语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>响应生成 (Response Generation)</title><link>https://docs.jujidata.com/docs/templates/conversational-ai/response-generation/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/conversational-ai/response-generation/</guid><description>&lt;h1 id="响应生成使用说明"&gt;响应生成使用说明&lt;/h1&gt;
-&lt;p&gt;可以理解为「读完上面的多轮对话后，在下方文本框里写出最合适回复的内容」。它适合需要&lt;strong&gt;开放式字符串标签&lt;/strong&gt;的对话生成、话术润色与模型对齐数据构建。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;输出与上下文连贯的自然语言回复，可直接用于评测集或人工基线；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;TextArea&lt;/code&gt; 与 &lt;code&gt;Paragraphs&lt;/code&gt; 绑定（&lt;code&gt;toName=&amp;quot;chat&amp;quot;&lt;/code&gt;），导出时可将回复与对话对象关联；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;maxSubmissions&lt;/code&gt; 可限制每条任务提交次数，降低重复标注噪声。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;自上而下阅读对话，确认当前轮次应由哪一方回复、需满足哪些事实；&lt;/li&gt;
-&lt;li&gt;在「提供回复」下方的文本框中撰写或修改回复全文；&lt;/li&gt;
-&lt;li&gt;点击界面「添加」等提交控件，即可保存提交；&lt;/li&gt;
-&lt;li&gt;自检语气、事实与合规要求后，完成任务。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/conversational-ai/images/response-generation-example_hu_5cb616e38fe0a017.webp"
- width="768"
- height="540"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="响应生成标注示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：提交后可以点击编辑键修改已有回复，或者删除此条，并重新添加回复。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;dialogue&lt;/code&gt; 须为对象数组，元素包含 &lt;code&gt;author&lt;/code&gt; 与 &lt;code&gt;text&lt;/code&gt;，并与 &lt;code&gt;Paragraphs&lt;/code&gt; 的 &lt;code&gt;value=&amp;quot;$dialogue&amp;quot;&lt;/code&gt; 一致；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rows&lt;/code&gt;、&lt;code&gt;editable&lt;/code&gt; 可按交互需求调整；&lt;code&gt;maxSubmissions=&amp;quot;1&amp;quot;&lt;/code&gt; 表示通常只允许一条最终回复，若需多稿对比请调整配置与规范；&lt;/li&gt;
-&lt;li&gt;若预填模型草稿，可在任务数据中通过平台支持的字段注入初始文本（以实际版本能力为准）；&lt;/li&gt;
-&lt;li&gt;话术风格、是否必须包含订单号等，应在项目说明中写清。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/conversational-ai/images/response-generation_hu_9847bc5e8a595c6a.webp"
- width="1024"
- height="629"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="响应生成模板预览"
- id="h-rh-i-1"
-&gt;&lt;/p&gt;</description></item><item><title>文档检索 (Document Retrieval)</title><link>https://docs.jujidata.com/docs/templates/ranking-and-scoring/document-retrieval/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/ranking-and-scoring/document-retrieval/</guid><description>&lt;h1 id="文档检索使用说明"&gt;文档检索使用说明&lt;/h1&gt;
-&lt;p&gt;文档检索可以理解为「先看查询，再选最相关文档」：上方显示用户查询，下方展示多条候选文本。标注员根据语义匹配程度，在候选中选择与查询最相关的一项。&lt;/p&gt;
-&lt;p&gt;本模板采用每行一个单选按钮（&lt;code&gt;choice=&amp;quot;single-radio&amp;quot;&lt;/code&gt;）的形式，让标注员在三条候选文档中完成相关性判断。适用于 FAQ 检索、知识库问答召回、搜索排序训练等任务。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;构建查询-文档相关性样本，提升检索模型排序质量；&lt;/li&gt;
-&lt;li&gt;用人工判断纠正词面匹配误差，强化语义匹配能力；&lt;/li&gt;
-&lt;li&gt;为问答系统提供高质量“命中文档”监督信号。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;阅读查询句，并逐条查看候选文档内容；&lt;/li&gt;
-&lt;li&gt;在最相关的一条右侧勾选对应选项，可多选；&lt;/li&gt;
-&lt;li&gt;提交前确认未误选、漏选。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/ranking-and-scoring/images/document-retrieval-example_hu_81dd96efa1881c96.webp"
- width="689"
- height="355"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="文档检索标注示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：若两条候选都部分相关，优先选择“更直接回答查询”的那一条。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;当前配置是“每行一个独立单选组件”，默认可出现多行同时被选；若业务要求“全局只能选一条”，建议改为单个 &lt;code&gt;Choices&lt;/code&gt; 包含多个 &lt;code&gt;Choice&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;相关性判定以“是否回答查询”优先，不只看关键词重合；&lt;/li&gt;
-&lt;li&gt;若候选数量扩展，需同步新增 &lt;code&gt;Text&lt;/code&gt; 与对应 &lt;code&gt;Choices&lt;/code&gt; 区块。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/ranking-and-scoring/images/document-retrieval_hu_e62ec3e4d75709d9.webp"
- width="1024"
- height="635"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="文档检索模板预览"
- id="h-rh-i-1"
-&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;以下代码用于实现掩码语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item></channel></rss>

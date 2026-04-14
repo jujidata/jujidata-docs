@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生成式 AI on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/generative-ai/</link><description>Recent content in 生成式 AI on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Mon, 13 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/generative-ai/index.xml" rel="self" type="application/rss+xml"/><item><title>监督式语言模型微调 (Supervised LLM Fine-tuning)</title><link>https://docs.jujidata.com/docs/templates/generative-ai/supervised-llm/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/generative-ai/supervised-llm/</guid><description>&lt;h1 id="监督式语言模型微调使用说明"&gt;监督式语言模型微调使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「根据上面指令或题目，下面在文本框里写出模型应当学会模仿的标准答案」。根据提示提示，标注员在答案区补全完整可运行代码或者文本。它适合指令微调、代码生成、长文作答等需要&lt;strong&gt;成对 (prompt, response)&lt;/strong&gt; 数据的任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将提示与参考答案约束在同屏，减少跨字段对齐错误；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;required&lt;/code&gt; 与 &lt;code&gt;requiredMessage&lt;/code&gt; 可降低空交率；&lt;/li&gt;
+&lt;li&gt;通过 &lt;code&gt;Style&lt;/code&gt; 与 &lt;code&gt;className&lt;/code&gt; 区分提示区与作答区，提升长文本阅读体验。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读蓝色提示区中的 &lt;code&gt;prompt&lt;/code&gt; 全文，明确任务类型与输出格式要求；&lt;/li&gt;
+&lt;li&gt;在下方答案区撰写或粘贴完整回复（如代码需包含必要函数体与返回值）；&lt;/li&gt;
+&lt;li&gt;点击「添加」即可提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/generative-ai/images/supervised-llm-example_hu_8ef6067d58cab701.webp"
+ width="1024"
+ height="629"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="监督式语言模型微调标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>人类偏好收集 (Human Feedback Collection)</title><link>https://docs.jujidata.com/docs/templates/generative-ai/human-feedback-collection/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/generative-ai/human-feedback-collection/</guid><description>&lt;h1 id="人类偏好收集使用说明"&gt;人类偏好收集使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「上面是共同的问题或指令，下面是两条不同回答，点选你认为更好、更合适或更符合规范的一条」。同一提示下对比可减少位置偏差带来的先验；导出结果通常可映射为「胜 / 负」或偏好分数。它适合 RLHF 数据管线、对话质量排序与安全偏好标注。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;成对比较同一 &lt;code&gt;prompt&lt;/code&gt; 下的 &lt;code&gt;answer1&lt;/code&gt; 与 &lt;code&gt;answer2&lt;/code&gt;，直接服务偏好学习与奖励建模；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Pairwise&lt;/code&gt; 的 &lt;code&gt;selectionStyle&lt;/code&gt; 高亮被选侧，降低误触与漏选；&lt;/li&gt;
+&lt;li&gt;布局与样式与监督式提示模版风格统一，便于在同一项目中混排任务类型。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;完整阅读蓝色提示区中的问题或指令；&lt;/li&gt;
+&lt;li&gt;依次阅读左右两个答案框中的全文，并按项目规范比较事实性、完整性、安全与风格；&lt;/li&gt;
+&lt;li&gt;点击更优答案所在区域完成选择（选中后会出现绿色高亮等样式，以实际渲染为准）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/generative-ai/images/human-feedback-collection-example_hu_39485b10d3f92d65.webp"
+ width="769"
+ height="617"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="人类偏好收集标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>聊天机器人模型评估 (Chatbot Assessment)</title><link>https://docs.jujidata.com/docs/templates/generative-ai/chatbot-assessment/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/generative-ai/chatbot-assessment/</guid><description>&lt;h1 id="聊天机器人模型评估使用说明"&gt;聊天机器人模型评估使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「读完整段人机对话，然后按维度打分、勾选题项」。先给整体质量打 1–7 星，再逐项判断是否存在未遵循指令、客服场景不当、幻觉，以及色情、暴力等政策相关风险。它适合对话模型上线前评估、数据集构建与多维度偏好标注。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;对话与问卷同屏，减少切屏与样本对齐错误；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Paragraphs&lt;/code&gt; 使用 &lt;code&gt;role&lt;/code&gt; / &lt;code&gt;content&lt;/code&gt; 字段，与常见对话 JSON 一致；&lt;/li&gt;
+&lt;li&gt;质量量表与安全/合规题项分层展示，导出后可做多标签分析。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;自上而下阅读左侧全部轮次，区分用户与助手内容；&lt;/li&gt;
+&lt;li&gt;在「整体质量评估」中选择 1–7 星（以平台星级组件为准）；&lt;/li&gt;
+&lt;li&gt;依次阅读右侧各题标题，在「是 / 否」单选项中择一。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/generative-ai/images/chatbot-assessment-example_hu_4b93ae4123ea2fd4.webp"
+ width="765"
+ height="853"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="聊天机器人模型评估标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item></channel></rss>
