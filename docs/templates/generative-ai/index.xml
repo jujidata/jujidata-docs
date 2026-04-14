@@ -73,4 +73,145 @@
  loading="lazy"
  alt="聊天机器人模型评估标注示例"
  id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>大语言模型排序器 (LLM Ranker)</title><link>https://docs.jujidata.com/docs/templates/generative-ai/llm-ranker/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/generative-ai/llm-ranker/</guid><description>&lt;h1 id="大语言模型排序器使用说明"&gt;大语言模型排序器使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先读任务说明和提示词，再把左侧全部候选卡片拖到中间『高相关』或右侧『偏见/不当』栏里」。例如讨论中国空间站时，客观、扣题的回答归入高相关，明显偏见或攻击性表述归入问题桶。它适合多候选重排序、批量质检与红队数据标注。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;一次任务覆盖多条候选回答，减少重复打开样本的成本；&lt;/li&gt;
+&lt;li&gt;结果直接对应「相关 / 风险」等离散标签，便于统计与训练；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;List&lt;/code&gt; + &lt;code&gt;Ranker&lt;/code&gt; + &lt;code&gt;Bucket&lt;/code&gt; 组合是常见的拖拽排序数据模型。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读「任务」与「提示词」，明确排序与分桶标准；&lt;/li&gt;
+&lt;li&gt;在「全部候选回答」中浏览每条卡片的标题与正文；&lt;/li&gt;
+&lt;li&gt;将卡片拖拽至「高相关回答」或「存在偏见或不当表述」（以平台拖拽交互为准）；&lt;/li&gt;
+&lt;li&gt;确认无遗漏、无放错桶后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/generative-ai/images/llm-ranker-example_hu_5f788cae2e68a89b.webp"
+ width="776"
+ height="837"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="大语言模型排序器标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：截图中①②与箭头为操作示意；卡片右上角小三角可能为展开或拖拽相关控件，以实际产品为准。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;导入字段 &lt;code&gt;items&lt;/code&gt; 须与 &lt;code&gt;List&lt;/code&gt; 的 &lt;code&gt;value=&amp;quot;$items&amp;quot;&lt;/code&gt; 一致；单条对象需包含展示所需字段（如 &lt;code&gt;title&lt;/code&gt;、&lt;code&gt;body&lt;/code&gt;、&lt;code&gt;id&lt;/code&gt;），具体键名以平台 List 组件约定为准；&lt;/li&gt;
+&lt;li&gt;样式表中 &lt;code&gt;.htx-ranker-item p:last-child { display: none }&lt;/code&gt; 会隐藏最后一项 &lt;code&gt;p&lt;/code&gt; 节点，若正文丢失请检查 DOM 结构或删除该规则；&lt;/li&gt;
+&lt;li&gt;CSS 变量（如 &lt;code&gt;--color-neutral-background&lt;/code&gt;）依赖主题，缺失时需改为具体色值；&lt;/li&gt;
+&lt;li&gt;桶名 &lt;code&gt;relevant_results&lt;/code&gt;、&lt;code&gt;biased_results&lt;/code&gt; 会进入导出结果，改名需同步数据与质检规则。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/generative-ai/images/llm-ranker_hu_ec7c7e81d5c9e8a4.webp"
+ width="1024"
+ height="628"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="大语言模型排序器模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>视觉排序器 (Visual Ranker)</title><link>https://docs.jujidata.com/docs/templates/generative-ai/visual-ranker/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/generative-ai/visual-ranker/</guid><description>&lt;h1 id="视觉排序器使用说明"&gt;视觉排序器使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先读提示词里对画面风格、构图和细节的要求，再在『候选图片』里通过拖拽把更符合提示的图排到更前」。例如古风会客厅场景中，构图完整、光线与家具符合描述的样本应排在前列。它适合文生图模型对比评测、A/B 集构建与多候选排序标注。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;同一任务聚合多张候选图，减少反复切换样本的开销；&lt;/li&gt;
+&lt;li&gt;排序结果可直接反映相对偏好，便于训练排序头或构造 pairwise 数据；&lt;/li&gt;
+&lt;li&gt;提示与图片分区展示，任务目标一目了然。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读灰色提示面板中的完整生成指令；&lt;/li&gt;
+&lt;li&gt;在「候选图片」区域浏览每张图篇，并按项目约定（相关性、美感、细节还原等）拖拽调整顺序；&lt;/li&gt;
+&lt;li&gt;完成排序后默认保存，确认顺序后提交即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/generative-ai/images/visual-ranker-example_hu_90a1722cf334b6ef.webp"
+ width="763"
+ height="907"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视觉排序器标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：截图中①②与箭头为教学叠加；实际界面以部署版本为准。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;images&lt;/code&gt; 数组中每条使用 &lt;code&gt;html&lt;/code&gt; 字段嵌入 &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 时，请确保 &lt;code&gt;src&lt;/code&gt; 指向可访问的静态资源或任务附件 URL；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.htx-ranker-item [class^=itemLine]:last-child { display: none }&lt;/code&gt; 用于隐藏列表辅助行，若图片不显示请检查选择器是否与当前 DOM 一致；&lt;/li&gt;
+&lt;li&gt;本示例 &lt;code&gt;Ranker&lt;/code&gt; 未配置 &lt;code&gt;Bucket&lt;/code&gt;，适用于&lt;strong&gt;单一有序列表&lt;/strong&gt;；若需多分栏（如「合格 / 不合格」），可参考 
+
+&lt;a class="link link--text" href="../../../docs/templates/generative-ai/llm-ranker/"&gt;大语言模型排序器&lt;/a&gt; 中的 &lt;code&gt;Bucket&lt;/code&gt; 写法并改造；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt; 字段便于在导出结果中与模型版本或随机种子对齐。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/generative-ai/images/visual-ranker_hu_e597cfd155a4b227.webp"
+ width="1024"
+ height="628"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视觉排序器模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>大语言模型响应评分 (Response Grading)</title><link>https://docs.jujidata.com/docs/templates/generative-ai/response-grading/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/generative-ai/response-grading/</guid><description>&lt;h1 id="大语言模型响应评分使用说明"&gt;大语言模型响应评分使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「读长文档，然后看模型写的摘要，最后给摘要打分」。例如乡村振兴类材料，需判断摘要是否覆盖产业、人才、生态、治理等要点且无明显捏造。它适合长文摘要、新闻缩写、报告凝练等&lt;strong&gt;源文—输出对照&lt;/strong&gt;型评测。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;同屏对照降低来回滚动与窗口切换成本；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Rating&lt;/code&gt; 绑定到 &lt;code&gt;summary&lt;/code&gt; 对象，导出时可将分数与摘要区域关联；&lt;/li&gt;
+&lt;li&gt;分栏高度与滚动区域可控，便于统一截图与质检口径。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在左侧「长文档」中完整阅读（可上下滚动）；&lt;/li&gt;
+&lt;li&gt;在右侧「摘要内容」中阅读模型生成结果；&lt;/li&gt;
+&lt;li&gt;依据项目量表在「请为该摘要评分」处选择星级。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/generative-ai/images/response-grading-example_hu_bd2edba7da24b4b0.webp"
+ width="739"
+ height="558"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="大语言模型响应评分标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：截图中箭头指向星级控件，为操作示意。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;若 &lt;code&gt;Text&lt;/code&gt; 的 &lt;code&gt;value=&amp;quot;$document&amp;quot;&lt;/code&gt; 不支持字符串数组，请将 &lt;code&gt;document&lt;/code&gt; 改为&lt;strong&gt;单一字符串&lt;/strong&gt;（段落间用换行拼接）或按平台文档使用支持的复合类型；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Rating&lt;/code&gt; 未显式写 &lt;code&gt;maxRating&lt;/code&gt; 时，默认星数以实现为准；需固定为 5 级时可补充 &lt;code&gt;maxRating=&amp;quot;5&amp;quot;&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;左右栏 &lt;code&gt;max-height&lt;/code&gt; / &lt;code&gt;scrollable&lt;/code&gt; 可按篇幅调整，避免长文档显示过短；&lt;/li&gt;
+&lt;li&gt;评分锚点（何为一星、何为五星）须在标注指南中写清。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/generative-ai/images/response-grading_hu_842894c603050642.webp"
+ width="1024"
+ height="628"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="大语言模型响应评分模板预览"
+ id="h-rh-i-1"
 &gt;&lt;/p&gt;</description></item></channel></rss>
