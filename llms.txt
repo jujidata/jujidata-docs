@@ -60,5 +60,6 @@
 - [计算机视觉](https://docs.jujidata.com/docs/templates/computer-vision/): 预置 10 大主流 AI 标注模版，支持高度自定义配置。
 - [对话式 AI](https://docs.jujidata.com/docs/templates/conversational-ai/): 面向对话理解、共指消解与实体相关任务的文本标注模版，可与对话或配置字段联动。
 - [生成式 AI](https://docs.jujidata.com/docs/templates/generative-ai/): 面向大模型监督微调、指令跟随与开放式生成的标注模版，支持提示与答案同屏编辑。
+- [视频](https://docs.jujidata.com/docs/templates/videos/): 面向视频理解、分类与质检的标注模版，支持与播放器联动的标签与选项配置。
 - [排序与评分](https://docs.jujidata.com/docs/templates/ranking-and-scoring/): 排序、检索偏好与相关性标注模版，覆盖 ASR 假设选择、图像/文档检索、成对比较与搜索排序等任务。
 

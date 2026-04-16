@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</title><link>https://docs.jujidata.com/</link><description>Recent content in 欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Mon, 13 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/index.xml" rel="self" type="application/rss+xml"/><item><title>共指消解和实体链接 (Coreference Resolution and Entity Linking)</title><link>https://docs.jujidata.com/docs/templates/conversational-ai/coreference-resolution-and-entity-linking/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/conversational-ai/coreference-resolution-and-entity-linking/</guid><description>&lt;h1 id="共指消解和实体链接使用说明"&gt;共指消解和实体链接使用说明&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</title><link>https://docs.jujidata.com/</link><description>Recent content in 欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 14 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/index.xml" rel="self" type="application/rss+xml"/><item><title>视频分类 (Video Classification)</title><link>https://docs.jujidata.com/docs/templates/videos/video-classification/</link><pubDate>Tue, 14 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/videos/video-classification/</guid><description>&lt;h1 id="视频分类使用说明"&gt;视频分类使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「对视频画面进行简单的分类」。例如对画面整体做「模糊 / 清晰」判断时，可在关键时段拖动时间轴确认后再勾选。它适合视频画质评估、粗粒度内容分类与快速筛选类任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Video&lt;/code&gt; 与时间轴高度可配，便于对齐播放进度与标注时刻；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choices&lt;/code&gt; 绑定到 &lt;code&gt;video&lt;/code&gt; 对象，导出时标签与视频字段一一对应；&lt;/li&gt;
+&lt;li&gt;布局紧凑，适合批量浏览短视频或片段。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;使用播放、暂停与进度条浏览视频，必要时逐段确认；&lt;/li&gt;
+&lt;li&gt;在「模糊」「清晰」等选项中选择一项（单选行为以 &lt;code&gt;Choices&lt;/code&gt; 配置为准）；&lt;/li&gt;
+&lt;li&gt;确认选项与项目定义一致后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/templates/videos/images/video-classification-example_hu_cffd76a7d8c0dd0a.webp"
+ width="739"
+ height="673"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视频分类标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data.video&lt;/code&gt; 须为可访问的视频 URL 或平台支持的相对路径；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;height&lt;/code&gt;、&lt;code&gt;timelineHeight&lt;/code&gt; 可按分辨率与操作习惯调整；&lt;/li&gt;
+&lt;li&gt;若需多标签，可将 &lt;code&gt;choice&lt;/code&gt; 改为多选模式（以平台属性为准）并更新质检规则；&lt;/li&gt;
+&lt;li&gt;注释中的 &lt;code&gt;annotations&lt;/code&gt; 为&lt;strong&gt;导出/回显&lt;/strong&gt;结构示例；新建任务导入时通常只需 &lt;code&gt;data&lt;/code&gt; 部分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/templates/videos/images/video-classification_hu_eb00611f5bccfbfd.webp"
+ width="1024"
+ height="624"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视频分类模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>共指消解和实体链接 (Coreference Resolution and Entity Linking)</title><link>https://docs.jujidata.com/docs/templates/conversational-ai/coreference-resolution-and-entity-linking/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/conversational-ai/coreference-resolution-and-entity-linking/</guid><description>&lt;h1 id="共指消解和实体链接使用说明"&gt;共指消解和实体链接使用说明&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;可以理解为「在文中标出代词与名词等提及，并在需要时用连线表达&lt;strong&gt;同一实体&lt;/strong&gt;上的指代关系」。&lt;/li&gt;
 &lt;li&gt;与 
@@ -222,7 +267,33 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="多边形语义分割标注配置代码说明"&gt;多边形语义分割标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现多边形语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>人类偏好收集 (Human Feedback Collection)</title><link>https://docs.jujidata.com/docs/templates/generative-ai/human-feedback-collection/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/generative-ai/human-feedback-collection/</guid><description>&lt;h1 id="人类偏好收集使用说明"&gt;人类偏好收集使用说明&lt;/h1&gt;
+&lt;p&gt;以下代码用于实现多边形语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>视频帧分类 (Video Frame Classification)</title><link>https://docs.jujidata.com/docs/templates/videos/video-frame-classification/</link><pubDate>Tue, 14 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/videos/video-frame-classification/</guid><description>&lt;h1 id="视频帧分类使用说明"&gt;视频帧分类使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「选择一种时间轴标签，并在时间线上标出对应片段」。与整段只选一个类的「视频分类」不同，本模版强调&lt;strong&gt;随时间变化的帧级/段级&lt;/strong&gt;标注。它适合体育剪辑、监控行为、镜头节奏分析等需要细粒度时序标签的场景。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;TimelineLabels&lt;/code&gt; 与 &lt;code&gt;Video&lt;/code&gt; 共用 &lt;code&gt;toName&lt;/code&gt;，标签与时间轴轨道联动；&lt;/li&gt;
+&lt;li&gt;多色 &lt;code&gt;Label&lt;/code&gt; 便于在轨道上区分不同类别；&lt;/li&gt;
+&lt;li&gt;同一视频可包含多段、多类标注，导出为时序监督数据。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在顶部点选要使用的类别（如「慢动作」），或使用快捷键 &lt;code&gt;[1]&lt;/code&gt; &lt;code&gt;[2]&lt;/code&gt; &lt;code&gt;[3]&lt;/code&gt;（以平台为准）；&lt;/li&gt;
+&lt;li&gt;播放或拖动时间轴到目标区间；&lt;/li&gt;
+&lt;li&gt;按平台交互在时间线上创建区段，亦可拖拽改变区间长度；&lt;/li&gt;
+&lt;li&gt;逐段完成标注后，检查轨道与画面是否一致，再提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/templates/videos/images/video-frame-classification-example_hu_bad34dee267c628f.webp"
+ width="776"
+ height="640"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视频帧分类标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>人类偏好收集 (Human Feedback Collection)</title><link>https://docs.jujidata.com/docs/templates/generative-ai/human-feedback-collection/</link><pubDate>Mon, 13 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/generative-ai/human-feedback-collection/</guid><description>&lt;h1 id="人类偏好收集使用说明"&gt;人类偏好收集使用说明&lt;/h1&gt;
 &lt;p&gt;可以理解为「上面是共同的问题或指令，下面是两条不同回答，点选你认为更好、更合适或更符合规范的一条」。同一提示下对比可减少位置偏差带来的先验；导出结果通常可映射为「胜 / 负」或偏好分数。它适合 RLHF 数据管线、对话质量排序与安全偏好标注。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -321,96 +392,4 @@
  loading="lazy"
  alt="基于内容图像检索标注示例"
  id="h-rh-i-0"
-&gt;&lt;/p&gt;</description></item><item><title>文本分类 (Text Classification)</title><link>https://docs.jujidata.com/docs/templates/natural-language-processing/text-classification/</link><pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/natural-language-processing/text-classification/</guid><description>&lt;h1 id="文本分类使用说明"&gt;文本分类使用说明&lt;/h1&gt;
-&lt;p&gt;文本分类可以理解为「读一句话或一段字，选一个最贴切的标签」：界面先展示 &lt;code&gt;$text&lt;/code&gt; 绑定的正文，再在下方卡片中从若干互斥选项里点选一项（如情感分析中的积极 / 消极 / 中性）。它适合评论舆情、客服意图、新闻主题等场景，常用于情感分类、主题标注与意图识别训练。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;输出标准类别标签：与文本一一对应，便于直接训练分类器；&lt;/li&gt;
-&lt;li&gt;单选约束清晰：&lt;code&gt;choice=&amp;quot;single&amp;quot;&lt;/code&gt; 避免一条样本多标签冲突（除非业务改为多选）；&lt;/li&gt;
-&lt;li&gt;布局集中：正文与选项分区展示，阅读与点选路径短。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;阅读上方待分类文本，把握整体语气或主题；&lt;/li&gt;
-&lt;li&gt;在下方卡片标题「选择文本情感」对应区域，点选一项，可自动提交。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/natural-language-processing/images/text-classification-example_hu_9c8f0a6fcc235eb8.webp"
- width="722"
- height="326"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="文本分类标注示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：若项目对「中性」与「无明显情感」有区分，需在标注规范中写清边界；快捷键 &lt;code&gt;[1]&lt;/code&gt; &lt;code&gt;[2]&lt;/code&gt; &lt;code&gt;[3]&lt;/code&gt; 以平台实际显示为准。&lt;/p&gt;</description></item><item><title>带掩码的语义分割 (Semantic Segmentation with Masks)</title><link>https://docs.jujidata.com/docs/templates/computer-vision/semantic-segmentation-with-masks/</link><pubDate>Tue, 31 Mar 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/computer-vision/semantic-segmentation-with-masks/</guid><description>&lt;h1 id="带掩码的语义分割使用说明"&gt;带掩码的语义分割使用说明&lt;/h1&gt;
-&lt;p&gt;带掩码的语义分割可以理解为“像涂色一样去标注”：选择对应类别的画笔，在目标区域上涂抹，让掩码按像素把目标覆盖出来，从而得到更精细的分割标注。它适合边缘不太清晰、形状不规则，或需要保留细节纹理的目标，比如飞机、云朵、植被、医学影像病灶等，广泛应用于航空航天影像分析、遥感图像识别、医疗影像诊断等领域。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;实现像素级精细标注：通过掩码涂抹精准覆盖目标区域，捕捉纹理细节，区分目标与背景的细微差异，为语义分割模型提供高密度训练数据；&lt;/li&gt;
-&lt;li&gt;适配无明确轮廓场景：解决多边形标注无法覆盖模糊边缘、复杂纹理目标的问题，提升标注数据的完整性；&lt;/li&gt;
-&lt;li&gt;支持多目标、多类别标注：可选择不同标签的掩码画笔，分别涂抹标注多个不同类别的目标，每个掩码区域关联对应标签。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;选择画笔，可调节画笔大小&lt;/li&gt;
-&lt;li&gt;选择不同颜色的标签，以区分不同目标&lt;/li&gt;
-&lt;li&gt;涂抹图中目标区域&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/computer-vision/images/semantic-segmentation-with-masks-example_hu_db20c7177d717142.webp"
- width="760"
- height="472"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="带掩码的语义分割示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：可使用右侧工具栏放大或缩小图片，便于进行精准标注。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;涂抹掩码时，尽量贴合目标像素范围，避免遗漏目标区域或过度覆盖背景区域；&lt;/li&gt;
-&lt;li&gt;对于纹理复杂的目标，可调整画笔参数提升标注精细度；&lt;/li&gt;
-&lt;li&gt;不同类别的目标需选择对应标签的掩码画笔，避免标签混淆，影响模型训练效果；&lt;/li&gt;
-&lt;li&gt;标注过程中可随时切换画笔、橡皮擦工具，或撤销已完成的涂抹操作。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/computer-vision/images/semantic-segmentation-with-masks_hu_6686771dc707bb4.webp"
- width="1026"
- height="657"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="带掩码的语义分割示例"
- id="h-rh-i-1"
-&gt;&lt;/p&gt;
-&lt;h2 id="模板配置"&gt;模板配置&lt;/h2&gt;
-&lt;h3 id="完整代码块"&gt;完整代码块&lt;/h3&gt;
-
-
-
-&lt;div class="expressive-code"&gt;
- &lt;figure class="frame not-content"&gt;
- &lt;figcaption class="header"&gt;
- &lt;span class="title"&gt;&lt;/span&gt;
- &lt;/figcaption&gt;
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Image&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;$image_path&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;BrushLabels&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;tag&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;toName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;飞机a&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;rgba(255, 0, 0, 0.7)&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Label&lt;/span&gt; &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;飞机b&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;rgba(0, 0, 255, 0.7)&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;BrushLabels&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;View&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- &lt;/figure&gt;
-&lt;/div&gt;
-&lt;h3 id="掩码语义分割标注配置代码说明"&gt;掩码语义分割标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现掩码语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item></channel></rss>
+&gt;&lt;/p&gt;</description></item></channel></rss>

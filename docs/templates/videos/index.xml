@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>视频 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/videos/</link><description>Recent content in 视频 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 15 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/videos/index.xml" rel="self" type="application/rss+xml"/><item><title>视频分类 (Video Classification)</title><link>https://docs.jujidata.com/docs/templates/videos/video-classification/</link><pubDate>Tue, 14 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/videos/video-classification/</guid><description>&lt;h1 id="视频分类使用说明"&gt;视频分类使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「对视频画面进行简单的分类」。例如对画面整体做「模糊 / 清晰」判断时，可在关键时段拖动时间轴确认后再勾选。它适合视频画质评估、粗粒度内容分类与快速筛选类任务。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Video&lt;/code&gt; 与时间轴高度可配，便于对齐播放进度与标注时刻；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choices&lt;/code&gt; 绑定到 &lt;code&gt;video&lt;/code&gt; 对象，导出时标签与视频字段一一对应；&lt;/li&gt;
+&lt;li&gt;布局紧凑，适合批量浏览短视频或片段。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;使用播放、暂停与进度条浏览视频，必要时逐段确认；&lt;/li&gt;
+&lt;li&gt;在「模糊」「清晰」等选项中选择一项（单选行为以 &lt;code&gt;Choices&lt;/code&gt; 配置为准）；&lt;/li&gt;
+&lt;li&gt;确认选项与项目定义一致后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/videos/images/video-classification-example_hu_cffd76a7d8c0dd0a.webp"
+ width="739"
+ height="673"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视频分类标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data.video&lt;/code&gt; 须为可访问的视频 URL 或平台支持的相对路径；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;height&lt;/code&gt;、&lt;code&gt;timelineHeight&lt;/code&gt; 可按分辨率与操作习惯调整；&lt;/li&gt;
+&lt;li&gt;若需多标签，可将 &lt;code&gt;choice&lt;/code&gt; 改为多选模式（以平台属性为准）并更新质检规则；&lt;/li&gt;
+&lt;li&gt;注释中的 &lt;code&gt;annotations&lt;/code&gt; 为&lt;strong&gt;导出/回显&lt;/strong&gt;结构示例；新建任务导入时通常只需 &lt;code&gt;data&lt;/code&gt; 部分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/videos/images/video-classification_hu_eb00611f5bccfbfd.webp"
+ width="1024"
+ height="624"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视频分类模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>视频帧分类 (Video Frame Classification)</title><link>https://docs.jujidata.com/docs/templates/videos/video-frame-classification/</link><pubDate>Tue, 14 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/videos/video-frame-classification/</guid><description>&lt;h1 id="视频帧分类使用说明"&gt;视频帧分类使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「选择一种时间轴标签，并在时间线上标出对应片段」。与整段只选一个类的「视频分类」不同，本模版强调&lt;strong&gt;随时间变化的帧级/段级&lt;/strong&gt;标注。它适合体育剪辑、监控行为、镜头节奏分析等需要细粒度时序标签的场景。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;TimelineLabels&lt;/code&gt; 与 &lt;code&gt;Video&lt;/code&gt; 共用 &lt;code&gt;toName&lt;/code&gt;，标签与时间轴轨道联动；&lt;/li&gt;
+&lt;li&gt;多色 &lt;code&gt;Label&lt;/code&gt; 便于在轨道上区分不同类别；&lt;/li&gt;
+&lt;li&gt;同一视频可包含多段、多类标注，导出为时序监督数据。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在顶部点选要使用的类别（如「慢动作」），或使用快捷键 &lt;code&gt;[1]&lt;/code&gt; &lt;code&gt;[2]&lt;/code&gt; &lt;code&gt;[3]&lt;/code&gt;（以平台为准）；&lt;/li&gt;
+&lt;li&gt;播放或拖动时间轴到目标区间；&lt;/li&gt;
+&lt;li&gt;按平台交互在时间线上创建区段，亦可拖拽改变区间长度；&lt;/li&gt;
+&lt;li&gt;逐段完成标注后，检查轨道与画面是否一致，再提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/videos/images/video-frame-classification-example_hu_bad34dee267c628f.webp"
+ width="776"
+ height="640"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视频帧分类标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>视频对象跟踪 (Video Object Tracking)</title><link>https://docs.jujidata.com/docs/templates/videos/video-object-tracking/</link><pubDate>Wed, 15 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/videos/video-object-tracking/</guid><description>&lt;h1 id="视频对象跟踪使用说明"&gt;视频对象跟踪使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先选类别，再在画面上拖出矩形框，并在时间轴上为每个目标打关键帧或调整轨迹」。与仅做时间轴类别标记的「视频帧分类」不同，本模版输出的是&lt;strong&gt;随时间变化的框位置&lt;/strong&gt;。它适合交通监控、无人机视角、体育转播等需要多目标轨迹的数据集。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Labels&lt;/code&gt; 定义类别颜色，&lt;code&gt;VideoRectangle&lt;/code&gt; 在同一视频上绘制多实例框；&lt;/li&gt;
+&lt;li&gt;时间轴可展示每条轨迹与关键帧，便于检查漏标与 ID 切换；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;allowEmpty=&amp;quot;false&amp;quot;&lt;/code&gt; 要求至少选择标签后再标注（以平台行为为准）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;点选标签（如「车辆」「楼房」），在画面上绘制或调整矩形框；&lt;/li&gt;
+&lt;li&gt;播放或逐帧前进，在目标形变或遮挡处补充关键帧；&lt;/li&gt;
+&lt;li&gt;在时间轴上核对各实例轨道是否连续、ID 是否串扰；&lt;/li&gt;
+&lt;li&gt;完成后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/videos/images/video-object-tracking-example_hu_5e0d611c4306f396.webp"
+ width="775"
+ height="626"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视频对象跟踪标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：截图中①—④示意选标签、播放、时间轴关键帧与画面框；以实际产品为准。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;导入任务使用 &lt;strong&gt;&lt;code&gt;data.video&lt;/code&gt;&lt;/strong&gt;；注释中裸 &lt;code&gt;video&lt;/code&gt; 字段需包在 &lt;code&gt;data&lt;/code&gt; 内；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;帧率（FPS）&lt;/strong&gt; 通常在项目或视频导入层统一配置，错误帧率会导致时间戳与轨迹与真实时间不对齐，请与工程侧确认；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;height&lt;/code&gt;、&lt;code&gt;timelineHeight&lt;/code&gt; 可按分辨率调整；长视频注意性能与抽检策略；&lt;/li&gt;
+&lt;li&gt;多目标时需约定 ID 规则、遮挡与出画处理、最小框面积等质检条款。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/videos/images/video-object-tracking_hu_6aa072ecb809bc6c.webp"
+ width="1024"
+ height="630"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视频对象跟踪模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>视频时间线分割 (Video Timeline Segmentation)</title><link>https://docs.jujidata.com/docs/templates/videos/video-timeline-segmentation/</link><pubDate>Wed, 15 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/videos/video-timeline-segmentation/</guid><description>&lt;h1 id="视频时间线分割使用说明"&gt;视频时间线分割使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「看视频、对音轨时间线打彩色区段，标出不同事件的时间线」。&lt;code&gt;Video&lt;/code&gt; 与 &lt;code&gt;Audio&lt;/code&gt; 互相 &lt;code&gt;sync&lt;/code&gt;，拖动一边另一边对齐，便于按声音起落或画面动作对齐切片。它适合网球/羽毛球等击球事件、音乐节拍、口令起止等&lt;strong&gt;时间轴级&lt;/strong&gt;标注。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;音画同步减少「只看视频猜声音」带来的边界误差；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Labels&lt;/code&gt; 绑定在 &lt;code&gt;audio&lt;/code&gt; 上，区段直接落在可缩放波形时间轴；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;choice=&amp;quot;multiple&amp;quot;&lt;/code&gt; 允许同一时段多标签策略（以项目规范为准）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读标题说明，明确要求，并初步观看视频，了解视频内容；&lt;/li&gt;
+&lt;li&gt;播放或拖动时间轴，结合画面与波形确定事件起止；&lt;/li&gt;
+&lt;li&gt;选择「发球」「击打」等标签，在音频轨道上创建并调整区段；&lt;/li&gt;
+&lt;li&gt;复核同步与边界后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/videos/images/video-timeline-segmentation-example_hu_f980b4cd0a9d273a.webp"
+ width="775"
+ height="735"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="视频时间线分割标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：此模板音画同频，而且可调节音量大小和速度，可以精准的进行时间线的分割。&lt;/p&gt;</description></item></channel></rss>
