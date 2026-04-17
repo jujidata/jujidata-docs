@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>结构化数据解析 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/structured-data-parsing/</link><description>Recent content in 结构化数据解析 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 15 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/structured-data-parsing/index.xml" rel="self" type="application/rss+xml"/><item><title>PDF 分类 (PDF Classification)</title><link>https://docs.jujidata.com/docs/templates/structured-data-parsing/pdf-classification/</link><pubDate>Wed, 15 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/structured-data-parsing/pdf-classification/</guid><description>&lt;h1 id="pdf-分类使用说明"&gt;PDF 分类使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先在阅读器中通读或扫读 PDF 正文，按项目标准选择最贴切的文章类型；最后依据规范给出星级评分」。例如范文库场景中区分「重要文章 / 新闻政要 / 高考范文」，并辅以 1–10 星表示推荐度或写作质量。它适合报刊归档、教辅筛选、内容安全分级等&lt;strong&gt;整篇文档级&lt;/strong&gt;标注。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Pdf&lt;/code&gt; 内嵌阅读器，减少外链打开与格式错乱；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Rating&lt;/code&gt; 与 &lt;code&gt;Choices&lt;/code&gt; 均绑定 &lt;code&gt;pdf&lt;/code&gt; 对象，导出时与同一任务对齐；&lt;/li&gt;
+&lt;li&gt;单选类别与量表组合，兼顾粗粒度标签与细粒度排序信号。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在 PDF 阅读器中阅读全文，可通过&lt;strong&gt;工具栏&lt;/strong&gt;进行缩放、检索、高光等操作（具体以平台提供的工具为准），便于核对正文；&lt;/li&gt;
+&lt;li&gt;在「重要文章」「新闻政要」「高考范文」中选择与文章最相符的类型；&lt;/li&gt;
+&lt;li&gt;选定类型后，再按规范点选星级完成评分；&lt;/li&gt;
+&lt;li&gt;自检是否与规范一致后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/structured-data-parsing/images/pdf-classification-example_hu_ee257c0fd2765a8.webp"
+ width="748"
+ height="896"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="PDF 分类标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>表格数据 (Tabular Data)</title><link>https://docs.jujidata.com/docs/templates/structured-data-parsing/tabular-data/</link><pubDate>Wed, 15 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/structured-data-parsing/tabular-data/</guid><description>&lt;h1 id="表格数据使用说明"&gt;表格数据使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「把一条样本里的键值关系打成表格，让人一眼核对名称与类别是否匹配」。例如人事名单场景中，检查「姓名—岗位」是否与源文档或常识一致，再整表标记&lt;strong&gt;正确&lt;/strong&gt;或&lt;strong&gt;错误&lt;/strong&gt;。它适合 OCR/抽取后质检、知识对齐、规则校验等&lt;strong&gt;表级&lt;/strong&gt;标注。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Table&lt;/code&gt; 以 &lt;code&gt;valueType=&amp;quot;json&amp;quot;&lt;/code&gt; 将对象渲染为行，键、值分列展示；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choices&lt;/code&gt; 通过 &lt;code&gt;toName=&amp;quot;table&amp;quot;&lt;/code&gt; 绑定整张表，导出时与同一对象对齐；&lt;/li&gt;
+&lt;li&gt;二元标签简单明确，易于统计准确率与误拒/误收。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读顶部说明，明确「正确」与「错误」的判定标准；&lt;/li&gt;
+&lt;li&gt;逐行核对表格中的名称与类别（或项目定义的两列含义）；&lt;/li&gt;
+&lt;li&gt;若任一行不符合规范，通常选「错误」；全部符合则选「正确」。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/structured-data-parsing/images/tabular-data-example_hu_e5c3042cd82293ac.webp"
+ width="748"
+ height="564"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="表格数据标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：截图中①②示意说明文案与选项。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data.item&lt;/code&gt; 须为 JSON 对象；键名会作为第一列、值为第二列（列标题以平台默认或配置为准）；&lt;/li&gt;
+&lt;li&gt;若需&lt;strong&gt;逐行&lt;/strong&gt;纠错或编辑单元格，需扩展为可编辑表格或拆分为多条子任务；&lt;/li&gt;
+&lt;li&gt;「正确 / 错误」文案与映射变更时，请同步培训材料与下游评测脚本；&lt;/li&gt;
+&lt;li&gt;大对象或深层嵌套 JSON 可能不适合单表展示，宜在入库前扁平化或截断字段。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/structured-data-parsing/images/tabular-data_hu_c571df15f6d34358.webp"
+ width="748"
+ height="564"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="表格数据模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item></channel></rss>
