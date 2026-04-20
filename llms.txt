@@ -64,4 +64,5 @@
 - [视频](https://docs.jujidata.com/docs/templates/videos/): 面向视频理解、分类与质检的标注模版，支持与播放器联动的标签与选项配置。
 - [排序与评分](https://docs.jujidata.com/docs/templates/ranking-and-scoring/): 排序、检索偏好与相关性标注模版，覆盖 ASR 假设选择、图像/文档检索、成对比较与搜索排序等任务。
 - [结构化数据解析](https://docs.jujidata.com/docs/templates/structured-data-parsing/): 面向版式文档、表格与半结构化内容的标注模版，支持在阅读器中完成分类、评分与字段级任务。
+- [时间序列分析](https://docs.jujidata.com/docs/templates/time-series-analysis/): 面向传感器与时间序列数据的标注模版，支持多通道曲线、时间轴区段或变化点标注与全局概览导航。
 

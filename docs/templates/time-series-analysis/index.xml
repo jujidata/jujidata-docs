@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>时间序列分析 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/</link><description>Recent content in 时间序列分析 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Mon, 20 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/time-series-analysis/index.xml" rel="self" type="application/rss+xml"/><item><title>活动识别 (Activity Recognition)</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/activity-recognition/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/time-series-analysis/activity-recognition/</guid><description>&lt;h1 id="活动识别使用说明"&gt;活动识别使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「在同一段时间上同时看多路曲线，并在的时间段上涂色并打上活动类型」。例如运动监测场景中，将「跑」「走」等标签对应到时间区间，便于构建&lt;strong&gt;时序分割 + 分类&lt;/strong&gt;的监督数据集。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;TimeSeries&lt;/code&gt; 从 &lt;code&gt;valueType=&amp;quot;url&amp;quot;&lt;/code&gt; 指向的 CSV 加载数据，多 &lt;code&gt;Channel&lt;/code&gt; 纵向堆叠且&lt;strong&gt;共享同一时间轴&lt;/strong&gt;，缩放与游标联动；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TimeSeriesLabels&lt;/code&gt; 提供活动类别与颜色，通常配合快捷键（如 1–5）切换当前标签后再划段；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overviewChannels&lt;/code&gt; 在底部生成缩略概览，便于在长序列上定位与检查已标片段。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读任务说明，明确各标签含义及是否允许重叠、最小片段长度等规则；&lt;/li&gt;
+&lt;li&gt;在顶部选择当前要打的&lt;strong&gt;活动类型&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;在主图中沿时间拖动选择起止时间；必要时用底部概览条平移或缩放视窗；&lt;/li&gt;
+&lt;li&gt;自检片段是否与曲线语义一致后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/time-series-analysis/images/activity-recognition-example_hu_afd41bd488580728.webp"
+ width="747"
+ height="717"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="活动识别标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>变化点监测 (Change Point Detection)</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/change-point-detection/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/time-series-analysis/change-point-detection/</guid><description>&lt;h1 id="变化点监测使用说明"&gt;变化点监测使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「在一条随时间变化的曲线（如速度）上，标出你认为&lt;strong&gt;性质发生明显变化&lt;/strong&gt;的时刻」。例如运动学或过程监控场景中，在峰值、谷值或斜率突变处打点，便于构建&lt;strong&gt;变点检测&lt;/strong&gt;或分段模型的训练与评测数据。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;单通道 &lt;code&gt;TimeSeries&lt;/code&gt; 配置简单，适合只关心一条主序列时的标注与质检；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TimeSeriesLabels&lt;/code&gt; 仅一类「变化点」时，界面聚焦单一操作，减少歧义；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overviewChannels&lt;/code&gt; 在底部展示全序列缩略图，已标变化点可在概览中一览位置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读任务说明，明确「变化点」的判定标准；&lt;/li&gt;
+&lt;li&gt;选中 &lt;strong&gt;变化点&lt;/strong&gt; 标签（或对应快捷键，以平台为准）；&lt;/li&gt;
+&lt;li&gt;找到主图时间轴上需要标记的位置，双击即可进行标注。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/time-series-analysis/images/change-point-detection-example_hu_387d0dee49c5e5e.webp"
+ width="746"
+ height="436"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="变化点监测标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：底部细条为全序列概览，灰框表示当前放大区间。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;任务数据字段名为 &lt;code&gt;csv&lt;/code&gt;，与配置中 &lt;code&gt;value=&amp;quot;$csv&amp;quot;&lt;/code&gt; 一致；须为可访问的 CSV URL；&lt;/li&gt;
+&lt;li&gt;CSV 须含 &lt;code&gt;time&lt;/code&gt; 与 &lt;code&gt;velocity&lt;/code&gt;（或与 &lt;code&gt;Channel column&lt;/code&gt; 一致的列名），分隔符与 &lt;code&gt;timeFormat&lt;/code&gt; 须与文件一致；&lt;/li&gt;
+&lt;li&gt;若平台将此类标签实现为&lt;strong&gt;极短区间&lt;/strong&gt;而非单点，导出时请以平台结果结构为准，并在评测脚本中统一为「时刻」或「区间」；&lt;/li&gt;
+&lt;li&gt;与&lt;strong&gt;活动识别&lt;/strong&gt;等多类区间标注相比，本模版仅一种标签，更适合纯变点或统一叫法的项目。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/time-series-analysis/images/change-point-detection_hu_259f98ea889bc5be.webp"
+ width="1024"
+ height="625"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="变化点监测模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>异常值和异常检测 (Outliers and Anomaly Detection)</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/outliers-anomaly-detection/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/time-series-analysis/outliers-anomaly-detection/</guid><description>&lt;h1 id="异常值和异常检测使用说明"&gt;异常值和异常检测使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先在曲线上圈出一段可疑区间，并选择异常类型」。例如传感器质检场景中，对速度曲线上的尖峰或平台期划区，并勾选「异常」，便于构建&lt;strong&gt;区段 + 属性&lt;/strong&gt;的监督或弱监督数据。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;TimeSeries&lt;/code&gt; 提供与&lt;strong&gt;变化点监测&lt;/strong&gt;相同的单通道浏览与底部概览体验；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TimeSeriesLabels&lt;/code&gt; 用「区域」类标签支持&lt;strong&gt;时间轴上的区间&lt;/strong&gt;标注；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choices&lt;/code&gt; 配合 &lt;code&gt;perRegion=&amp;quot;true&amp;quot;&lt;/code&gt;，使「离群值 / 异常」等选项&lt;strong&gt;随当前选中区域切换&lt;/strong&gt;，实现「一段一判」。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读任务说明，明确「离群值」与「异常」的定义及是否允许多选、是否互斥；&lt;/li&gt;
+&lt;li&gt;选择 &lt;strong&gt;区域&lt;/strong&gt; 标签，在主图上拖选需要标注的时间范围；&lt;/li&gt;
+&lt;li&gt;选中该区间后，在下方选项中勾选 &lt;strong&gt;离群值&lt;/strong&gt;、&lt;strong&gt;异常&lt;/strong&gt; 等（&lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 时须满足必选规则后再提交）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/time-series-analysis/images/outliers-anomaly-detection-example_hu_a8d9cf9003045b90.webp"
+ width="746"
+ height="550"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="异常值和异常检测标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>信号质量 (Signal Quality)</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/signal-quality/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/time-series-analysis/signal-quality/</guid><description>&lt;h1 id="信号质量使用说明"&gt;信号质量使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「在两条同步曲线上圈出一段信号，再对这段打星并进行质量评判」。例如传感器质检场景中，对某段时间窗口内的波形做主观打分，便于构建&lt;strong&gt;区段 + 序数/分类&lt;/strong&gt;的混合标注数据。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;visibleWhen=&amp;quot;no-region-selected&amp;quot;&lt;/code&gt; 仅在未选中区域时显示 &lt;strong&gt;TimeSeriesLabels&lt;/strong&gt;，引导用户先创建「区域」；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;visibleWhen=&amp;quot;region-selected&amp;quot;&lt;/code&gt; 在选中区域后显示 &lt;strong&gt;Rating&lt;/strong&gt; 与 &lt;strong&gt;Choices&lt;/strong&gt;，避免空白时误触评分；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Rating&lt;/code&gt;、&lt;code&gt;Choices&lt;/code&gt; 均设 &lt;code&gt;perRegion=&amp;quot;true&amp;quot;&lt;/code&gt;，与&lt;strong&gt;异常值和异常检测&lt;/strong&gt;类似，实现「一段一星一档」。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读任务说明，明确「好 / 中 / 差」与星级分档的对应关系；&lt;/li&gt;
+&lt;li&gt;在未选区状态下选择 &lt;strong&gt;区域&lt;/strong&gt;标签；&lt;/li&gt;
+&lt;li&gt;在主图时间轴上拖选要评估的区间（双通道上会同步高亮）；&lt;/li&gt;
+&lt;li&gt;单击任意高亮区域，在上方出现的控件中拖动 &lt;strong&gt;星级&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;并单选 &lt;strong&gt;好 / 中 / 差&lt;/strong&gt;（&lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 时须完成必选项）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/time-series-analysis/images/signal-quality-example1_hu_200a8ae65c4d2978.webp"
+ width="747"
+ height="688"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="信号质量标注示例"
+ id="h-rh-i-0"
+&gt;
+
+
+&lt;img
+ src="../../../docs/templates/time-series-analysis/images/signal-quality-example2_hu_d04a35d72283eef2.webp"
+ width="756"
+ height="747"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="信号质量标注示例"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item></channel></rss>

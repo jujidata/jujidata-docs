@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>结构化数据解析 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/structured-data-parsing/</link><description>Recent content in 结构化数据解析 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 15 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/structured-data-parsing/index.xml" rel="self" type="application/rss+xml"/><item><title>PDF 分类 (PDF Classification)</title><link>https://docs.jujidata.com/docs/templates/structured-data-parsing/pdf-classification/</link><pubDate>Wed, 15 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/structured-data-parsing/pdf-classification/</guid><description>&lt;h1 id="pdf-分类使用说明"&gt;PDF 分类使用说明&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>结构化数据解析 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/structured-data-parsing/</link><description>Recent content in 结构化数据解析 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Mon, 20 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/structured-data-parsing/index.xml" rel="self" type="application/rss+xml"/><item><title>自由格式元数据 (Freeform Metadata)</title><link>https://docs.jujidata.com/docs/templates/structured-data-parsing/freeform-metadata/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/structured-data-parsing/freeform-metadata/</guid><description>&lt;h1 id="自由格式元数据使用说明"&gt;自由格式元数据使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先读一段固定正文，再在下方表格里按行填写与正文相关的名称与取值」。例如影评场景中，从正文中归纳多位评论者及其评分，人工录入或修正「姓名—分数」对，便于构建&lt;strong&gt;键值对齐原文&lt;/strong&gt;的监督数据。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Text&lt;/code&gt; 展示 &lt;code&gt;$text&lt;/code&gt;，作为判断与填写的依据，通常不参与编辑；&lt;/li&gt;
+&lt;li&gt;多组 &lt;code&gt;TextArea&lt;/code&gt; 以 &lt;code&gt;grid&lt;/code&gt; 排成两列，左列名称、右列值，结构清晰；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;toName=&amp;quot;text&amp;quot;&lt;/code&gt; 将每个输入区与正文对象关联，导出时便于与同一任务对齐（具体以平台导出格式为准）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读顶部正文，明确需要抽取的实体或属性类型；&lt;/li&gt;
+&lt;li&gt;在下方「名称」「值」成对输入框中填写或修改内容；可从正文复制或凭规范手写；&lt;/li&gt;
+&lt;li&gt;若平台支持删除行，可通过行旁操作清理无效行后再提交；&lt;/li&gt;
+&lt;li&gt;自检行数、格式与任务规范一致后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/structured-data-parsing/images/freeform-metadata-example_hu_e0747a2c9aea0aca.webp"
+ width="781"
+ height="363"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="自由格式元数据标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;说明：截图中①②示意首行「名称」与「值」输入区与影评人、分数的对应关系。&lt;/p&gt;
+&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;editable=&amp;quot;true&amp;quot;&lt;/code&gt; 表示字段可编辑；&lt;code&gt;maxSubmissions=&amp;quot;1&amp;quot;&lt;/code&gt; 限制单字段提交条数，可按业务调整；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Style&lt;/code&gt; 中针对 &lt;code&gt;input[name^=&amp;quot;table&amp;quot;]&lt;/code&gt; 等选择器用于微调边框与区域高度，&lt;strong&gt;若类名或 &lt;code&gt;name&lt;/code&gt; 前缀与平台实际 DOM 不一致可能不生效&lt;/strong&gt;，需按界面审查后修改；&lt;/li&gt;
+&lt;li&gt;样式块中的 &lt;code&gt;table_metric&lt;/code&gt; 规则仅在存在对应 &lt;code&gt;name&lt;/code&gt; 前缀的输入时有效，与当前 &lt;code&gt;table_name_*&lt;/code&gt; / &lt;code&gt;table_value_*&lt;/code&gt; 不一致时可删除或改写；&lt;/li&gt;
+&lt;li&gt;行数固定为三组时，空行导出策略以平台为准；若需动态增减行，需扩展配置或使用支持动态列表的组件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/structured-data-parsing/images/freeform-metadata_hu_97a8924d2698d172.webp"
+ width="1024"
+ height="629"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="自由格式元数据模板预览"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>HTML 实体识别 (HTML Entity Recognition)</title><link>https://docs.jujidata.com/docs/templates/structured-data-parsing/html-entity-recognition/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/structured-data-parsing/html-entity-recognition/</guid><description>&lt;h1 id="html-实体识别使用说明"&gt;HTML 实体识别使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「把一条样本里的 HTML 渲染成可读正文，再按项目定义的实体类型（如标题、作者、正文）框选或修正片段」。例如论坛帖、工单或文章页场景中，从已带 &lt;code&gt;header-tag&lt;/code&gt;、&lt;code&gt;author-tag&lt;/code&gt; 等类名的 DOM 结构出发，人工确认或补全实体边界，便于构建&lt;strong&gt;网页级&lt;/strong&gt;序列标注与抽取评测数据。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;HyperText&lt;/code&gt; 将 &lt;code&gt;$shtml&lt;/code&gt; 中的 HTML 渲染为可交互文本层，支持在可见内容上直接划选；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HyperTextLabels&lt;/code&gt; 提供多类实体标签及颜色，通常配合快捷键（如 1 / 2 / 3）加速标注；&lt;/li&gt;
+&lt;li&gt;导出结果可与源 HTML 偏移或平台内部索引对齐，便于与预标注流水线、后处理脚本衔接。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读任务说明，明确「标题」「作者」「正文」等业务含义与边界规则；&lt;/li&gt;
+&lt;li&gt;在顶部选择实体类型的标签；&lt;/li&gt;
+&lt;li&gt;在正文区域框选对应片段；若存在预上色或预框，仅做核对与修正。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/structured-data-parsing/images/html-entity-recognition-example_hu_2498861352206e92.webp"
+ width="735"
+ height="396"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="HTML 实体识别标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>PDF 分类 (PDF Classification)</title><link>https://docs.jujidata.com/docs/templates/structured-data-parsing/pdf-classification/</link><pubDate>Wed, 15 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/structured-data-parsing/pdf-classification/</guid><description>&lt;h1 id="pdf-分类使用说明"&gt;PDF 分类使用说明&lt;/h1&gt;
 &lt;p&gt;可以理解为「先在阅读器中通读或扫读 PDF 正文，按项目标准选择最贴切的文章类型；最后依据规范给出星级评分」。例如范文库场景中区分「重要文章 / 新闻政要 / 高考范文」，并辅以 1–10 星表示推荐度或写作质量。它适合报刊归档、教辅筛选、内容安全分级等&lt;strong&gt;整篇文档级&lt;/strong&gt;标注。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
