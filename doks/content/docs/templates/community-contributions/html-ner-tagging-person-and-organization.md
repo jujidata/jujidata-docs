@@ -1,5 +1,5 @@
 ---
-title: "HTML 命名实体标注（人 / 组织） (HTML NER — Person & Organization)"
+title: "HTML 命名实体标注(HTML NER Tagging)"
 description: "在 HyperText 展示的正文上完成「人」「组织」二类命名实体标注，标签栏 + 带边框正文区，适合对话与轻量 HTML 片段。"
 lead: "任务数据中的 `$text` 可为 HTML 字符串；标注员在渲染结果上划选 spans 并套用实体类型，导出为序列标注或实体级结果。"
 date: 2026-04-21 08:00:00
@@ -11,14 +11,14 @@ menu:
     parent: "模版使用"
 params:
   seo:
-      title: "HTML 命名实体标注 (HTML NER — Person & Organization)"
+      title: "HTML 命名实体标注 (HTML NER Tagging)"
       description: "在 HyperText 展示的正文上完成「人」「组织」二类命名实体标注，标签栏 + 带边框正文区，适合对话与轻量 HTML 片段。"
       keywords: ["标注模板", "社区贡献", "HTML NER", "HyperText", "命名实体", "人", "组织"]
       canonical: "https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization"
       robots: "index, follow"
 ---
 
-# HTML 命名实体标注（人 / 组织）使用说明
+# HTML 命名实体标注使用说明
 
 可以理解为「把一条样本里的正文（常为 HTML）渲染出来，再标注实体」。例如多轮对话场景中，将「王五先生」等称谓标为「人」，便于构建**社区贡献的 NER** 数据集或与标准 NLP 模版对照实验。
 
