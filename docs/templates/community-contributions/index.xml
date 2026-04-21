@@ -1,1 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>社区贡献 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/community-contributions/</link><description>Recent content in 社区贡献 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate/><atom:link href="https://docs.jujidata.com/docs/templates/community-contributions/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>社区贡献 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/community-contributions/</link><description>Recent content in 社区贡献 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 21 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/community-contributions/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML 命名实体标注(HTML NER Tagging)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</guid><description>&lt;h1 id="html-命名实体标注使用说明"&gt;HTML 命名实体标注使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「把一条样本里的正文（常为 HTML）渲染出来，再标注实体」。例如多轮对话场景中，将「王五先生」等称谓标为「人」，便于构建&lt;strong&gt;社区贡献的 NER&lt;/strong&gt; 数据集或与标准 NLP 模版对照实验。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;HyperText&lt;/code&gt; 将 &lt;code&gt;$text&lt;/code&gt; 渲染为可交互文本层，支持在可见内容上划选；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HyperTextLabels&lt;/code&gt; 仅两类标签，快捷键通常为 &lt;strong&gt;1 / 2&lt;/strong&gt;，操作路径短；&lt;/li&gt;
+&lt;li&gt;与 &lt;code&gt;structured-data-parsing&lt;/code&gt; 下「HTML 实体识别」等模版同属 HyperText 系，可迁移标签体系或数据字段。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读任务说明，明确不同的实体标签的边界；&lt;/li&gt;
+&lt;li&gt;在顶部选择 &lt;strong&gt;人&lt;/strong&gt; 或 &lt;strong&gt;组织&lt;/strong&gt;等不同标签；&lt;/li&gt;
+&lt;li&gt;在正文区拖选对应片段；若存在预标注，仅做核对与修正；&lt;/li&gt;
+&lt;li&gt;自检漏标、错标后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/community-contributions/images/html-ner-tagging-person-and-organization-example_hu_fbb201c45eb680a.webp"
+ width="758"
+ height="442"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="HTML 命名实体标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>发票命名实体标注（BIO 形式） (NER — Invoices, BIO-style)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/ner-tagging-invoices-bio-format/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/ner-tagging-invoices-bio-format/</guid><description>&lt;h1 id="发票命名实体标注bio-形式使用说明"&gt;发票命名实体标注（BIO 形式）使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「查看 OCR 后的发票正文，并选择实体类型后，在文本上按划选对应片段」。标注结果在平台内多为&lt;strong&gt;区间 + 类型&lt;/strong&gt;；若在训练脚本中将每个词映射为 &lt;strong&gt;B-类型 / I-类型 / O&lt;/strong&gt;，即常见的 &lt;strong&gt;BIO（或 BIOES）序列标注&lt;/strong&gt;流程。本配置源自社区模版库，适合作为发票信息抽取的起点。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Flex 布局&lt;/strong&gt;将标签列表与正文区分左右，长文本时右侧可纵向滚动（&lt;code&gt;max-height: 80vh; overflow-y: auto&lt;/code&gt;）；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Labels&lt;/code&gt; + &lt;code&gt;Text&lt;/code&gt;（非 HyperText）直接处理&lt;strong&gt;纯文本&lt;/strong&gt; &lt;code&gt;$ocr&lt;/code&gt;，与常见 OCR 管道输出一致；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;granularity=&amp;quot;word&amp;quot;&lt;/code&gt; 约束选区对齐到词界，有利于与 &lt;strong&gt;BIO&lt;/strong&gt; 词级标签对齐（具体分词规则以平台与下游脚本为准）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读项目规范，明确八类标签各自覆盖的字符串范围（是否含「发票号码：」前缀等）；&lt;/li&gt;
+&lt;li&gt;在左侧选中一类标签（如「购买方信息」）；&lt;/li&gt;
+&lt;li&gt;在右侧「发票文本」中划选对应片段；重复直至字段标全或按任务要求结束；&lt;/li&gt;
+&lt;li&gt;自检漏标、跨行截断等问题后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/community-contributions/images/ner-tagging-invoices-bio-format-example_hu_91e0c49c2acb4116.webp"
+ width="773"
+ height="394"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="发票命名实体标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>OCR 发票预命名实体（BIO 格式） (OCR Invoices — Pre-NER BIO)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/ocr-invoices-pre-ner-bio-format/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/ocr-invoices-pre-ner-bio-format/</guid><description>&lt;h1 id="ocr-发票预命名实体bio-格式使用说明"&gt;OCR 发票预命名实体（BIO 格式）使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先在&lt;strong&gt;图像&lt;/strong&gt;上把每个要参与分词/序列标注的片段框出来，再在框里&lt;strong&gt;打字或改 OCR 结果&lt;/strong&gt;」。产出的是「框 + 文本」对，下游可拼成一行或多行纯文本，再套用 
+
+&lt;a class="link link--text" href="../../../docs/templates/community-contributions/ner-tagging-invoices-bio-format/"&gt;发票命名实体标注（BIO 形式）&lt;/a&gt; 这类模版做实体类型标注，从而形成 &lt;strong&gt;OCR → 词界 → BIO NER&lt;/strong&gt; 的流水线。本配置源自社区模版库。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Image&lt;/code&gt; 开启 &lt;code&gt;zoomControl&lt;/code&gt;，便于核对小字与表线；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;RectangleLabels&lt;/code&gt; 仅一类「分词单元」，与 &lt;code&gt;choice=&amp;quot;single&amp;quot;&lt;/code&gt; 配合，强调&lt;strong&gt;单元化&lt;/strong&gt;框选；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TextArea&lt;/code&gt; 设 &lt;code&gt;perRegion=&amp;quot;true&amp;quot;&lt;/code&gt;，&lt;strong&gt;每个矩形一条转写&lt;/strong&gt;，&lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 要求提交前填写。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读任务说明，明确「分词单元」粒度（单字、词组还是整行表头）；&lt;/li&gt;
+&lt;li&gt;选择 &lt;strong&gt;分词单元&lt;/strong&gt;的标签；&lt;/li&gt;
+&lt;li&gt;在图像上拖出矩形覆盖目标文字；&lt;/li&gt;
+&lt;li&gt;再次点击已标单元，在对应输入框中录入或修正 OCR 文本；&lt;/li&gt;
+&lt;li&gt;重复直至覆盖计划中的单元，自检后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/community-contributions/images/ocr-invoices-pre-ner-bio-format-example_hu_29f6963b8d5f196a.webp"
+ width="736"
+ height="504"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="OCR 发票预命名实体标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item></channel></rss>

@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</title><link>https://docs.jujidata.com/</link><description>Recent content in 欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Mon, 20 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/index.xml" rel="self" type="application/rss+xml"/><item><title>活动识别 (Activity Recognition)</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/activity-recognition/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/time-series-analysis/activity-recognition/</guid><description>&lt;h1 id="活动识别使用说明"&gt;活动识别使用说明&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</title><link>https://docs.jujidata.com/</link><description>Recent content in 欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 21 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML 命名实体标注(HTML NER Tagging)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</guid><description>&lt;h1 id="html-命名实体标注使用说明"&gt;HTML 命名实体标注使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「把一条样本里的正文（常为 HTML）渲染出来，再标注实体」。例如多轮对话场景中，将「王五先生」等称谓标为「人」，便于构建&lt;strong&gt;社区贡献的 NER&lt;/strong&gt; 数据集或与标准 NLP 模版对照实验。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;HyperText&lt;/code&gt; 将 &lt;code&gt;$text&lt;/code&gt; 渲染为可交互文本层，支持在可见内容上划选；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HyperTextLabels&lt;/code&gt; 仅两类标签，快捷键通常为 &lt;strong&gt;1 / 2&lt;/strong&gt;，操作路径短；&lt;/li&gt;
+&lt;li&gt;与 &lt;code&gt;structured-data-parsing&lt;/code&gt; 下「HTML 实体识别」等模版同属 HyperText 系，可迁移标签体系或数据字段。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读任务说明，明确不同的实体标签的边界；&lt;/li&gt;
+&lt;li&gt;在顶部选择 &lt;strong&gt;人&lt;/strong&gt; 或 &lt;strong&gt;组织&lt;/strong&gt;等不同标签；&lt;/li&gt;
+&lt;li&gt;在正文区拖选对应片段；若存在预标注，仅做核对与修正；&lt;/li&gt;
+&lt;li&gt;自检漏标、错标后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/templates/community-contributions/images/html-ner-tagging-person-and-organization-example_hu_fbb201c45eb680a.webp"
+ width="758"
+ height="442"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="HTML 命名实体标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>活动识别 (Activity Recognition)</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/activity-recognition/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/time-series-analysis/activity-recognition/</guid><description>&lt;h1 id="活动识别使用说明"&gt;活动识别使用说明&lt;/h1&gt;
 &lt;p&gt;可以理解为「在同一段时间上同时看多路曲线，并在的时间段上涂色并打上活动类型」。例如运动监测场景中，将「跑」「走」等标签对应到时间区间，便于构建&lt;strong&gt;时序分割 + 分类&lt;/strong&gt;的监督数据集。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -340,75 +366,30 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="多边形语义分割标注配置代码说明"&gt;多边形语义分割标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现多边形语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>HTML 实体识别 (HTML Entity Recognition)</title><link>https://docs.jujidata.com/docs/templates/structured-data-parsing/html-entity-recognition/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/structured-data-parsing/html-entity-recognition/</guid><description>&lt;h1 id="html-实体识别使用说明"&gt;HTML 实体识别使用说明&lt;/h1&gt;
-&lt;p&gt;可以理解为「把一条样本里的 HTML 渲染成可读正文，再按项目定义的实体类型（如标题、作者、正文）框选或修正片段」。例如论坛帖、工单或文章页场景中，从已带 &lt;code&gt;header-tag&lt;/code&gt;、&lt;code&gt;author-tag&lt;/code&gt; 等类名的 DOM 结构出发，人工确认或补全实体边界，便于构建&lt;strong&gt;网页级&lt;/strong&gt;序列标注与抽取评测数据。&lt;/p&gt;
+&lt;p&gt;以下代码用于实现多边形语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>发票命名实体标注（BIO 形式） (NER — Invoices, BIO-style)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/ner-tagging-invoices-bio-format/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/ner-tagging-invoices-bio-format/</guid><description>&lt;h1 id="发票命名实体标注bio-形式使用说明"&gt;发票命名实体标注（BIO 形式）使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「查看 OCR 后的发票正文，并选择实体类型后，在文本上按划选对应片段」。标注结果在平台内多为&lt;strong&gt;区间 + 类型&lt;/strong&gt;；若在训练脚本中将每个词映射为 &lt;strong&gt;B-类型 / I-类型 / O&lt;/strong&gt;，即常见的 &lt;strong&gt;BIO（或 BIOES）序列标注&lt;/strong&gt;流程。本配置源自社区模版库，适合作为发票信息抽取的起点。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;HyperText&lt;/code&gt; 将 &lt;code&gt;$shtml&lt;/code&gt; 中的 HTML 渲染为可交互文本层，支持在可见内容上直接划选；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;HyperTextLabels&lt;/code&gt; 提供多类实体标签及颜色，通常配合快捷键（如 1 / 2 / 3）加速标注；&lt;/li&gt;
-&lt;li&gt;导出结果可与源 HTML 偏移或平台内部索引对齐，便于与预标注流水线、后处理脚本衔接。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Flex 布局&lt;/strong&gt;将标签列表与正文区分左右，长文本时右侧可纵向滚动（&lt;code&gt;max-height: 80vh; overflow-y: auto&lt;/code&gt;）；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Labels&lt;/code&gt; + &lt;code&gt;Text&lt;/code&gt;（非 HyperText）直接处理&lt;strong&gt;纯文本&lt;/strong&gt; &lt;code&gt;$ocr&lt;/code&gt;，与常见 OCR 管道输出一致；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;granularity=&amp;quot;word&amp;quot;&lt;/code&gt; 约束选区对齐到词界，有利于与 &lt;strong&gt;BIO&lt;/strong&gt; 词级标签对齐（具体分词规则以平台与下游脚本为准）。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;阅读任务说明，明确「标题」「作者」「正文」等业务含义与边界规则；&lt;/li&gt;
-&lt;li&gt;在顶部选择实体类型的标签；&lt;/li&gt;
-&lt;li&gt;在正文区域框选对应片段；若存在预上色或预框，仅做核对与修正。&lt;/li&gt;
+&lt;li&gt;阅读项目规范，明确八类标签各自覆盖的字符串范围（是否含「发票号码：」前缀等）；&lt;/li&gt;
+&lt;li&gt;在左侧选中一类标签（如「购买方信息」）；&lt;/li&gt;
+&lt;li&gt;在右侧「发票文本」中划选对应片段；重复直至字段标全或按任务要求结束；&lt;/li&gt;
+&lt;li&gt;自检漏标、跨行截断等问题后提交。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;
 
 &lt;img
- src="./docs/templates/structured-data-parsing/images/html-entity-recognition-example_hu_2498861352206e92.webp"
- width="735"
- height="396"
+ src="./docs/templates/community-contributions/images/ner-tagging-invoices-bio-format-example_hu_91e0c49c2acb4116.webp"
+ width="773"
+ height="394"
  decoding="async"
  fetchpriority="auto"
  loading="lazy"
- alt="HTML 实体识别标注示例"
+ alt="发票命名实体标注示例"
  id="h-rh-i-0"
-&gt;&lt;/p&gt;</description></item><item><title>变化点监测 (Change Point Detection)</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/change-point-detection/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/time-series-analysis/change-point-detection/</guid><description>&lt;h1 id="变化点监测使用说明"&gt;变化点监测使用说明&lt;/h1&gt;
-&lt;p&gt;可以理解为「在一条随时间变化的曲线（如速度）上，标出你认为&lt;strong&gt;性质发生明显变化&lt;/strong&gt;的时刻」。例如运动学或过程监控场景中，在峰值、谷值或斜率突变处打点，便于构建&lt;strong&gt;变点检测&lt;/strong&gt;或分段模型的训练与评测数据。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;单通道 &lt;code&gt;TimeSeries&lt;/code&gt; 配置简单，适合只关心一条主序列时的标注与质检；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;TimeSeriesLabels&lt;/code&gt; 仅一类「变化点」时，界面聚焦单一操作，减少歧义；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;overviewChannels&lt;/code&gt; 在底部展示全序列缩略图，已标变化点可在概览中一览位置。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;阅读任务说明，明确「变化点」的判定标准；&lt;/li&gt;
-&lt;li&gt;选中 &lt;strong&gt;变化点&lt;/strong&gt; 标签（或对应快捷键，以平台为准）；&lt;/li&gt;
-&lt;li&gt;找到主图时间轴上需要标记的位置，双击即可进行标注。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/time-series-analysis/images/change-point-detection-example_hu_387d0dee49c5e5e.webp"
- width="746"
- height="436"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="变化点监测标注示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;
-&lt;p&gt;说明：底部细条为全序列概览，灰框表示当前放大区间。&lt;/p&gt;
-&lt;h2 id="注意事项"&gt;注意事项&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;任务数据字段名为 &lt;code&gt;csv&lt;/code&gt;，与配置中 &lt;code&gt;value=&amp;quot;$csv&amp;quot;&lt;/code&gt; 一致；须为可访问的 CSV URL；&lt;/li&gt;
-&lt;li&gt;CSV 须含 &lt;code&gt;time&lt;/code&gt; 与 &lt;code&gt;velocity&lt;/code&gt;（或与 &lt;code&gt;Channel column&lt;/code&gt; 一致的列名），分隔符与 &lt;code&gt;timeFormat&lt;/code&gt; 须与文件一致；&lt;/li&gt;
-&lt;li&gt;若平台将此类标签实现为&lt;strong&gt;极短区间&lt;/strong&gt;而非单点，导出时请以平台结果结构为准，并在评测脚本中统一为「时刻」或「区间」；&lt;/li&gt;
-&lt;li&gt;与&lt;strong&gt;活动识别&lt;/strong&gt;等多类区间标注相比，本模版仅一种标签，更适合纯变点或统一叫法的项目。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="模板预览"&gt;模板预览&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/time-series-analysis/images/change-point-detection_hu_259f98ea889bc5be.webp"
- width="1024"
- height="625"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="变化点监测模板预览"
- id="h-rh-i-1"
 &gt;&lt;/p&gt;</description></item></channel></rss>

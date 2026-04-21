@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>时间序列分析 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/</link><description>Recent content in 时间序列分析 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Mon, 20 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/time-series-analysis/index.xml" rel="self" type="application/rss+xml"/><item><title>活动识别 (Activity Recognition)</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/activity-recognition/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/time-series-analysis/activity-recognition/</guid><description>&lt;h1 id="活动识别使用说明"&gt;活动识别使用说明&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>时间序列分析 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/</link><description>Recent content in 时间序列分析 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 21 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/time-series-analysis/index.xml" rel="self" type="application/rss+xml"/><item><title>活动识别 (Activity Recognition)</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/activity-recognition/</link><pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/time-series-analysis/activity-recognition/</guid><description>&lt;h1 id="活动识别使用说明"&gt;活动识别使用说明&lt;/h1&gt;
 &lt;p&gt;可以理解为「在同一段时间上同时看多路曲线，并在的时间段上涂色并打上活动类型」。例如运动监测场景中，将「跑」「走」等标签对应到时间区间，便于构建&lt;strong&gt;时序分割 + 分类&lt;/strong&gt;的监督数据集。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -134,4 +134,30 @@
  loading="lazy"
  alt="信号质量标注示例"
  id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>时间序列预测 (Time Series Forecasting)</title><link>https://docs.jujidata.com/docs/templates/time-series-analysis/time-series-forecasting/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/time-series-analysis/time-series-forecasting/</guid><description>&lt;h1 id="时间序列预测使用说明"&gt;时间序列预测使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先在曲线上标出你认为&lt;strong&gt;适合用来预测&lt;/strong&gt;的一段（或多段），再进行预测」。例如量化或教学场景中，用历史股价序列构造「可预测窗口 + 方向标签」，便于训练或评测&lt;strong&gt;预测辅助&lt;/strong&gt;类模型。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Header&lt;/code&gt; 分两处说明&lt;strong&gt;框选目的&lt;/strong&gt;与&lt;strong&gt;趋势选项含义&lt;/strong&gt;，降低歧义；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TimeSeriesLabels&lt;/code&gt; 与 &lt;code&gt;TimeSeries&lt;/code&gt; 通过 &lt;code&gt;toName=&amp;quot;stock&amp;quot;&lt;/code&gt;（名称可改）绑定，支持在「股价」曲线上拖选红色「区域」；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choices&lt;/code&gt; 未使用 &lt;code&gt;perRegion=&amp;quot;true&amp;quot;&lt;/code&gt; 时，通常表示&lt;strong&gt;每条任务一次&lt;/strong&gt;的「上涨 / 下跌 / 持平」判断，与区段标注组合导出（具体字段结构以平台为准）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读顶部「在时间序列中框选可预测区间」及项目细则，明确可预测区间的定义；&lt;/li&gt;
+&lt;li&gt;选择 &lt;strong&gt;区域&lt;/strong&gt;标签；&lt;/li&gt;
+&lt;li&gt;在主图与概览上拖选一处或多处区间；&lt;/li&gt;
+&lt;li&gt;阅读「预测下一趋势」说明，在 &lt;strong&gt;上涨 / 下跌 / 持平&lt;/strong&gt; 中择一。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/time-series-analysis/images/time-series-forecasting-example_hu_53f7cf6c503fc71d.webp"
+ width="749"
+ height="688"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="时间序列预测标注示例"
+ id="h-rh-i-0"
 &gt;&lt;/p&gt;</description></item></channel></rss>
