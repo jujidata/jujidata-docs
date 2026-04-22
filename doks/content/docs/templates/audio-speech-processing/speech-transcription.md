@@ -2,8 +2,8 @@
 title: "语音转录 (Speech Transcription)"
 description: "在波形上标「语音 / 噪音」区段；仅当区段为「语音」时，显示按区转写、情感三选一（表情 Choice）与区域列表，适合带情感维度的分段 ASR。"
 lead: "在「使用片段的 ASR」基础上增加 whenLabelValue 与表情 Choices；TextArea 使用 displayMode=region-list，在底部区域列表中展示各段转写。"
-date: 2026-04-25 08:00:00
-lastmod: 2026-04-25 08:00:00
+date: 2026-04-22 08:00:00
+lastmod: 2026-04-22 08:00:00
 draft: false
 weight: 8
 menu:

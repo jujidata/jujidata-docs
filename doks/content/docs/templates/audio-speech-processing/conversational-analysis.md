@@ -3,7 +3,7 @@ title: "对话分析 (Conversational Analysis)"
 description: "音频与分段对话 JSON 同步展示：上方波形、中部对话气泡带时间轴，底部对整段话轮打积极/消极等标签；适合客服、会议等话轮级情感或立场标注。"
 lead: "Audio 与 Paragraphs 双向 sync；text 为话轮数组（author、text、start、end）；ParagraphLabels 绑定到话轮对象。"
 date: 2026-04-22 08:00:00
-lastmod: 2026-04-23 08:00:00
+lastmod: 2026-04-22 08:00:00
 draft: false
 weight: 3
 menu:
