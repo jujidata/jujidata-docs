@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</title><link>https://docs.jujidata.com/</link><description>Recent content in 欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 21 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML 命名实体标注(HTML NER Tagging)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</guid><description>&lt;h1 id="html-命名实体标注使用说明"&gt;HTML 命名实体标注使用说明&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</title><link>https://docs.jujidata.com/</link><description>Recent content in 欢迎来到据吉数据标注&lt;br&gt;一站式服务平台 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 22 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/index.xml" rel="self" type="application/rss+xml"/><item><title>自动语音识别 (Automatic Speech Recognition)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/automatic-speech-recognition/</link><pubDate>Wed, 22 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/automatic-speech-recognition/</guid><description>&lt;h1 id="自动语音识别使用说明"&gt;自动语音识别使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「识别音频的内容，并写成文字」。例如方言采集、客服录音质检或 ASR 模型评测场景中，人工听写作为参考文本，便于计算字错率或与模型输出对比。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Audio&lt;/code&gt; 提供波形、播放与 &lt;code&gt;zoom=&amp;quot;true&amp;quot;&lt;/code&gt; 缩放，便于定位含糊片段；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hotkey=&amp;quot;ctrl+enter&amp;quot;&lt;/code&gt; 可在部分环境中用于快捷提交（以平台实际支持为准）；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TextArea&lt;/code&gt; 通过 &lt;code&gt;toName=&amp;quot;audio&amp;quot;&lt;/code&gt; 与音频对象绑定，导出时与同一任务对齐。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;使用播放、暂停与波形缩放反复听辨；&lt;/li&gt;
+&lt;li&gt;在文本框中输入此音频的完整转写；&lt;/li&gt;
+&lt;li&gt;点击「添加」等，即可保存本条转写；&lt;/li&gt;
+&lt;li&gt;自检是否与音频一致后提交任务。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="./docs/templates/audio-speech-processing/images/automatic-speech-recognition-example_hu_75bdf601cb22f95.webp"
+ width="772"
+ height="375"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="自动语音识别标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>HTML 命名实体标注(HTML NER Tagging)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</guid><description>&lt;h1 id="html-命名实体标注使用说明"&gt;HTML 命名实体标注使用说明&lt;/h1&gt;
 &lt;p&gt;可以理解为「把一条样本里的正文（常为 HTML）渲染出来，再标注实体」。例如多轮对话场景中，将「王五先生」等称谓标为「人」，便于构建&lt;strong&gt;社区贡献的 NER&lt;/strong&gt; 数据集或与标准 NLP 模版对照实验。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -366,30 +392,4 @@
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="多边形语义分割标注配置代码说明"&gt;多边形语义分割标注配置代码说明&lt;/h3&gt;
-&lt;p&gt;以下代码用于实现多边形语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item><item><title>发票命名实体标注（BIO 形式） (NER — Invoices, BIO-style)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/ner-tagging-invoices-bio-format/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/ner-tagging-invoices-bio-format/</guid><description>&lt;h1 id="发票命名实体标注bio-形式使用说明"&gt;发票命名实体标注（BIO 形式）使用说明&lt;/h1&gt;
-&lt;p&gt;可以理解为「查看 OCR 后的发票正文，并选择实体类型后，在文本上按划选对应片段」。标注结果在平台内多为&lt;strong&gt;区间 + 类型&lt;/strong&gt;；若在训练脚本中将每个词映射为 &lt;strong&gt;B-类型 / I-类型 / O&lt;/strong&gt;，即常见的 &lt;strong&gt;BIO（或 BIOES）序列标注&lt;/strong&gt;流程。本配置源自社区模版库，适合作为发票信息抽取的起点。&lt;/p&gt;
-&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Flex 布局&lt;/strong&gt;将标签列表与正文区分左右，长文本时右侧可纵向滚动（&lt;code&gt;max-height: 80vh; overflow-y: auto&lt;/code&gt;）；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Labels&lt;/code&gt; + &lt;code&gt;Text&lt;/code&gt;（非 HyperText）直接处理&lt;strong&gt;纯文本&lt;/strong&gt; &lt;code&gt;$ocr&lt;/code&gt;，与常见 OCR 管道输出一致；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;granularity=&amp;quot;word&amp;quot;&lt;/code&gt; 约束选区对齐到词界，有利于与 &lt;strong&gt;BIO&lt;/strong&gt; 词级标签对齐（具体分词规则以平台与下游脚本为准）。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;阅读项目规范，明确八类标签各自覆盖的字符串范围（是否含「发票号码：」前缀等）；&lt;/li&gt;
-&lt;li&gt;在左侧选中一类标签（如「购买方信息」）；&lt;/li&gt;
-&lt;li&gt;在右侧「发票文本」中划选对应片段；重复直至字段标全或按任务要求结束；&lt;/li&gt;
-&lt;li&gt;自检漏标、跨行截断等问题后提交。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-&lt;img
- src="./docs/templates/community-contributions/images/ner-tagging-invoices-bio-format-example_hu_91e0c49c2acb4116.webp"
- width="773"
- height="394"
- decoding="async"
- fetchpriority="auto"
- loading="lazy"
- alt="发票命名实体标注示例"
- id="h-rh-i-0"
-&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;以下代码用于实现多边形语义分割标注功能，可直接复制使用，关键部分可根据实际标注需求修改。&lt;/p&gt;</description></item></channel></rss>

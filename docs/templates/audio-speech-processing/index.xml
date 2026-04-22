@@ -1,1 +1,171 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>音频/语音处理 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/</link><description>Recent content in 音频/语音处理 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate/><atom:link href="https://docs.jujidata.com/docs/templates/audio-speech-processing/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>音频/语音处理 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/</link><description>Recent content in 音频/语音处理 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 22 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/audio-speech-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>自动语音识别 (Automatic Speech Recognition)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/automatic-speech-recognition/</link><pubDate>Wed, 22 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/automatic-speech-recognition/</guid><description>&lt;h1 id="自动语音识别使用说明"&gt;自动语音识别使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「识别音频的内容，并写成文字」。例如方言采集、客服录音质检或 ASR 模型评测场景中，人工听写作为参考文本，便于计算字错率或与模型输出对比。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Audio&lt;/code&gt; 提供波形、播放与 &lt;code&gt;zoom=&amp;quot;true&amp;quot;&lt;/code&gt; 缩放，便于定位含糊片段；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hotkey=&amp;quot;ctrl+enter&amp;quot;&lt;/code&gt; 可在部分环境中用于快捷提交（以平台实际支持为准）；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TextArea&lt;/code&gt; 通过 &lt;code&gt;toName=&amp;quot;audio&amp;quot;&lt;/code&gt; 与音频对象绑定，导出时与同一任务对齐。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;使用播放、暂停与波形缩放反复听辨；&lt;/li&gt;
+&lt;li&gt;在文本框中输入此音频的完整转写；&lt;/li&gt;
+&lt;li&gt;点击「添加」等，即可保存本条转写；&lt;/li&gt;
+&lt;li&gt;自检是否与音频一致后提交任务。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/audio-speech-processing/images/automatic-speech-recognition-example_hu_75bdf601cb22f95.webp"
+ width="772"
+ height="375"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="自动语音识别标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>使用片段的自动语音识别 (Automatic Speech Recognition Using Segments)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/automatic-speech-recognition-using-segments/</link><pubDate>Wed, 22 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/automatic-speech-recognition-using-segments/</guid><description>&lt;h1 id="片段的自动语音识别使用说明"&gt;片段的自动语音识别使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先在时间轴上&lt;strong&gt;切出若干段&lt;/strong&gt;，标成语音或噪音，再&lt;strong&gt;对每一段语音分别听写&lt;/strong&gt;」。与 
+
+&lt;a class="link link--text" href="../../../docs/templates/audio-speech-processing/automatic-speech-recognition/"&gt;整段转写&lt;/a&gt; 相比，本模版强调&lt;strong&gt;区段时间边界 + 区段文本&lt;/strong&gt;对齐，便于做带噪声间隔的长音频数据集。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Labels&lt;/code&gt; 提供 &lt;strong&gt;语音 / 噪音&lt;/strong&gt; 等类别，在 &lt;code&gt;Audio&lt;/code&gt; 上创建可着色区段；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TextArea&lt;/code&gt; 设 &lt;code&gt;perRegion=&amp;quot;true&amp;quot;&lt;/code&gt;，转写内容与&lt;strong&gt;当前选中区段&lt;/strong&gt;一一对应；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 要求为相关区段完成必填校验（若噪音段不应打字，请在培训材料中约定是否留空及平台是否允许）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;选择最上方的 &lt;strong&gt;语音&lt;/strong&gt; 或 &lt;strong&gt;噪音&lt;/strong&gt;的标签；&lt;/li&gt;
+&lt;li&gt;拖选时间范围形成区段（可重复添加多段）；&lt;/li&gt;
+&lt;li&gt;完成拖选后，单击高亮部分，就会出现对应的输入框；&lt;/li&gt;
+&lt;li&gt;在下方输入框中输入该段转写；&lt;/li&gt;
+&lt;li&gt;完成此段转写后，点击 &lt;strong&gt;添加&lt;/strong&gt; 按钮保存。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/audio-speech-processing/images/automatic-speech-recognition-using-segments-example_hu_583fd95e2f86937f.webp"
+ width="772"
+ height="332"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="使用片段的自动语音识别标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>对话分析 (Conversational Analysis)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/conversational-analysis/</link><pubDate>Wed, 22 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/conversational-analysis/</guid><description>&lt;h1 id="对话分析使用说明"&gt;对话分析使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先听整条对话录音，再对&lt;strong&gt;每一句（或每一段话轮）选情感标签&lt;/strong&gt;」。与 
+
+&lt;a class="link link--text" href="../../../docs/templates/audio-speech-processing/automatic-speech-recognition-using-segments/"&gt;按片段的 ASR&lt;/a&gt; 不同，话轮文本通常已由上游 ASR 写好，本任务侧重&lt;strong&gt;对齐音频与话轮级标签&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Audio&lt;/code&gt; 使用 &lt;code&gt;sync=&amp;quot;text&amp;quot;&lt;/code&gt;，与 &lt;code&gt;Paragraphs&lt;/code&gt; 的 &lt;code&gt;sync=&amp;quot;audio&amp;quot;&lt;/code&gt; 配对，实现&lt;strong&gt;播放进度与话轮列表&lt;/strong&gt;联动；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Paragraphs&lt;/code&gt; 以 &lt;code&gt;layout=&amp;quot;dialogue&amp;quot;&lt;/code&gt; 展示气泡，&lt;code&gt;textKey&lt;/code&gt; / &lt;code&gt;nameKey&lt;/code&gt; 映射正文与说话人，&lt;code&gt;granularity=&amp;quot;paragraph&amp;quot;&lt;/code&gt; 以段为操作单元；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ParagraphLabels&lt;/code&gt; 将 &lt;strong&gt;积极 / 消极&lt;/strong&gt; 等标签绑定到 &lt;code&gt;name=&amp;quot;text&amp;quot;&lt;/code&gt; 的话轮对象，用于整段标注。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;用顶部波形与播放键听全段或逐段播放（单条气泡旁也可能有播放入口）；&lt;/li&gt;
+&lt;li&gt;在「对话转录」中浏览说话人、时间与正文，可用「显示所有作者」与「自动滚动」辅助阅读；&lt;/li&gt;
+&lt;li&gt;在「情感标签」中选择 &lt;strong&gt;积极&lt;/strong&gt; 或 &lt;strong&gt;消极&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;直接在文字部分选区标注，或者点击气泡后面标识一键标注整句话。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/audio-speech-processing/images/conversational-analysis-example_hu_8f24432ca6e281c5.webp"
+ width="771"
+ height="770"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="对话分析标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>意图分类 (Intent Classification)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/intent-classification/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/intent-classification/</guid><description>&lt;h1 id="意图分类使用说明"&gt;意图分类使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先把长音频&lt;strong&gt;切成几段&lt;/strong&gt;，再对&lt;strong&gt;每一段&lt;/strong&gt;进行意图分类。与 
+
+&lt;a class="link link--text" href="../../../docs/templates/audio-speech-processing/automatic-speech-recognition-using-segments/"&gt;使用片段的自动语音识别&lt;/a&gt;（语音/噪音 + 转写）不同，本模版&lt;strong&gt;不写转写&lt;/strong&gt;，只做&lt;strong&gt;区段 + 意图&lt;/strong&gt;分类。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Labels&lt;/code&gt; 提供 &lt;strong&gt;语音片段一 / 二 / 三&lt;/strong&gt; 等，用于在 &lt;code&gt;Audio&lt;/code&gt; 上创建带类型的区段（名称可按项目改写）；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choices&lt;/code&gt; 使用 &lt;code&gt;perRegion=&amp;quot;true&amp;quot;&lt;/code&gt;，选项随&lt;strong&gt;当前选中区段&lt;/strong&gt;切换；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;required=&amp;quot;true&amp;quot;&lt;/code&gt; 要求每个区段完成意图选择后再提交（以平台校验为准）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读任务说明，明确各「语音片段」标签与意图类别的含义；&lt;/li&gt;
+&lt;li&gt;在顶部选择一种片段标签，在波形上拖选时间范围；可换标签标下一段；&lt;/li&gt;
+&lt;li&gt;点击高亮的区段后，在下方会显示意图列表；&lt;/li&gt;
+&lt;li&gt;在意图列表中勾选一项对该区段完成意图标注。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/audio-speech-processing/images/intent-classification-example_hu_238d461587966dbf.webp"
+ width="730"
+ height="554"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="意图分类标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>说话人分割 (Speaker Segmentation)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/speaker-segmentation/</link><pubDate>Wed, 22 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/speaker-segmentation/</guid><description>&lt;h1 id="说话人分割使用说明"&gt;说话人分割使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「&lt;strong&gt;谁在什么时候说话&lt;/strong&gt;」：在一条录音里，用两种颜色在时间上标出&lt;strong&gt;说话人甲&lt;/strong&gt;、&lt;strong&gt;说话人乙&lt;/strong&gt;的片段（可多次交替）。与 
+
+&lt;a class="link link--text" href="../../../docs/templates/audio-speech-processing/conversational-analysis/"&gt;对话分析&lt;/a&gt;（已带 &lt;code&gt;author&lt;/code&gt;+时间+正文的气泡）不同，这里&lt;strong&gt;只有波形区段&lt;/strong&gt;；与 
+
+&lt;a class="link link--text" href="./sound-event-detection/"&gt;声音事件监测&lt;/a&gt; 的交互类似，但标签语义是&lt;strong&gt;说话人&lt;/strong&gt;而不是泛化「事件」。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;两类标签常对应两个说话人，颜色用强对比（如亮绿与深绿）减少混淆；&lt;/li&gt;
+&lt;li&gt;可连续多段、交替标同一说话人，以覆盖&lt;strong&gt;多人轮流发言&lt;/strong&gt;的长音频；&lt;/li&gt;
+&lt;li&gt;为下游 &lt;strong&gt;diarization&lt;/strong&gt;、说话人相关 ASR 或质检提供&lt;strong&gt;时间掩码&lt;/strong&gt;级标注。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;听全段，熟悉每人嗓音与交替节奏，明确「说话人一 / 二」在规范中的指代；&lt;/li&gt;
+&lt;li&gt;选择当前要标的说话人标签；&lt;/li&gt;
+&lt;li&gt;在波形上拖选该说话人发声的起止；换人时切换另一标签，重复至覆盖需标注的区间；&lt;/li&gt;
+&lt;li&gt;必要时微调区段边界，与项目边界规则一致后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/audio-speech-processing/images/speaker-segmentation-example_hu_8a4412f01b1fb092.webp"
+ width="714"
+ height="327"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="说话人分割标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>语音转录 (Speech Transcription)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/speech-transcription/</link><pubDate>Wed, 22 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/speech-transcription/</guid><description>&lt;h1 id="语音转录使用说明"&gt;语音转录使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「先像 
+
+&lt;a class="link link--text" href="../../../docs/templates/audio-speech-processing/automatic-speech-recognition-using-segments/"&gt;使用片段的自动语音识别&lt;/a&gt; 一样&lt;strong&gt;划区&lt;/strong&gt;，选择每个语音区的情感态度，并进行语音转写」。「噪音」区一般只做时间标记，不强制跟转写和情感。适合&lt;strong&gt;分段 ASR + 话段情感&lt;/strong&gt;联合标注。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;whenTagName=&amp;quot;label&amp;quot; whenLabelValue=&amp;quot;语音&amp;quot;&lt;/code&gt; 使 &lt;code&gt;TextArea&lt;/code&gt; 与 &lt;code&gt;Choices&lt;/code&gt; &lt;strong&gt;仅在「语音」区段&lt;/strong&gt;展示，避免在噪音区误填；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;displayMode=&amp;quot;region-list&amp;quot;&lt;/code&gt; 把转写放在&lt;strong&gt;区域列表面板&lt;/strong&gt;中，便于多段管理；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choice&lt;/code&gt; 使用 &lt;code&gt;html&lt;/code&gt; 嵌入大表情，提升点选速度。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;听全段，熟悉每人嗓音与交替节奏；&lt;/li&gt;
+&lt;li&gt;选中不同的标签，并在波形图上标注对应的片段；&lt;/li&gt;
+&lt;li&gt;点击对应的片段，即可出现情感划分选项，在同一区段为 &lt;strong&gt;积极 / 中性 / 消极&lt;/strong&gt; 择一；&lt;/li&gt;
+&lt;li&gt;在底部「区域」列表中找到对应条目，在文本框中输入该段转写；&lt;/li&gt;
+&lt;li&gt;多段重复上述操作后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/audio-speech-processing/images/speech-transcription-example_hu_fad8362d58ca86b6.webp"
+ width="733"
+ height="730"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="语音转录标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>社区贡献 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/community-contributions/</link><description>Recent content in 社区贡献 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 21 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/community-contributions/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML 命名实体标注(HTML NER Tagging)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</guid><description>&lt;h1 id="html-命名实体标注使用说明"&gt;HTML 命名实体标注使用说明&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>社区贡献 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/community-contributions/</link><description>Recent content in 社区贡献 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 22 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/community-contributions/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML 命名实体标注(HTML NER Tagging)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</link><pubDate>Tue, 21 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/html-ner-tagging-person-and-organization/</guid><description>&lt;h1 id="html-命名实体标注使用说明"&gt;HTML 命名实体标注使用说明&lt;/h1&gt;
 &lt;p&gt;可以理解为「把一条样本里的正文（常为 HTML）渲染出来，再标注实体」。例如多轮对话场景中，将「王五先生」等称谓标为「人」，便于构建&lt;strong&gt;社区贡献的 NER&lt;/strong&gt; 数据集或与标准 NLP 模版对照实验。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -78,5 +78,32 @@
  fetchpriority="auto"
  loading="lazy"
  alt="OCR 发票预命名实体标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>X/Twitter 帖子的两级情感分析 (Two-level Sentiment — X/Twitter Posts)</title><link>https://docs.jujidata.com/docs/templates/community-contributions/two-level-sentiment-analysis-of-x-twitter-posts/</link><pubDate>Wed, 22 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/community-contributions/two-level-sentiment-analysis-of-x-twitter-posts/</guid><description>&lt;h1 id="xtwitter-帖子的两级情感分析使用说明"&gt;X/Twitter 帖子的两级情感分析使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「看一条帖子的正文，&lt;strong&gt;先判整体情感&lt;/strong&gt;，再勾&lt;strong&gt;写作风格或语义特点&lt;/strong&gt;」。第一层与第二层拆开，可减少一次界面上的选项数量，并符合「先主类、后附加属性」的质检习惯。本配置源自社区模版库。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;顶部 &lt;strong&gt;Style&lt;/strong&gt; 微调 &lt;code&gt;.htx-text&lt;/code&gt;，避免在旧版 playground 中与卡片样式冲突；&lt;/li&gt;
+&lt;li&gt;卡片用嵌套 &lt;code&gt;View&lt;/code&gt; + &lt;code&gt;Text&lt;/code&gt; 拼出头像、昵称、时间与互动数据，&lt;strong&gt;仅正文&lt;/strong&gt;来自 &lt;code&gt;$text&lt;/code&gt;，其余可为演示固定值；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choices name=&amp;quot;sentiment&amp;quot;&lt;/code&gt; 使用 &lt;code&gt;choice=&amp;quot;single&amp;quot;&lt;/code&gt;，绑定到承载正文的 &lt;code&gt;Text name=&amp;quot;tweet&amp;quot;&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Choices name=&amp;quot;other-props&amp;quot;&lt;/code&gt; 使用 &lt;code&gt;choice=&amp;quot;multiple&amp;quot;&lt;/code&gt;，并通过 &lt;code&gt;visibleWhen=&amp;quot;choice-selected&amp;quot;&lt;/code&gt;、&lt;code&gt;whenTagName=&amp;quot;sentiment&amp;quot;&lt;/code&gt; 在选中主情感后再显示第二组选项。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读主情感三项的，在 &lt;strong&gt;积极 / 中性 / 消极&lt;/strong&gt; 中择一；&lt;/li&gt;
+&lt;li&gt;出现「帖子其他属性」后，按需勾选一项或多项（描述性、情绪化等），并参考各 &lt;code&gt;hint&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;若项目要求必选第二组，请在规范中写明；当前配置未对第二组强制 &lt;code&gt;required&lt;/code&gt;（以实际 XML 为准）；&lt;/li&gt;
+&lt;li&gt;自检后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/community-contributions/images/two-level-sentiment-analysis-of-x-twitter-posts-example_hu_d7a2c9a25f6e25f5.webp"
+ width="638"
+ height="518"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="两级情感分析标注示例"
  id="h-rh-i-0"
 &gt;&lt;/p&gt;</description></item></channel></rss>
