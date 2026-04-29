@@ -2,8 +2,8 @@
 title: "意图分类 (Intent Classification)"
 description: "在波形上先用多类「语音片段」标签划段，再对每个区段从意图列表中单选或多选（以平台为准）；适合客服语音、指令意图等按段分类。"
 lead: "Labels 定义可区分的片段类型或分段工具；Choices 设 perRegion 与 required，使每个选中区段必须选择一种意图。"
-date: 2026-04-23 08:00:00
-lastmod: 2026-04-23 08:00:00
+date: 2026-04-21 08:00:00
+lastmod: 2026-04-21 08:00:00
 draft: false
 weight: 4
 menu:
