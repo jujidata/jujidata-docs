@@ -27,18 +27,28 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+    
+      - name: 🟢 设置 Node.js   # 👈 必须加
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+    
       - name: 🛠️ 安装 Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
-
+    
       - name: 📦 安装 Node.js 依赖
-        # 有了上面的 defaults，这里会自动在 ./doks 下运行
         run: npm install
-
+    
       - name: 🏗️ 执行构建
-        # 增加 --gc (垃圾回收) 确保清理旧资源
         run: npm run build -- --gc --minify
 
       - name: 🌐 部署到 GitHub Pages
