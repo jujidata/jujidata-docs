@@ -26,27 +26,20 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-
-      - name: 📥 检出代码
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
     
       - name: 🟢 设置 Node.js   # 👈 必须加
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-    
+          
+      - run: npm install
+      
       - name: 🛠️ 安装 Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
-    
-      - name: 📦 安装 Node.js 依赖
-        run: npm install
     
       - name: 🏗️ 执行构建
         run: npm run build -- --gc --minify
