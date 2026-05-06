@@ -30,7 +30,7 @@ jobs:
       - name: 🟢 设置 Node.js   # 👈 必须加
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
           cache-dependency-path: doks/package-lock.json
       
       - name: 🛠️ 安装 Hugo
