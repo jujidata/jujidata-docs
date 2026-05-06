@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>标注概念 (Concepts) on 据吉文档</title><link>https://docs.jujidata.com/docs/concepts/</link><description>Recent content in 标注概念 (Concepts) on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 25 Mar 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/concepts/index.xml" rel="self" type="application/rss+xml"/><item><title>功能介绍：账号权限说明书 (IAM)</title><link>https://docs.jujidata.com/docs/concepts/juji-iam/</link><pubDate>Wed, 25 Mar 2026 10:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/juji-iam/</guid><description>&lt;h2 id="1-角色定义"&gt;1. 角色定义&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>标注概念 (Concepts) on 据吉文档</title><link>https://docs.jujidata.com/docs/concepts/</link><description>Recent content in 标注概念 (Concepts) on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Thu, 30 Apr 2026 10:53:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/concepts/index.xml" rel="self" type="application/rss+xml"/><item><title>功能介绍：账号权限说明书 (IAM)</title><link>https://docs.jujidata.com/docs/concepts/juji-iam/</link><pubDate>Wed, 25 Mar 2026 10:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/juji-iam/</guid><description>&lt;h2 id="1-角色定义"&gt;1. 角色定义&lt;/h2&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -678,7 +678,63 @@
 &lt;li&gt;&lt;strong&gt;创建限制&lt;/strong&gt;：个人用户仅能创建一个企业或一个团队&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;认证限制&lt;/strong&gt;：仅团队账户和个人允许认证高校教师&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;服务商认证&lt;/strong&gt;：企业申请外包项目前需完成服务商认证&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>功能介绍：AI 预标注插件与开发者沙盒</title><link>https://docs.jujidata.com/docs/concepts/pre-annotation/</link><pubDate>Tue, 24 Mar 2026 21:15:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/pre-annotation/</guid><description>&lt;h1 id="-ai-预标注插件让数据标注进入自动驾驶时代"&gt;🤖 AI 预标注插件：让数据标注进入“自动驾驶”时代&lt;/h1&gt;
+&lt;/ol&gt;</description></item><item><title>功能介绍：账号授权管理</title><link>https://docs.jujidata.com/docs/concepts/users-iam/</link><pubDate>Thu, 30 Apr 2026 10:53:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/users-iam/</guid><description>&lt;h1 id="账号授权管理"&gt;账号授权管理&lt;/h1&gt;
+&lt;h2 id="一功能介绍"&gt;一、功能介绍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;账号授权管理功能：可修改用户权限、账号状态，并支持席位分配与撤回。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/concepts/images/users-iam_hu_341a0541af1b2eaf.webp"
+ width="1024"
+ height="549"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="users-iam"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;p&gt;具体账号权限说明请参考：
+
+&lt;a class="link link--text" href="../../docs/concepts/juji-iam/"&gt;账号权限说明书 (IAM)&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id="二搜索与账号管理"&gt;二、搜索与账号管理&lt;/h2&gt;
+&lt;h3 id="1-搜索功能"&gt;1) 搜索功能&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;支持按手机号搜索用户。&lt;/li&gt;
+&lt;li&gt;支持模糊查询。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-账号管理"&gt;2) 账号管理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;展示账户总数。&lt;/li&gt;
+&lt;li&gt;展示管理账号数量。&lt;/li&gt;
+&lt;li&gt;展示员工账号数量（此处员工指除超级管理员外的所有账号）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="三用户账户"&gt;三、用户账户&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;可邀请新用户或已有用户加入。&lt;/li&gt;
+&lt;li&gt;被邀请用户会收到消息提示，可选择 &lt;code&gt;接受&lt;/code&gt; 或 &lt;code&gt;拒绝&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;企业管理员会收到邀请处理通知。&lt;/li&gt;
+&lt;li&gt;若邀请对象是新用户：首次登录需先点击 &lt;code&gt;忘记密码&lt;/code&gt; 完成密码设置，再次登录即可使用（自动注册）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="1批量导入"&gt;1）批量导入&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;下载 Excel 模板后，按要求填写手机号。&lt;/li&gt;
+&lt;li&gt;可点击上传区域选择文件进行上传，也可选择文件拖拽到指定区域上传。&lt;/li&gt;
+&lt;li&gt;批量导入时，所有用户默认权限为 &lt;code&gt;员工&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/concepts/images/import_hu_33a6da657a359c4d.webp"
+ width="1024"
+ height="549"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="import"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;</description></item><item><title>功能介绍：AI 预标注插件与开发者沙盒</title><link>https://docs.jujidata.com/docs/concepts/pre-annotation/</link><pubDate>Tue, 24 Mar 2026 21:15:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/pre-annotation/</guid><description>&lt;h1 id="-ai-预标注插件让数据标注进入自动驾驶时代"&gt;🤖 AI 预标注插件：让数据标注进入“自动驾驶”时代&lt;/h1&gt;
 &lt;p&gt;在处理大规模数据集时，纯人工标注往往效率低下。&lt;strong&gt;据吉网 (Jujidata)&lt;/strong&gt; 推出强大的预标注插件系统，允许用户结合 AI 模型力量，将标注时间缩短 60% 以上。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="-桌面级工具联动"&gt;💻 桌面级工具联动&lt;/h2&gt;

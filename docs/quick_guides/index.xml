@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>据吉网做什么的？ on 据吉文档</title><link>https://docs.jujidata.com/docs/quick_guides/</link><description>Recent content in 据吉网做什么的？ on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Tue, 24 Mar 2026 21:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/quick_guides/index.xml" rel="self" type="application/rss+xml"/><item><title>据吉网：我们可以做什么？</title><link>https://docs.jujidata.com/docs/quick_guides/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/intro/</guid><description>&lt;h1 id="快速了解据吉网"&gt;快速了解据吉网&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>据吉网做什么的？ on 据吉文档</title><link>https://docs.jujidata.com/docs/quick_guides/</link><description>Recent content in 据吉网做什么的？ on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Thu, 30 Apr 2026 09:40:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/quick_guides/index.xml" rel="self" type="application/rss+xml"/><item><title>据吉网：我们可以做什么？</title><link>https://docs.jujidata.com/docs/quick_guides/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/intro/</guid><description>&lt;h1 id="快速了解据吉网"&gt;快速了解据吉网&lt;/h1&gt;
 &lt;hr&gt;
 &lt;h2 id="1-全面的标注工具能力"&gt;1. 全面的标注工具能力&lt;/h2&gt;
 &lt;ul&gt;
@@ -219,22 +219,121 @@
 &lt;hr&gt;
 &lt;h2 id="常见问题-faq"&gt;常见问题 (FAQ)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Q: 如何提高我的投标成功率？&lt;/strong&gt;
-A: 强大的案例库、快速的响应速度以及在试标环节展现出的专业性是中标的核心因素。&lt;/p&gt;</description></item><item><title>快速上手：自标注模式</title><link>https://docs.jujidata.com/docs/quick_guides/self-annotated/</link><pubDate>Tue, 24 Mar 2026 21:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/self-annotated/</guid><description>&lt;h1 id="-自标注模式上手指南"&gt;🏠 自标注模式上手指南&lt;/h1&gt;
-&lt;p&gt;如果您拥有自己的标注团队，并希望利用 &lt;strong&gt;据吉网&lt;/strong&gt; 专业、圆润易用的 UI 工具进行内部协作，请选择“自标注”模式。该模式支持您自主管理成员、分配任务并直接获取成果。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="-第一阶段项目创建与配置"&gt;🟢 第一阶段：项目创建与配置&lt;/h2&gt;
-&lt;h3 id="1-发布自标注项目"&gt;1. 发布自标注项目&lt;/h3&gt;
+A: 强大的案例库、快速的响应速度以及在试标环节展现出的专业性是中标的核心因素。&lt;/p&gt;</description></item><item><title>快速上手：自标注模式</title><link>https://docs.jujidata.com/docs/quick_guides/self-annotated/</link><pubDate>Tue, 24 Mar 2026 21:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/self-annotated/</guid><description>&lt;h1 id="自标注功能"&gt;自标注功能&lt;/h1&gt;
+&lt;p&gt;本文整理了注册、登录、自标注项目的关键流程和规则，便于产品验收和实际操作。&lt;/p&gt;
+&lt;h2 id="一注册页面"&gt;一、注册页面&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/register_hu_243750e48472991e.webp"
+ width="1024"
+ height="556"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="register"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;h3 id="1-注册入口"&gt;1) 注册入口&lt;/h3&gt;
+&lt;p&gt;从网站首页进入注册页。&lt;/p&gt;
+&lt;h3 id="2-表单校验项"&gt;2) 表单校验项&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;操作路径&lt;/strong&gt;：进入 &lt;code&gt;项目管理&lt;/code&gt; 页面 -&amp;gt; 点击 &lt;code&gt;发布项目&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;关键选择&lt;/strong&gt;：在发布选项中，找到 &lt;strong&gt;“标注模式”&lt;/strong&gt;，勾选 &lt;strong&gt;[自标注]&lt;/strong&gt; 选项。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;配置信息&lt;/strong&gt;：填入项目名称和任务类型（如：图片分割、语义理解），保存并生成项目卡片。&lt;/li&gt;
+&lt;li&gt;手机号输入框应提示：&lt;code&gt;请输入大陆手机号码&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;两次密码输入必须一致，且密码需符合平台密码规则。&lt;/li&gt;
+&lt;li&gt;邀请码需校验有效性，无效邀请码不可通过。&lt;/li&gt;
+&lt;li&gt;需完成短信验证。&lt;/li&gt;
+&lt;li&gt;仅当手机号格式符合要求时，才允许获取验证码。&lt;/li&gt;
+&lt;li&gt;必须勾选 &lt;code&gt;我已阅读并同意《用户协议》&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;以上校验全部通过后，才允许点击并完成注册。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="2-开启组织成员管理"&gt;2. 开启组织成员管理&lt;/h3&gt;
+&lt;h2 id="二登录页面"&gt;二、登录页面&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/log_hu_ea815356da86ebb9.webp"
+ width="1024"
+ height="555"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="log"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;h3 id="1-登录方式"&gt;1) 登录方式&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;进入管理&lt;/strong&gt;：在项目列表中找到刚才创建的项目卡片。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;管理入口&lt;/strong&gt;：点击卡片下方的 &lt;strong&gt;[组织成员管理]&lt;/strong&gt; 图标。在这里，您可以邀请您的团队成员加入特定项目。&lt;/li&gt;
+&lt;li&gt;支持密码登录：手机号 + 密码。&lt;/li&gt;
+&lt;li&gt;输入正确手机号与密码时，可正常登录。&lt;/li&gt;
+&lt;li&gt;输入错误密码（手机号与密码不匹配）时，不可登录。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id="-第二阶段资源准备与团队建设"&gt;🟡 第二阶段：资源准备与团队建设&lt;/h2&gt;
-&lt;h3 id="3-为标注人员购买席位"&gt;3. 为标注人员购买席位&lt;/h3&gt;
-&lt;p&gt;为了保障平台工具的高效运行，自标注模式需要为每位参与的标注人员分配“席位”。&lt;/p&gt;</description></item></channel></rss>
+&lt;h3 id="2-手机号规则"&gt;2) 手机号规则&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;手机号长度要求为 11 位。&lt;/li&gt;
+&lt;li&gt;当手机号位数不为 11 位时，登录按钮不可点击。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="三修改密码"&gt;三、修改密码&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/update-password_hu_6641620a7407769e.webp"
+ width="1024"
+ height="556"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="update-password"
+ id="h-rh-i-2"
+&gt;&lt;/p&gt;</description></item><item><title>快速上手：自标注团队迁移与协作</title><link>https://docs.jujidata.com/docs/quick_guides/self-annotated-team/</link><pubDate>Thu, 30 Apr 2026 09:40:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/self-annotated-team/</guid><description>&lt;h1 id="自标注项目转团队协作"&gt;自标注项目转团队协作&lt;/h1&gt;
+&lt;p&gt;本文聚焦自标注项目从个人账号转入企业/团队后的协作流程与权限规则，便于实际操作与验收。&lt;/p&gt;
+&lt;p&gt;说明：项目迁移不可逆，必要时可通过 &lt;code&gt;项目成员管理&lt;/code&gt; 进行限制。&lt;/p&gt;
+&lt;h2 id="一创建团队"&gt;一、创建团队&lt;/h2&gt;
+&lt;p&gt;个人账号只可以一个人进行项目标注，若是需要多人协作，则需要转换成团队账号。
+以下是个人账号的操作流程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若当前账号没有团队，可点击 &lt;code&gt;一键创建团队&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;具体方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在登陆时创建团队，或者登录个人账号时，点击右上角进行创建&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/team-create1_hu_63afaef06edf1600.webp"
+ width="1024"
+ height="549"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="team-create1"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;在 &lt;code&gt;项目管理&lt;/code&gt; 页面创建团队。点击 &lt;code&gt;邀请用户协作&lt;/code&gt; ，可在此创建团队后邀请用户&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/team-create2_hu_8287a0f2d9c14faf.webp"
+ width="1024"
+ height="549"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="team-create2"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;点击后可快速完成团队创建，并自动切换到该团队 &lt;code&gt;超级管理员账号&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/quick_guides/images/team-switch1_hu_c18096cebf6b05fe.webp"
+ width="1024"
+ height="549"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="team-switch1"
+ id="h-rh-i-2"
+&gt;&lt;/p&gt;</description></item></channel></rss>

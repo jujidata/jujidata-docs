@@ -41,6 +41,7 @@
 
 - [试标空间 (Sandbox)](https://docs.jujidata.com/docs/concepts/sandbox/): 通过小样任务测试供应商交付质量，降低大规模作业风险。
 - [功能介绍：账号权限说明书 (IAM)](https://docs.jujidata.com/docs/concepts/juji-iam/)
+- [功能介绍：账号授权管理](https://docs.jujidata.com/docs/concepts/users-iam/)
 - [功能介绍：AI 预标注插件与开发者沙盒](https://docs.jujidata.com/docs/concepts/pre-annotation/)
 - [功能介绍：多账号身份切换 (Multi-Accounts)](https://docs.jujidata.com/docs/concepts/multi-accounts/)
 
@@ -52,6 +53,7 @@
 - [快速上手：项目发布者 (甲方)](https://docs.jujidata.com/docs/quick_guides/buyer_guide/): 指导需求方在据吉网完成从注册到获取标注数据的全流程操作
 - [快速上手：项目服务商 (乙方) ](https://docs.jujidata.com/docs/quick_guides/vendor_guide/)
 - [快速上手：自标注模式](https://docs.jujidata.com/docs/quick_guides/self-annotated/)
+- [快速上手：自标注团队迁移与协作](https://docs.jujidata.com/docs/quick_guides/self-annotated-team/)
 
 ### 模版中心
 
@@ -60,11 +62,11 @@
 - [自然语言处理](https://docs.jujidata.com/docs/templates/natural-language-processing/): 文本与语言类标注模版，覆盖分类、摘要、实体、问答、审核与翻译等常见 NLP 任务。
 - [计算机视觉](https://docs.jujidata.com/docs/templates/computer-vision/): 预置 10 大主流 AI 标注模版，支持高度自定义配置。
 - [对话式 AI](https://docs.jujidata.com/docs/templates/conversational-ai/): 面向对话理解、共指消解与实体相关任务的文本标注模版，可与对话或配置字段联动。
+- [音频/语音处理](https://docs.jujidata.com/docs/templates/audio-speech-processing/): 面向语音与音频任务的标注模版，支持波形浏览、听辨、分段语音转录与段级情感、声音事件与说话人区段、整段质量打分、对话话轮展示等配置。
 - [生成式 AI](https://docs.jujidata.com/docs/templates/generative-ai/): 面向大模型监督微调、指令跟随与开放式生成的标注模版，支持提示与答案同屏编辑。
 - [视频](https://docs.jujidata.com/docs/templates/videos/): 面向视频理解、分类与质检的标注模版，支持与播放器联动的标签与选项配置。
 - [排序与评分](https://docs.jujidata.com/docs/templates/ranking-and-scoring/): 排序、检索偏好与相关性标注模版，覆盖 ASR 假设选择、图像/文档检索、成对比较与搜索排序等任务。
 - [结构化数据解析](https://docs.jujidata.com/docs/templates/structured-data-parsing/): 面向版式文档、表格与半结构化内容的标注模版，支持在阅读器中完成分类、评分与字段级任务。
 - [时间序列分析](https://docs.jujidata.com/docs/templates/time-series-analysis/): 面向传感器与时间序列数据的标注模版，支持多通道曲线、时间轴区段或变化点标注与全局概览导航。
 - [社区贡献](https://docs.jujidata.com/docs/templates/community-contributions/): 由社区贡献或实验性质的标注模版示例，便于复用与二次改造；使用前请结合业务与平台版本核对行为。
-- [音频/语音处理](https://docs.jujidata.com/docs/templates/audio-speech-processing/): 面向语音与音频任务的标注模版，支持波形浏览、听辨、分段语音转录与段级情感、声音事件与说话人区段、整段质量打分、对话话轮展示等配置。
 

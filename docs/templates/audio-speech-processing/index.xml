@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>音频/语音处理 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/</link><description>Recent content in 音频/语音处理 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 22 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/audio-speech-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>自动语音识别 (Automatic Speech Recognition)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/automatic-speech-recognition/</link><pubDate>Wed, 22 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/automatic-speech-recognition/</guid><description>&lt;h1 id="自动语音识别使用说明"&gt;自动语音识别使用说明&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>音频/语音处理 on 据吉文档</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/</link><description>Recent content in 音频/语音处理 on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Fri, 24 Apr 2026 08:00:00 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/templates/audio-speech-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>自动语音识别 (Automatic Speech Recognition)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/automatic-speech-recognition/</link><pubDate>Wed, 22 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/automatic-speech-recognition/</guid><description>&lt;h1 id="自动语音识别使用说明"&gt;自动语音识别使用说明&lt;/h1&gt;
 &lt;p&gt;可以理解为「识别音频的内容，并写成文字」。例如方言采集、客服录音质检或 ASR 模型评测场景中，人工听写作为参考文本，便于计算字错率或与模型输出对比。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
@@ -109,12 +109,69 @@
  loading="lazy"
  alt="意图分类标注示例"
  id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>信号质量监测 (Signal Quality Detection)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/signal-quality-detection/</link><pubDate>Thu, 23 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/signal-quality-detection/</guid><description>&lt;h1 id="信号质量监测使用说明"&gt;信号质量监测使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「&lt;strong&gt;听完整条音频&lt;/strong&gt;后，用星级给此音频信号质量打分」。与 
+
+&lt;a class="link link--text" href="../../../docs/templates/time-series-analysis/signal-quality/"&gt;时间序列分析&lt;/a&gt; 里在曲线上&lt;strong&gt;按区段&lt;/strong&gt;评质量不同，本模版是&lt;strong&gt;整段一条音频一个分数&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Header&lt;/code&gt; 明确 1–10 分与「信号质量」的判定提示，便于培训对齐；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Rating&lt;/code&gt; 绑定到 &lt;code&gt;Audio&lt;/code&gt; 对象，导出时与 &lt;code&gt;audio&lt;/code&gt; 字段同一任务；&lt;/li&gt;
+&lt;li&gt;布局上评分在播放器上方，符合「先看说明 → 再听 → 再打分」的操作顺序（也可按产品调整顺序）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;阅读顶栏说明，明确 1 分与 10 分分别对应什么现象；&lt;/li&gt;
+&lt;li&gt;使用波形区播放、拖动进度，必要时反复听同一片段；&lt;/li&gt;
+&lt;li&gt;在星标控件上点选 1–10 分；&lt;/li&gt;
+&lt;li&gt;自检与规范一致后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/audio-speech-processing/images/signal-quality-detection-example_hu_42508bcc6baf2c84.webp"
+ width="715"
+ height="363"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="信号质量监测标注示例"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;</description></item><item><title>声音事件监测 (Sound Event Detection)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/sound-event-detection/</link><pubDate>Fri, 24 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/sound-event-detection/</guid><description>&lt;h1 id="声音事件监测使用说明"&gt;声音事件监测使用说明&lt;/h1&gt;
+&lt;p&gt;可以理解为「在一条音频里，把不同事件在时间线上标出来」。与 
+
+&lt;a class="link link--text" href="../../../docs/templates/audio-speech-processing/intent-classification/"&gt;意图分类&lt;/a&gt;（区段 + 语言意图）不同，本模版&lt;strong&gt;只标声学与时间边界&lt;/strong&gt;，不依赖文本；与 
+
+&lt;a class="link link--text" href="../../../docs/templates/audio-speech-processing/automatic-speech-recognition-using-segments/"&gt;使用片段的自动语音识别&lt;/a&gt; 相比，这里区段表示&lt;strong&gt;不同事件&lt;/strong&gt;而不是「语音/噪音 + 转写」。&lt;/p&gt;
+&lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Labels&lt;/code&gt; 提供至少两类可区分颜色（如红 / 绿），在波形上形成&lt;strong&gt;可重叠、可多段&lt;/strong&gt;的区段（以平台能力为准）；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Audio&lt;/code&gt; 承担播放与&lt;strong&gt;时间轴&lt;/strong&gt;展示，便于精调区段起止；&lt;/li&gt;
+&lt;li&gt;配置极简单，适合作为 &lt;strong&gt;SED / 音频强监督&lt;/strong&gt; 的起点。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="基础操作步骤"&gt;基础操作步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在顶部选择当前要标的事件类型；&lt;/li&gt;
+&lt;li&gt;在波形上拖选起止时间；可切换标签标注另一类事件，重复多段；&lt;/li&gt;
+&lt;li&gt;自检区段与听感一致后提交。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../../docs/templates/audio-speech-processing/images/sound-event-detection-example_hu_4ac8526d7472e4db.webp"
+ width="714"
+ height="327"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="声音事件监测标注示例"
+ id="h-rh-i-0"
 &gt;&lt;/p&gt;</description></item><item><title>说话人分割 (Speaker Segmentation)</title><link>https://docs.jujidata.com/docs/templates/audio-speech-processing/speaker-segmentation/</link><pubDate>Wed, 22 Apr 2026 08:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/templates/audio-speech-processing/speaker-segmentation/</guid><description>&lt;h1 id="说话人分割使用说明"&gt;说话人分割使用说明&lt;/h1&gt;
 &lt;p&gt;可以理解为「&lt;strong&gt;谁在什么时候说话&lt;/strong&gt;」：在一条录音里，用两种颜色在时间上标出&lt;strong&gt;说话人甲&lt;/strong&gt;、&lt;strong&gt;说话人乙&lt;/strong&gt;的片段（可多次交替）。与 
 
 &lt;a class="link link--text" href="../../../docs/templates/audio-speech-processing/conversational-analysis/"&gt;对话分析&lt;/a&gt;（已带 &lt;code&gt;author&lt;/code&gt;+时间+正文的气泡）不同，这里&lt;strong&gt;只有波形区段&lt;/strong&gt;；与 
 
-&lt;a class="link link--text" href="./sound-event-detection/"&gt;声音事件监测&lt;/a&gt; 的交互类似，但标签语义是&lt;strong&gt;说话人&lt;/strong&gt;而不是泛化「事件」。&lt;/p&gt;
+&lt;a class="link link--text" href="../../../docs/templates/audio-speech-processing/sound-event-detection/"&gt;声音事件监测&lt;/a&gt; 的交互类似，但标签语义是&lt;strong&gt;说话人&lt;/strong&gt;而不是泛化「事件」。&lt;/p&gt;
 &lt;h2 id="标注核心作用"&gt;标注核心作用&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;两类标签常对应两个说话人，颜色用强对比（如亮绿与深绿）减少混淆；&lt;/li&gt;
