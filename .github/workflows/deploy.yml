@@ -36,9 +36,8 @@ jobs:
       - name: 🛠️ 安装 Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.160.1'
           extended: true
-    
           
       - name: npm install
         run: npm install
