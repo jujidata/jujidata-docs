@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>标注概念 (Concepts) on 据吉文档</title><link>https://docs.jujidata.com/docs/concepts/</link><description>Recent content in 标注概念 (Concepts) on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Thu, 30 Apr 2026 10:53:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/concepts/index.xml" rel="self" type="application/rss+xml"/><item><title>功能介绍：账号权限说明书 (IAM)</title><link>https://docs.jujidata.com/docs/concepts/juji-iam/</link><pubDate>Wed, 25 Mar 2026 10:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/juji-iam/</guid><description>&lt;h2 id="1-角色定义"&gt;1. 角色定义&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>标注概念 (Concepts) on 据吉文档</title><link>https://docs.jujidata.com/docs/concepts/</link><description>Recent content in 标注概念 (Concepts) on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Thu, 07 May 2026 15:45:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/concepts/index.xml" rel="self" type="application/rss+xml"/><item><title>功能介绍：账号权限说明书 (IAM)</title><link>https://docs.jujidata.com/docs/concepts/juji-iam/</link><pubDate>Wed, 25 Mar 2026 10:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/juji-iam/</guid><description>&lt;h2 id="1-角色定义"&gt;1. 角色定义&lt;/h2&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -734,7 +734,36 @@
  loading="lazy"
  alt="import"
  id="h-rh-i-1"
-&gt;&lt;/p&gt;</description></item><item><title>功能介绍：AI 预标注插件与开发者沙盒</title><link>https://docs.jujidata.com/docs/concepts/pre-annotation/</link><pubDate>Tue, 24 Mar 2026 21:15:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/pre-annotation/</guid><description>&lt;h1 id="-ai-预标注插件让数据标注进入自动驾驶时代"&gt;🤖 AI 预标注插件：让数据标注进入“自动驾驶”时代&lt;/h1&gt;
+&gt;&lt;/p&gt;</description></item><item><title>功能介绍：账号管理与席位</title><link>https://docs.jujidata.com/docs/concepts/roles-seats/</link><pubDate>Thu, 07 May 2026 15:45:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/roles-seats/</guid><description>&lt;h1 id="功能介绍账号管理与席位"&gt;功能介绍：账号管理与席位&lt;/h1&gt;
+&lt;h2 id="一方案与定价"&gt;一、方案与定价&lt;/h2&gt;
+&lt;p&gt;购买页：显示三种购买方案，费用、用途等信息&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/concepts/images/rs-pricing_hu_3962df2c9266d4a3.webp"
+ width="1024"
+ height="532"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="rs-pricing"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;h3 id="免费版"&gt;免费版&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;发现并对接供给商与服务商&lt;/li&gt;
+&lt;li&gt;在平台创建、发布并管理标注项目&lt;/li&gt;
+&lt;li&gt;浏览超60种标注模板，查看标注内容与配置示例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;赠送席位：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;个人新用户注册后赠送一个月 VIP&lt;/li&gt;
+&lt;li&gt;企业认证之后赠送两个人月的席位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="个人vip"&gt;个人VIP&lt;/h3&gt;
+&lt;p&gt;可以选择不同的支付方式：银行卡、支付宝、微信支付&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;个人账号只能给自己购买 VIP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;购买时长&lt;/code&gt; ，点击 &lt;code&gt;立即支付&lt;/code&gt; 即可购买&lt;/p&gt;</description></item><item><title>功能介绍：AI 预标注插件与开发者沙盒</title><link>https://docs.jujidata.com/docs/concepts/pre-annotation/</link><pubDate>Tue, 24 Mar 2026 21:15:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/pre-annotation/</guid><description>&lt;h1 id="-ai-预标注插件让数据标注进入自动驾驶时代"&gt;🤖 AI 预标注插件：让数据标注进入“自动驾驶”时代&lt;/h1&gt;
 &lt;p&gt;在处理大规模数据集时，纯人工标注往往效率低下。&lt;strong&gt;据吉网 (Jujidata)&lt;/strong&gt; 推出强大的预标注插件系统，允许用户结合 AI 模型力量，将标注时间缩短 60% 以上。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="-桌面级工具联动"&gt;💻 桌面级工具联动&lt;/h2&gt;
