@@ -356,7 +356,7 @@
  &lt;td&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
- &lt;td&gt;删除任务&lt;/td&gt;
+ &lt;td&gt;删除项目&lt;/td&gt;
  &lt;td style="text-align: center"&gt;&lt;/td&gt;
  &lt;td style="text-align: center"&gt;是&lt;/td&gt;
  &lt;td style="text-align: center"&gt;是&lt;/td&gt;
@@ -478,6 +478,19 @@
  &lt;td style="text-align: center"&gt;否&lt;/td&gt;
  &lt;td style="text-align: center"&gt;否&lt;/td&gt;
  &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;删除项目&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
  &lt;td&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
