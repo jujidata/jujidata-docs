@@ -89,7 +89,11 @@
 
 ### 2） 数据标注
 
-- 通过点击上边栏 `数据标注平台` 并选择对应项目进入标注空间
+- 点击上边栏 `数据标注平台` 
+
+![Labeling_platform](./images/Labeling_platform.png)
+
+- 选择对应项目进入标注空间
 
 ![projects](./images/projects.png)
 

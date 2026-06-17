@@ -291,6 +291,19 @@
  &lt;td&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
+ &lt;td&gt;删除标注任务&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td&gt;仅项目的甲方可删除任务，乙方不可以&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
  &lt;td&gt;执行预标注&lt;/td&gt;
  &lt;td style="text-align: center"&gt;&lt;/td&gt;
  &lt;td style="text-align: center"&gt;是&lt;/td&gt;
@@ -317,7 +330,20 @@
  &lt;td&gt;操作者需要席位&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
- &lt;td&gt;审核（含打回）标注&lt;/td&gt;
+ &lt;td&gt;删除标注&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td&gt;操作者需要席位；标注员只能删除自己的标注；角色向下管理&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;审核（重新）标注&lt;/td&gt;
  &lt;td style="text-align: center"&gt;&lt;/td&gt;
  &lt;td style="text-align: center"&gt;是&lt;/td&gt;
  &lt;td style="text-align: center"&gt;是&lt;/td&gt;
@@ -442,6 +468,19 @@
  &lt;td&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
+ &lt;td&gt;删除标注任务&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
  &lt;td&gt;执行预标注&lt;/td&gt;
  &lt;td style="text-align: center"&gt;&lt;/td&gt;
  &lt;td style="text-align: center"&gt;是&lt;/td&gt;
@@ -468,7 +507,7 @@
  &lt;td&gt;操作者需要席位&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
- &lt;td&gt;审核（含打回）标注&lt;/td&gt;
+ &lt;td&gt;审核（重新）标注&lt;/td&gt;
  &lt;td style="text-align: center"&gt;&lt;/td&gt;
  &lt;td style="text-align: center"&gt;是&lt;/td&gt;
  &lt;td style="text-align: center"&gt;是&lt;/td&gt;
@@ -681,17 +720,41 @@
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id="关键权限规则摘要"&gt;关键权限规则摘要&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;角色向下管理&lt;/strong&gt;：用户管理类操作（修改角色、冻结/解冻、删除账号）仅能操作比自己角色层级低的用户&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;向上管理&lt;/strong&gt;：标注员、审核员等执行层角色可被添加到项目中，支持从下向上的业务协同&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;甲方权限&lt;/strong&gt;：外包项目中，上传数据、下载数据、删除任务、确认完成审核等操作仅甲方可执行&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;席位要求&lt;/strong&gt;：修改平台设置、执行预标注、执行标注任务、审核标注等操作需要操作者拥有有效席位&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;项目阶段限制&lt;/strong&gt;：外包项目开始前甲乙方均可修改设置；项目开始后不可修改&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;创建限制&lt;/strong&gt;：个人用户仅能创建一个企业或一个团队&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;认证限制&lt;/strong&gt;：仅团队账户和个人允许认证高校教师&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;服务商认证&lt;/strong&gt;：企业申请外包项目前需完成服务商认证&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>功能介绍：账号授权管理</title><link>https://docs.jujidata.com/docs/concepts/users-iam/</link><pubDate>Thu, 30 Apr 2026 10:53:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/users-iam/</guid><description>&lt;h1 id="账号授权管理"&gt;账号授权管理&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="7-购买项目存储容量相关功能"&gt;7. 购买项目存储容量相关功能&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;功能&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;据吉管理员&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;企业或团队超级管理员&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;企业或团队管理员&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;项目经理&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;2级审核员&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;1级审核员&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;标注员&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;普通员工&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;个人用户&lt;/th&gt;
+ &lt;th&gt;特殊说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;购买容量&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;否&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;是&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;购买限制&lt;/strong&gt;：对于外包项目，只有预付款通过的项目且自己是甲方才能购买项目存储容量；对于自标注自标注项目不做限制。&lt;/p&gt;</description></item><item><title>功能介绍：账号授权管理</title><link>https://docs.jujidata.com/docs/concepts/users-iam/</link><pubDate>Thu, 30 Apr 2026 10:53:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/users-iam/</guid><description>&lt;h1 id="账号授权管理"&gt;账号授权管理&lt;/h1&gt;
 &lt;h2 id="一功能介绍"&gt;一、功能介绍&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;账号授权管理功能：可修改用户权限、账号状态，并支持席位分配与撤回。&lt;/li&gt;
@@ -776,19 +839,113 @@
 &lt;h3 id="个人vip"&gt;个人VIP&lt;/h3&gt;
 &lt;p&gt;可以选择不同的支付方式：银行卡、支付宝、微信支付&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;个人账号只能给自己购买 VIP&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;选择 &lt;code&gt;购买时长&lt;/code&gt; ，点击 &lt;code&gt;立即支付&lt;/code&gt; 即可购买&lt;/p&gt;</description></item><item><title>功能介绍：AI 预标注插件与开发者沙盒</title><link>https://docs.jujidata.com/docs/concepts/pre-annotation/</link><pubDate>Tue, 24 Mar 2026 21:15:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/pre-annotation/</guid><description>&lt;h1 id="-ai-预标注插件让数据标注进入自动驾驶时代"&gt;🤖 AI 预标注插件：让数据标注进入“自动驾驶”时代&lt;/h1&gt;
-&lt;p&gt;在处理大规模数据集时，纯人工标注往往效率低下。&lt;strong&gt;据吉网 (Jujidata)&lt;/strong&gt; 推出强大的预标注插件系统，允许用户结合 AI 模型力量，将标注时间缩短 60% 以上。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="-桌面级工具联动"&gt;💻 桌面级工具联动&lt;/h2&gt;
-&lt;p&gt;为了获得更流畅的交互体验和更强的本地处理能力，我们推荐配合 &lt;strong&gt;据吉桌面版标注工具&lt;/strong&gt; 使用。&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;购买时长&lt;/code&gt; ，点击 &lt;code&gt;立即支付&lt;/code&gt; 即可购买&lt;/p&gt;</description></item><item><title>功能介绍：AI 预标注插件</title><link>https://docs.jujidata.com/docs/concepts/pre-annotation/</link><pubDate>Tue, 24 Mar 2026 21:15:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/pre-annotation/</guid><description>&lt;h1 id="预标注插件的使用"&gt;预标注插件的使用&lt;/h1&gt;
+&lt;p&gt;使用预标注插件功能，必须先下载并登录&lt;strong&gt;据吉客户端&lt;/strong&gt;，网页版暂不支持该插件能力。本文完整介绍插件上传、启用、使用、管理及常见注意事项。&lt;/p&gt;
+&lt;h2 id="一前期准备"&gt;一、前期准备&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;提前下载并安装据吉客户端，完成账号登录。&lt;/li&gt;
+&lt;li&gt;准备好本地预标注插件文件，保证文件完整、无损坏。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="二进入插件配置入口"&gt;二、进入插件配置入口&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;登录据吉客户端，进入&lt;strong&gt;数据标注平台&lt;/strong&gt;。具体操作见
+
+&lt;a class="link link--text" href="../concepts/self-annotated/"&gt;自标注模式&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在任务列表页面，点击页面上方/右侧的&lt;strong&gt;设置&lt;/strong&gt;按钮，进入平台配置面板。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/concepts/images/pre_list_hu_b7f0f83fcb4a1d15.webp"
+ width="1280"
+ height="721"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="设置"
+ id="h-rh-i-0"
+&gt;&lt;/p&gt;
+&lt;h2 id="三上传预标注插件"&gt;三、上传预标注插件&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在弹出的侧边配置栏中，找到并选中&lt;strong&gt;预标注插件&lt;/strong&gt;分类。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/concepts/images/pre_set_hu_f0f11ac12d543887.webp"
+ width="1280"
+ height="721"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="预标注插件"
+ id="h-rh-i-1"
+&gt;&lt;/p&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;
+&lt;p&gt;点击页面内 &lt;strong&gt;添加预标注插件&lt;/strong&gt; 按钮，唤起本地文件选择窗口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选中本地存放的插件文件，确认上传，等待系统解析完成。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="四插件启用与状态管理"&gt;四、插件启用与状态管理&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;插件上传成功后，列表内会展示已上传的插件名称、版本、状态等信息。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/concepts/images/pre_inf_hu_21ebdbe77a617f92.webp"
+ width="2560"
+ height="1392"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="信息"
+ id="h-rh-i-2"
+&gt;&lt;/p&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;点击插件对应的&lt;strong&gt;开关按钮&lt;/strong&gt;，将插件切换为启用状态。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/concepts/images/pre_infer_hu_878600d144b1c366.webp"
+ width="1280"
+ height="721"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="插件"
+ id="h-rh-i-3"
+&gt;&lt;/p&gt;
+&lt;h3 id="插件基础管理"&gt;插件基础管理&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;无缝集成&lt;/strong&gt;：下载并安装桌面版工具后，您可以直接在设置中加载自定义的预标注插件。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;本地算力加速&lt;/strong&gt;：利用本地 GPU 或 CPU 运行预标注算法，减少网络延迟，实现秒级响应。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多格式支持&lt;/strong&gt;：插件能够预处理各种复杂的行业特定数据格式，并将其转化为可视化的标注草案。&lt;/li&gt;
+&lt;li&gt;停用插件：点击开关即可临时关闭，关闭后标注界面无法调用该插件。&lt;/li&gt;
+&lt;li&gt;删除插件：选中目标插件，点击&lt;strong&gt;删除&lt;/strong&gt;按钮，可移除已上传的插件，删除后需重新上传方可使用。&lt;/li&gt;
+&lt;li&gt;重新上传：插件异常时，可直接覆盖上传新版本插件。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id="-插件开发沙盒-playground"&gt;🛠️ 插件开发沙盒 (Playground)&lt;/h2&gt;
-&lt;p&gt;每个企业的 AI 模型和数据标准都不尽相同。为此，我们提供了 &lt;strong&gt;据吉插件 Playground&lt;/strong&gt;，让开发者能够轻松量身定制。&lt;/p&gt;</description></item><item><title>功能介绍：多账号身份切换 (Multi-Accounts)</title><link>https://docs.jujidata.com/docs/concepts/multi-accounts/</link><pubDate>Wed, 25 Mar 2026 10:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/multi-accounts/</guid><description>&lt;h1 id="-多账号身份协作系统-multi-accounts"&gt;🌐 多账号身份协作系统 (Multi-Accounts)&lt;/h1&gt;
+&lt;h2 id="五标注任务中调用插件"&gt;五、标注任务中调用插件&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;返回标注平台&lt;strong&gt;任务列表页&lt;/strong&gt;，可以在最左侧下拉框查看已有插件信息。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img
+ src="../../docs/concepts/images/pre_list_infer_hu_1c277fe4f81dec4.webp"
+ width="394"
+ height="730"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="插件列表"
+ id="h-rh-i-4"
+&gt;&lt;/p&gt;</description></item><item><title>功能介绍：多账号身份切换 (Multi-Accounts)</title><link>https://docs.jujidata.com/docs/concepts/multi-accounts/</link><pubDate>Wed, 25 Mar 2026 10:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/concepts/multi-accounts/</guid><description>&lt;h1 id="-多账号身份协作系统-multi-accounts"&gt;🌐 多账号身份协作系统 (Multi-Accounts)&lt;/h1&gt;
 &lt;p&gt;在 &lt;strong&gt;据吉网 (Jujidata)&lt;/strong&gt;，我们打破了传统平台“一号一企”的限制。通过强大的 &lt;strong&gt;多账号/多身份 (Multi-Tenancy)&lt;/strong&gt; 架构，一名标注员可以同时服务于多家标注公司，并能随时回归个人身份，实现资产与任务的高效管理。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="-核心功能亮点"&gt;🚀 核心功能亮点&lt;/h2&gt;
