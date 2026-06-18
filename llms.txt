@@ -55,6 +55,7 @@
 - [快速上手：项目服务商 (乙方) ](https://docs.jujidata.com/docs/quick_guides/vendor_guide/)
 - [快速上手：自标注模式](https://docs.jujidata.com/docs/quick_guides/self-annotated/)
 - [快速上手：自标注团队迁移与协作](https://docs.jujidata.com/docs/quick_guides/self-annotated-team/)
+- [快速上手：标注插件开发](https://docs.jujidata.com/docs/quick_guides/prediction-plugin/)
 
 ### 模版中心
 
