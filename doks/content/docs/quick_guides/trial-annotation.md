@@ -8,7 +8,7 @@ params:
     title: "试标注操作指南 | 据吉网 (Jujidata)"
     description: "甲方如何在创建项目时开启试标注、配置并发起试标注，以及乙方如何进入试标注开展限时免费标注，涵盖操作步骤、限制与常见问题。"
     keywords: ["试标注", "试标", "Sandbox", "数据标注", "据吉网", "Jujidata", "标注服务商", "甲方", "乙方"]
-    canonical: ""
+    canonical: "https://www.jujidata.com/docs/quick_guides/trial-annotation/"
     robots: "index, follow"
 ---
 
