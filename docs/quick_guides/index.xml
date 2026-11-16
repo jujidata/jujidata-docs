@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>据吉网做什么的？ on 据吉文档</title><link>https://docs.jujidata.com/docs/quick_guides/</link><description>Recent content in 据吉网做什么的？ on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Wed, 17 Jun 2026 09:06:20 +0000</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/quick_guides/index.xml" rel="self" type="application/rss+xml"/><item><title>据吉网：我们可以做什么？</title><link>https://docs.jujidata.com/docs/quick_guides/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/intro/</guid><description>&lt;h1 id="快速了解据吉网"&gt;快速了解据吉网&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>据吉网做什么的？ on 据吉文档</title><link>https://docs.jujidata.com/docs/quick_guides/</link><description>Recent content in 据吉网做什么的？ on 据吉文档</description><generator>Hugo</generator><language>zh-CN</language><copyright>Copyright (c) 2020-2026 据吉网</copyright><lastBuildDate>Thu, 29 Oct 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://docs.jujidata.com/docs/quick_guides/index.xml" rel="self" type="application/rss+xml"/><item><title>据吉网：我们可以做什么？</title><link>https://docs.jujidata.com/docs/quick_guides/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/intro/</guid><description>&lt;h1 id="快速了解据吉网"&gt;快速了解据吉网&lt;/h1&gt;
 &lt;hr&gt;
 &lt;h2 id="1-全面的标注工具能力"&gt;1. 全面的标注工具能力&lt;/h2&gt;
 &lt;ul&gt;
@@ -365,4 +365,22 @@ A: 强大的案例库、快速的响应速度以及在试标环节展现出的�
  &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id="通信协议"&gt;通信协议&lt;/h3&gt;
-&lt;p&gt;标注平台与插件通过标准输入输出进行数据交互：&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;标注平台与插件通过标准输入输出进行数据交互：&lt;/p&gt;</description></item><item><title>快速上手：试标注</title><link>https://docs.jujidata.com/docs/quick_guides/trial-annotation/</link><pubDate>Thu, 29 Oct 2026 12:00:00 +0800</pubDate><guid>https://docs.jujidata.com/docs/quick_guides/trial-annotation/</guid><description>&lt;h1 id="试标注操作指南"&gt;试标注操作指南&lt;/h1&gt;
+&lt;p&gt;「试标注」是据吉网为&lt;strong&gt;外包（协作）标注项目&lt;/strong&gt;提供的免费试用标注功能。甲方（发起方）在项目申请阶段，可邀请最多 3 家乙方（标注服务商）先行开展一轮限时试标注，用于验证乙方标注能力、核对标注规则与验收标准，再进入正式合同阶段。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;想了解试标注的机制与定位，可先阅读概念文档：
+
+&lt;a class="link link--text" href="../../docs/concepts/sandbox/"&gt;试标空间 (Sandbox)&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;核心特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;完全免费&lt;/strong&gt;：试标注无需席位、无需预付款；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;限时进行&lt;/strong&gt;：单次时长 1～4 小时（由甲方设定），乙方开始后不可暂停，关闭页面计时仍会继续；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结果不可导出&lt;/strong&gt;：试标注的测试数据与标注结果不可下载、导出或转发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="适用角色与前置条件"&gt;适用角色与前置条件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;甲方（发起方）&lt;/strong&gt;：甲方管理员，或个人项目所有者；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;乙方（标注方 / 服务商）&lt;/strong&gt;：已申请该外包项目、并收到试标注邀请的企业 / 团队。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;前置条件：&lt;/p&gt;</description></item></channel></rss>

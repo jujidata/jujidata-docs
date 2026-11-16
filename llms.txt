@@ -56,6 +56,7 @@
 - [快速上手：自标注模式](https://docs.jujidata.com/docs/quick_guides/self-annotated/)
 - [快速上手：自标注团队迁移与协作](https://docs.jujidata.com/docs/quick_guides/self-annotated-team/)
 - [快速上手：标注插件开发](https://docs.jujidata.com/docs/quick_guides/prediction-plugin/)
+- [快速上手：试标注](https://docs.jujidata.com/docs/quick_guides/trial-annotation/)
 
 ### 模版中心
 
